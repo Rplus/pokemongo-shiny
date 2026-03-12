@@ -65,7 +65,7 @@
 				/
 			{/if}
 
-			<label class="pm status-{index} position:relative width:70 aspect-ratio:1 height:70 place-content:center place-items:center text-align:center cursor:pointer"
+			<label class="pm status-{index} position:relative width:88 aspect-ratio:1 height:88 place-content:center place-items:center text-align:center cursor:pointer"
 				title={$_(`status.${status_labels[index]}`)}
 			>
 				<!-- <label class="label-has-checkbox cursor:pointer"> -->

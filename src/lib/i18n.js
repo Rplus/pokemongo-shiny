@@ -25,6 +25,10 @@ let _words = {
 		'en': 'Extra',
 		'zh': '有餘',
 	},
+	'status.released': {
+		'en': 'Released',
+		'zh': '已亮相',
+	},
 	'order': {
 		'en': 'Order',
 		'zh': '排序',

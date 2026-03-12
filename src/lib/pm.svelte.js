@@ -158,12 +158,23 @@ export function handle_pms(pms_json) {
 	})
 	.filter(Boolean);
 
+	pms.sort((a, b) => a.dex - b.dex);
+
 	root_map = null;
 	root_index_map = null;
 
+	let groups = all_groups
+		.map(i => i.groups)
+		.flat()
+		.map((group) => {
+			group.pms.sort((a, b) => a.dex - b.dex || a.index - b.index);
+			return group;
+		})
+		.sort((a, b) => a.pms[0].dex - b.pms[0].dex);
+
 	return {
 		pms,
-		groups: all_groups.map(i => i.groups).flat(),
+		groups,
 		max_index,
 		tags,
 	};

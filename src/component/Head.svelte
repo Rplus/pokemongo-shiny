@@ -86,6 +86,21 @@
 				<!-- </label> -->
 			</label>
 		{/each}
+
+		/
+
+		<div
+			class="pm status-0 summary-card position:relative width:70 aspect-ratio:1 height:70 place-content:center place-items:center text-align:center"
+			title="Released"
+		>
+			<input type="checkbox" class="sr-only-u" checked disabled>
+			<div class="number font-size:1.2rem">
+				{counts.total.summary}
+			</div>
+			<div class="white-space:nowrap overflow:hidden text-overflow:ellipsis width:100% padding:0|2 margin-top:.25em font-size:smaller opacity:0.5">
+				Released
+			</div>
+		</div>
 	</div>
 </header>
 
@@ -124,7 +139,8 @@
 		opacity: 0.2;
 	}
 
-	.pm {
+	.pm,
+	.summary-card {
 		background-color: #fff3;
 		--pm-border-width: 1.5px;
 		--pm-marker-size: 25%;

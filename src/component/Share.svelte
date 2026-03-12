@@ -1,32 +1,64 @@
 <script>
-	import { _, locale } from 'svelte-i18n';
+	import { _, } from 'svelte-i18n';
 
 	import { name, status } from '@/stores.js';
-	import { derived } from 'svelte/store';
-	import { fetch_data, gen_href, } from '@lib/u.js';
+	import { gen_href, } from '@lib/u.js';
 
 	let url = $derived.by(() => gen_href($status, $name));
 
+	const shortener_app_href = 'https://tinyurl.com/app';
 	let short_href = $state(null);
+	let short_message = $state('');
 
 	let is_fetching = $state(false);
 	async function gen_short_href() {
 		if (is_fetching) {
-			alert('');
 			return;
 		}
 
 		is_fetching = true;
+		short_message = '';
 
-		const encoded_url = encodeURIComponent(`http://tinyurl.com/api-create.php?url=${url}`);
+		try {
+			const encoded_url = encodeURIComponent(`http://tinyurl.com/api-create.php?url=${url}`);
+			const response = await fetch(`https://corsproxy.io/?${encoded_url}`);
 
-		short_href = await fetch_data(`https://corsproxy.io/?${encoded_url}`, 'text');
-		// TODO: preview shorturl https://tinyurl.com/preview/ooxxoxox
-		is_fetching = null;
+			if (!response.ok) {
+				throw new Error(`shortener request failed: ${response.status}`);
+			}
+
+			const text = (await response.text()).trim();
+			if (!/^https:\/\/tinyurl\.com\/\S+$/i.test(text)) {
+				throw new Error('shortener returned an invalid response');
+			}
+
+			short_href = text;
+			short_message = 'Short URL generated.';
+		} catch (error) {
+			console.error(error);
+			short_href = null;
+			short_message = await fallback_to_manual_shortener(url);
+		}
+
+		is_fetching = false;
 	}
 
-	function get_qrcode_img(url) {
-    return `https://quickchart.io/qr?text=${url}&format=svg`;
+	async function fallback_to_manual_shortener(url) {
+		const shortener_tab = window.open(shortener_app_href, '_blank', 'noopener');
+		let message = 'Open TinyURL and paste the full URL manually.';
+
+		try {
+			await navigator.clipboard.writeText(url);
+			message = 'Automatic shortening unavailable. Full URL copied for TinyURL.';
+		} catch (error) {
+			console.error(error);
+		}
+
+		if (!shortener_tab) {
+			message = 'Automatic shortening unavailable. Popup blocked, so open TinyURL and paste the full URL manually.';
+		}
+
+		return message;
 	}
 </script>
 
@@ -44,23 +76,23 @@
 
 		<li>
 			<a class="short-link text-decoration:"
-				href={short_href}
+				href={short_href || shortener_app_href}
 				class:fetching={is_fetching}
 				rel="noopener"
 				target="_blank"
 			>
 				{$_('share.short.link')}
 			</a>
-
-			{#if short_href}
-				<img class="display:block margin-top:2px" src={ get_qrcode_img(short_href) } alt="qrcode for short url">
-			{/if}
 		</li>
 	</ul>
 	<div class="text-align:right">
 		<hr>
 		<button onclick={gen_short_href}>📦 {$_('share.get.short.url')}</button>
 	</div>
+
+	{#if short_message}
+		<p class="font-size:smaller opacity:.7">{short_message}</p>
+	{/if}
 </div>
 
 
@@ -75,7 +107,7 @@
 	}
 
 	.short-link[href]::after {
-		content: attr(href) ' ✅';
+		content: attr(href);
 		display: block;
 		line-height: 1;
 		/* font-size: smaller; */

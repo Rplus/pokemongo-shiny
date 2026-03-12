@@ -161,9 +161,15 @@ export function handle_pms(pms_json) {
 	root_map = null;
 	root_index_map = null;
 
+	let sort_by_min_dex = (a, b) => {
+		let minA = Math.min(...a.pms.map(p => p.dex)) || 0;
+		let minB = Math.min(...b.pms.map(p => p.dex)) || 0;
+		return minA - minB;
+	};
+
 	return {
 		pms,
-		groups: all_groups.map(i => i.groups).flat(),
+		groups: all_groups.map(i => i.groups).flat().sort(sort_by_min_dex),
 		max_index,
 		tags,
 	};

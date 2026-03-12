@@ -15,7 +15,7 @@
 				if (prop === 'name') {
 					return pm[prop][_locale] || '';
 				} else if (prop === 'status') {
-					return _status[index] || 0;
+					return _status[pm.index] || 0;
 				}
 				return pm[prop] ?? '';
 			}).join(',');

@@ -90,7 +90,7 @@
 		/
 
 		<div
-			class="pm position:relative width:70 aspect-ratio:1 height:70 place-content:center place-items:center text-align:center"
+			class="pm position:relative width:88 aspect-ratio:1 height:88 place-content:center place-items:center text-align:center"
 			title={$_('status.released')}
 		>
 			<input type="checkbox" class="sr-only-u" checked disabled>
@@ -146,6 +146,15 @@
 
 		&::before,
 		&::after {
+		}
+	}
+	@media (max-width: 650px) {
+		.dashboard {
+			gap: min(1.25vw, .75em);
+		}
+		.pm {
+			width: 70px;
+			height: 70px;
 		}
 	}
 	.pm:not(:has(input:checked)) {

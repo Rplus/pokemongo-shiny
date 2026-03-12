@@ -60,20 +60,6 @@
 	</div>
 
 	<div class="dashboard flex gap:min(2vw,1em) justify-content:center align-items:center user-select:none font-size:smaller">
-		<div
-			class="summary-card position:relative width:70 aspect-ratio:1 height:70 place-content:center place-items:center text-align:center"
-			title="Total"
-		>
-			<div class="number font-size:1.2rem">
-				{counts.total.summary}
-			</div>
-			<div class="white-space:nowrap overflow:hidden text-overflow:ellipsis width:100% padding:0|2 margin-top:.25em font-size:smaller opacity:0.5">
-				Total
-			</div>
-		</div>
-
-		/
-
 		{#each status_visibility as st, index}
 			{#if index}
 				/
@@ -100,6 +86,21 @@
 				<!-- </label> -->
 			</label>
 		{/each}
+
+		/
+
+		<div
+			class="pm status-0 summary-card position:relative width:70 aspect-ratio:1 height:70 place-content:center place-items:center text-align:center"
+			title="Released"
+		>
+			<input type="checkbox" class="sr-only-u" checked disabled>
+			<div class="number font-size:1.2rem">
+				{counts.total.summary}
+			</div>
+			<div class="white-space:nowrap overflow:hidden text-overflow:ellipsis width:100% padding:0|2 margin-top:.25em font-size:smaller opacity:0.5">
+				Released
+			</div>
+		</div>
 	</div>
 </header>
 

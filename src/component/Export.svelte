@@ -17,7 +17,7 @@
 				} else if (prop === 'status') {
 					return _status[index] || 0;
 				}
-				return pm[prop] || '';
+				return pm[prop] ?? '';
 			}).join(',');
 		});
 		csv.unshift(titles);

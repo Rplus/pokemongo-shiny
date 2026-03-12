@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test:local": "bash ./scripts/test-local.sh",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview"

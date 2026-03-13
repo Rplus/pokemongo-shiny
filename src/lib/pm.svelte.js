@@ -179,9 +179,18 @@ export function get_name(names, lang = 'en') {
 	return names?.[lang] || names?.en || '';
 }
 
+const baby_dexes = new Set([
+	172, 173, 174, 175, 236, 238, 239, 240,
+	298, 360, 406, 433, 438, 439, 440, 446,
+	447, 458, 848,
+]);
+
 function get_default_tags(tags = [], pid = '', dex = 1) {
 	if (!tags.includes('costume')) {
 		tags.push('-costume');
+	}
+	if (!baby_dexes.has(dex)) {
+		tags.push('-BABY');
 	}
 	switch (pid.split('.f')[1]) {
 		case 'HISUIAN':

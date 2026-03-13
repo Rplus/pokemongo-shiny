@@ -23,8 +23,10 @@
 	let status_string = $derived(status_map.join(''));
 
 	let status_counter = $derived.by(() => {
-		return status_map.reduce((all, s) => {
-			all[+s] = (all[+s] || 0) + 1;
+		// Dataset indices are sparse, so count only actual released rows.
+		return pms.reduce((all, pm) => {
+			let s = Number(status_map[pm.index] || 0);
+			all[s] = (all[s] || 0) + 1;
 			return all;
 		}, [0, 0, 0, 0]);
 	});

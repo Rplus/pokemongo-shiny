@@ -1,7 +1,7 @@
 <script>
 	import { pm_data, } from '@lib/pm.svelte.js';
 	import { _, } from 'svelte-i18n';
-	import { ordered_style, get_item, set_item, } from '@lib/u.js';
+	import { ordered_style, flat_group_style, get_item, set_item, } from '@lib/u.js';
 	import { config, } from '@/stores.js';
 
 	let { tags, } = pm_data;
@@ -9,6 +9,7 @@
 	let cached_tags = get_item('checked_tags') || [];
 
 	let is_cap = $state(get_item('filter_is_cap') || false);
+	let is_exclude = $state(get_item('filter_is_exclude') || false);
 
 	let tags_cloud = $state(
 		Object.keys(tags).sort().map(tag => {
@@ -24,6 +25,17 @@
 		set_item('filter_is_cap', is_cap);
 	})
 
+	$effect(() => {
+		set_item('filter_is_exclude', is_exclude);
+	})
+
+	function get_selectors(tags = []) {
+		if (is_cap) {
+			return '.pm-list .pm' + tags.map(tag => `.tag-${tag}`).join('');
+		}
+		return tags.map(tag => `.pm-list .pm.tag-${tag}`).join(',');
+	}
+
 	let style = $derived.by(() => {
 		let _tags = tags_cloud.map(tag => tag.checked && tag.label).filter(Boolean);
 		set_item('checked_tags', _tags);
@@ -32,17 +44,16 @@
 			return '';
 		}
 
-		let selectors = '';
-		if (is_cap) {
-			selectors = '.pm-list .pm' + _tags.map(tag => `.tag-${tag}`).join('');
-		} else {
-			selectors = _tags.map(tag => `.pm-list .pm.tag-${tag}`).join(',');
+		let selectors = get_selectors(_tags);
+		if (is_exclude) {
+			return flat_group_style + selectors + `{ display:none !important; }`;
 		}
 		return ordered_style + selectors + `{ display:flex; }`;
 	});
 
 	function reset_tags() {
 		is_cap = false;
+		is_exclude = false;
 		tags_cloud.forEach(tag => {
 			tag.checked = false;
 		})
@@ -56,12 +67,22 @@
 	<summary class="text-align:center hide-for-print opacity:0 transition:opacity|.3s"
 		accesskey="t">
 		🔖 {$_('tag')}
-	<label class="display:inline-flex width:fit-content margin:.5em|auto">
-		<input class="switcher" type="checkbox" data-inactive="∪" data-active="∩"
-			title={is_cap ? $_('tag.intersection_selected') : $_('tag.union_selected')}
-			bind:checked={is_cap}
-		/>
-	</label>
+	<span class="display:inline-flex gap:.25em margin:.5em|auto">
+		<label class="display:inline-flex width:fit-content">
+			<input class="switcher" type="checkbox" data-inactive="∪" data-active="∩"
+				title={is_cap ? $_('tag.intersection_selected') : $_('tag.union_selected')}
+				aria-label={is_cap ? $_('tag.intersection_selected') : $_('tag.union_selected')}
+				bind:checked={is_cap}
+			/>
+		</label>
+		<label class="display:inline-flex width:fit-content">
+			<input class="switcher" type="checkbox" data-inactive="show" data-active="hide"
+				title={is_exclude ? $_('tag.hide_selected') : $_('tag.show_selected')}
+				aria-label={is_exclude ? $_('tag.hide_selected') : $_('tag.show_selected')}
+				bind:checked={is_exclude}
+			/>
+		</label>
+	</span>
 	</summary>
 
 
@@ -112,6 +133,7 @@
 		font-family: inherit;
 		font-size: smaller;
 		cursor: pointer;
+		line-height: 1.2;
 
 		&::after,
 		&::before {

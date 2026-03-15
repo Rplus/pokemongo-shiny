@@ -138,7 +138,7 @@ export function preventDefault(fn) {
 	};
 }
 
-export const ordered_style = `
+export const flat_group_style = `
 .pm-list {
 	gap: 1em;
 }
@@ -146,6 +146,10 @@ export const ordered_style = `
 	display: contents !important;
 }
 .pm-group .pm {
-	display: none;
 	order: var(--dex-order);
+}`;
+
+export const ordered_style = flat_group_style + `
+.pm-group .pm {
+	display: none;
 }`;

@@ -1,20 +1,22 @@
 <script>
 	import { pm_data, } from '@lib/pm.svelte.js';
 	import { _, } from 'svelte-i18n';
-	import { ordered_style, get_item, set_item, } from '@lib/u.js';
+	import { ordered_style, flat_group_style, get_item, set_item, } from '@lib/u.js';
 	import { config, } from '@/stores.js';
 
 	let { tags, } = pm_data;
 
-	let cached_tags = get_item('checked_tags') || [];
+	let all_tags = Object.keys(tags).sort();
+	let cached_tags = get_cached_tags(all_tags);
 
 	let is_cap = $state(get_item('filter_is_cap') || false);
 
 	let tags_cloud = $state(
-		Object.keys(tags).sort().map(tag => {
+		all_tags.map(tag => {
 			return {
 				label: tag,
-				checked: cached_tags.includes(tag),
+				checked: Object.prototype.hasOwnProperty.call(cached_tags, tag),
+				inverted: cached_tags[tag] || false,
 				count: tags[tag].length,
 			};
 		})
@@ -24,27 +26,101 @@
 		set_item('filter_is_cap', is_cap);
 	})
 
-	let style = $derived.by(() => {
-		let _tags = tags_cloud.map(tag => tag.checked && tag.label).filter(Boolean);
-		set_item('checked_tags', _tags);
+	function invert_tag_label(label = '') {
+		return label.startsWith('-') ? label.slice(1) : `-${label}`;
+	}
 
-		if (!_tags.length) {
+	function get_cached_tags(tag_labels = []) {
+		let cached_tags = get_item('checked_tags') || [];
+		if (Array.isArray(cached_tags)) {
+			let lookup = {};
+			let remaining_tags = new Set(cached_tags);
+
+			tag_labels.forEach(tag => {
+				if (remaining_tags.delete(tag)) {
+					lookup[tag] = false;
+				}
+			});
+
+			tag_labels.forEach(tag => {
+				if (remaining_tags.delete(invert_tag_label(tag))) {
+					lookup[tag] = true;
+				}
+			});
+
+			return lookup;
+		}
+
+		return Object.entries(cached_tags).reduce((all, [label, value]) => {
+			if (value === 'include') {
+				all[label] = false;
+			} else if (value === 'exclude') {
+				all[label] = true;
+			} else if (typeof value === 'boolean') {
+				all[label] = value;
+			} else if (value) {
+				all[label] = false;
+			}
+			return all;
+		}, {});
+	}
+
+	function invert_tags() {
+		tags_cloud.forEach(tag => {
+			if (tag.checked) {
+				tag.inverted = !tag.inverted;
+			}
+		})
+	}
+
+	function get_tag_display_label(tag) {
+		return tag.inverted ? invert_tag_label(tag.label) : tag.label;
+	}
+
+	function sync_tag(tag) {
+		if (!tag.checked) {
+			tag.inverted = false;
+		}
+	}
+
+	function get_selectors(tags = []) {
+		if (is_cap) {
+			return '.pm-list .pm' + tags.map(tag => `.tag-${tag}`).join('');
+		}
+		return tags.map(tag => `.pm-list .pm.tag-${tag}`).join(',');
+	}
+
+	let style = $derived.by(() => {
+		let selected_tags = tags_cloud.reduce((all, tag) => {
+			if (tag.checked) {
+				all[tag.label] = tag.inverted;
+			}
+			return all;
+		}, {});
+		set_item('checked_tags', selected_tags);
+
+		let include_tags = tags_cloud.filter(tag => tag.checked && !tag.inverted).map(tag => tag.label);
+		let exclude_tags = tags_cloud.filter(tag => tag.checked && tag.inverted).map(tag => tag.label);
+
+		if (!include_tags.length && !exclude_tags.length) {
 			return '';
 		}
 
-		let selectors = '';
-		if (is_cap) {
-			selectors = '.pm-list .pm' + _tags.map(tag => `.tag-${tag}`).join('');
-		} else {
-			selectors = _tags.map(tag => `.pm-list .pm.tag-${tag}`).join(',');
+		let style = include_tags.length
+			? ordered_style + get_selectors(include_tags) + `{ display:flex; }`
+			: flat_group_style;
+
+		if (exclude_tags.length) {
+			style += get_selectors(exclude_tags) + `{ display:none !important; }`;
 		}
-		return ordered_style + selectors + `{ display:flex; }`;
+		return style;
 	});
 
 	function reset_tags() {
 		is_cap = false;
 		tags_cloud.forEach(tag => {
 			tag.checked = false;
+			tag.inverted = false;
 		})
 	}
 
@@ -85,14 +161,15 @@
 					font-weight:900"
 					title="count:{tag.count}"
 				>
-					<input type="checkbox" class="sr-only-u" bind:checked={tag.checked}>
-					{tag.label}
+					<input type="checkbox" class="sr-only-u" bind:checked={tag.checked} onchange={() => sync_tag(tag)}>
+					{get_tag_display_label(tag)}
 					<!-- <sup>({tag.count})</sup> -->
 				</label>
 			{/each}
 
 			<div class="border-right:1px|dotted height:1em align-self:center"></div>
 
+			<input type="button" value={$_('tag.invert')} onclick={invert_tags}>
 			<input type="reset" onclick={reset_tags}>
 		</div>
 		<svelte:element this={style_tag}>{style}</svelte:element>

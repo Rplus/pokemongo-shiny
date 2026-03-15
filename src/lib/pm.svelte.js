@@ -180,9 +180,6 @@ export function get_name(names, lang = 'en') {
 }
 
 function get_default_tags(tags = [], pid = '', dex = 1) {
-	if (!tags.includes('costume')) {
-		tags.push('-costume');
-	}
 	switch (pid.split('.f')[1]) {
 		case 'HISUIAN':
 			tags.push('📍hisuian');

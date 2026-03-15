@@ -70,7 +70,7 @@
 
 				<div>
 					pms:
-					<label class="display:flex gap:.25em margin-bottom:.5em">
+					<label class="display:flex gap:.25em">
 						<!-- https://api.npoint.io/6acfd46ce5bfdbca61af -->
 						<input type="text"
 							class="width:4em flex-grow:1"
@@ -80,11 +80,13 @@
 							<option value="csv">csv</option>
 							<option value="json">json</option>
 						</select>
+					</label>
+					<div class="source-actions">
 						<button type="button" onclick={use_pm_data_source}>
 							{$_('custom.default')}
 						</button>
 						<input type="reset" onclick={reset_data_source}>
-					</label>
+					</div>
 				</div>
 			</details>
 		</li>
@@ -107,6 +109,13 @@
 		&::marker {
 			content: attr(data-marker) ' ';
 		}
+	}
+
+	.source-actions {
+		display: flex;
+		gap: 0.5em;
+		margin-top: 0.5em;
+		justify-content: flex-end;
 	}
 
 </style>

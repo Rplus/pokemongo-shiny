@@ -183,6 +183,9 @@ function get_default_tags(tags = [], pid = '', dex = 1) {
 	if (!tags.includes('costume')) {
 		tags.push('-costume');
 	}
+	if (!tags.includes('baby')) {
+		tags.push('-baby');
+	}
 	switch (pid.split('.f')[1]) {
 		case 'HISUIAN':
 			tags.push('📍hisuian');

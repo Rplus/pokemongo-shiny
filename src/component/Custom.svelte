@@ -80,6 +80,9 @@
 							<option value="csv">csv</option>
 							<option value="json">json</option>
 						</select>
+						<button type="button" onclick={use_pm_data_source}>
+							{$_('custom.default')}
+						</button>
 						<input type="reset" onclick={reset_data_source}>
 					</label>
 				</div>
@@ -88,11 +91,8 @@
 
 		<hr>
 
-		<div class="action-buttons">
-			<button onclick={use_pm_data_source}>
-				{$_('custom.use_pm_source_url')}
-			</button>
-			<button onclick={reset_all_config}>
+		<div class="display:flex">
+			<button class="margin:auto" onclick={reset_all_config}>
 				{$_('custom.reset_all_config')}
 			</button>
 		</div>
@@ -109,10 +109,4 @@
 		}
 	}
 
-	.action-buttons {
-		display: flex;
-		gap: 0.5em;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
 </style>

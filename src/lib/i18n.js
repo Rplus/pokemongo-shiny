@@ -175,9 +175,9 @@ let _words = {
 		'en': 'Custom data source url',
 		'zh': '自訂資料網址',
 	},
-	'custom.use_pm_source_url': {
-		'en': 'Use PM sheet url',
-		'zh': '使用 PM 表格網址',
+	'custom.default': {
+		'en': 'Default',
+		'zh': '預設',
 	},
 	'custom.reset_all_config': {
 		'en': 'RESET all config',

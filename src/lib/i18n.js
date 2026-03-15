@@ -61,13 +61,9 @@ let _words = {
 		'en': 'Union - [Intersection]',
 		'zh': '聯集 [交集]',
 	},
-	'tag.show_selected': {
-		'en': '[Show] - Hide',
-		'zh': '[顯示] 隱藏',
-	},
-	'tag.hide_selected': {
-		'en': 'Show - [Hide]',
-		'zh': '顯示 [隱藏]',
+	'tag.invert': {
+		'en': 'Invert',
+		'zh': '反選',
 	},
 	'record': {
 		'en': 'Record',

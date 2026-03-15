@@ -152,4 +152,5 @@ export const flat_group_style = `
 export const ordered_style = flat_group_style + `
 .pm-group .pm {
 	display: none;
+	order: var(--dex-order);
 }`;

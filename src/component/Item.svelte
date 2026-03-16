@@ -25,21 +25,20 @@
 
 </script>
 
-<button class="pm status-{status} width:96@sm width:72 aspect-ratio:1 {tags_class}"
+<button class="pm status-{status} {tags_class}"
 	class:img_diff={$config.img_diff}
 	data-index={pm.index}
 	onclick={() => handle_click_pm(pm.index)}
 	style="--group-order:{pm.order || 0};--dex-order:{pm.dex};"
 	title={title}
 >
-	<div class="img-box position:absolute inset:0 border-radius:inherit overflow:hidden"
+	<div class="img-box"
 		style="--w: 140%; --t:-30%; --l: -5%; {pm.style}"
 	>
 		<!--
 		-->
 		{#if $config.img_diff}
 			<img
-				class="display:block"
 				width="96"
 				height="96"
 				src={src0}
@@ -48,7 +47,6 @@
 			/>
 		{/if}
 		<img
-			class="display:block transition:opacity|0.3s"
 			width="96"
 			height="96"
 			src={src}
@@ -64,16 +62,16 @@
 	>{status}</div>
 	-->
 
-	<div class="caption position:absolute z-index:15 left:2.5% top:1% padding:.3em|.25em pointer-events:none transition:opacity|0.3s" hidden={!$config.show_name}>
-		<div class="name font-size:10 font-size:12@sm opacity:0.4 transition:opacity|0.3s">
+	<div class="caption" hidden={!$config.show_name}>
+		<div class="name">
 			{get_name(pm.name, $locale)}
 
 			{#if $config.show_suffix}
-				<span class="white-space:pre-wrap">{pm.suffix}</span>
+				<span>{pm.suffix}</span>
 			{/if}
 		</div>
 
-		<div class="dex text-align:start font-size:10 opacity:0 transition:opacity|.3s">
+		<div class="dex">
 			#{pm.dex}
 		</div>
 	</div>
@@ -114,6 +112,19 @@
 	}
 
 	.img-box {
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		overflow: hidden;
+
+		img {
+			display: block;
+		}
+
+		img + img {
+			transition: opacity 0.3s;
+		}
+
 		&::after {
 			content: '';
 			position: absolute;
@@ -151,6 +162,37 @@
 	}
 	.pm:hover .dex {
 		opacity: 0.5;
+	}
+
+	.caption {
+		position: absolute;
+		z-index: 15;
+		left: 2.5%;
+		top: 1%;
+		padding: .3em .25em;
+		transition: opacity 0.3s;
+		pointer-events: none;
+	}
+
+	.name {
+		font-size: 10px;
+		opacity: 0.4;
+		transition: opacity 0.3s;
+
+		@media (max-width: 768px) {
+			font-size: 12px;
+		}
+
+		span {
+			white-space: pre-wrap;
+		}
+	}
+
+	.dex {
+		text-align: start;
+		font-size: 10px;
+		opacity: 0;
+		transition: opacity .3s;
 	}
 
 	.img_diff:hover {

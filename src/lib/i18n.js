@@ -61,6 +61,10 @@ let _words = {
 		'en': 'Union - [Intersection]',
 		'zh': '聯集 [交集]',
 	},
+	'tag.invert_selection': {
+		'en': 'Invert',
+		'zh': '反選',
+	},
 	'record': {
 		'en': 'Record',
 		'zh': '紀錄',

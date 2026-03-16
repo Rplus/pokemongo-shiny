@@ -41,6 +41,12 @@
 		return ordered_style + selectors + `{ display:flex; }`;
 	});
 
+	function invert_selection_tags() {
+		tags_cloud.forEach(tag => {
+			tag.checked = !tag.checked;
+		})
+	}
+
 	function reset_tags() {
 		is_cap = false;
 		tags_cloud.forEach(tag => {
@@ -52,36 +58,32 @@
 
 </script>
 
-<details bind:open={$config.open_tags} class="tag-details margin:auto background-color:#9993 padding:0|3vw">
-	<summary class="text-align:center hide-for-print opacity:0 transition:opacity|.3s"
-		accesskey="t">
+<details bind:open={$config.open_tags} class="tag-details">
+	<summary accesskey="t" class="hide-for-print">
 		🔖 {$_('tag')}
-	<label class="display:inline-flex width:fit-content margin:.5em|auto">
-		<input class="switcher" type="checkbox" data-inactive="∪" data-active="∩"
-			title={is_cap ? $_('tag.intersection_selected') : $_('tag.union_selected')}
-			bind:checked={is_cap}
-		/>
-	</label>
+		<label>
+			<input class="switcher" type="checkbox" data-inactive="∪" data-active="∩"
+				title={is_cap ? $_('tag.intersection_selected') : $_('tag.union_selected')}
+				bind:checked={is_cap}
+			/>
+		</label>
 	</summary>
 
 
-	<div class="filter-box display:flex align-items:center justify-content:center margin:auto"
-		 style="max-width: var(--max-width);"
-	>
-		<div class="tag-cloud display:flex flex-wrap:wrap gap:.5em place-content:center">
+	<div class="filter-box margin:auto" style="max-width: var(--max-width);">
+		<div class="tag-cloud">
 			{#each tags_cloud as tag (tag.label)}
-				<label class="tag"
-					title="count:{tag.count}"
-				>
+				<label class="tag" title="count:{tag.count}">
 					<input type="checkbox" class="sr-only-u" bind:checked={tag.checked}>
 					{tag.label}
 					<!-- <sup>({tag.count})</sup> -->
 				</label>
 			{/each}
+		</div>
 
-			<div class="border-right:1px|dotted height:1em align-self:center"></div>
-
+		<div class="tag-cloud-actions">
 			<input type="reset" onclick={reset_tags}>
+			<!-- <input type="button" value={$_('tag.invert_selection')} onclick={invert_selection_tags}> -->
 		</div>
 		<svelte:element this={style_tag}>{style}</svelte:element>
 	</div>
@@ -136,14 +138,45 @@
 		}
 	}
 
-	.tag-details[open] {
-		padding-bottom: 1em;
-	}
-	summary {
-		.tag-details[open] &,
-		.tag-details:hover & {
+	.tag-details {
+		margin: auto;
+		background-color: #9993;
+		padding: 0 3vw;
+
+		&[open] {
+			padding-bottom: 1em;
+		}
+
+		summary {
+			text-align: center;
+			opacity: 0;
+			transition: opacity .3s;
+
+			label {
+				display: inline-flex;
+				width: fit-content;
+				margin: .5em auto;
+			}
+		}
+
+		&[open] summary,
+		&:hover summary {
 			opacity: 1;
 		}
 	}
 
+	.tag-cloud {
+		display: flex;
+		flex-wrap: wrap;
+		gap: .5em;
+		place-content: center;
+	}
+
+	.tag-cloud-actions {
+		max-width: 70%;
+		border-top: 1px dashed #0003;
+		margin: .5em auto 0;
+		padding-top: .5em;
+		text-align: center;
+	}
 </style>

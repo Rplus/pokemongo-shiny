@@ -1,22 +1,6 @@
 <script>
 	import { _, } from 'svelte-i18n';
 
-	let initFaceookLikeBtn = (() => {
-		let executed = false;
-		return () => {
-			if (!executed) {
-				executed = true;
-
-				let js;
-				let fjs = document.getElementsByTagName('script')[0];
-				if (document.getElementById('facebook-jssdk')) {return;}
-				js = document.createElement('script');
-				js.id = 'facebook-jssdk';
-				js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
-				fjs.parentNode.insertBefore(js, fjs);
-			}
-		};
-	})();
 </script>
 
 
@@ -33,22 +17,9 @@
 			design style from: <a href="https://leekduck.com/" target="_blank" rel="noopener">Leek Duck</a>
 		</li>
 		<li>
-			report an issue on <a href="https://github.com/rplus/pokemongo-shiny/issues" target="_blank" rel="noopener">GitHub repo</a>
-			<br>
-			or add a new shiny one?
-		</li>
-		<li>
-			<details class="fb-like-details">
-				<summary onclick={ initFaceookLikeBtn }>
-					Give a 👍️ with Facebook?
-				</summary>
-				<div class="fb-like"
-					data-href="https://rplus.github.io/Pokemon-shiny/"
-					data-layout="button_count"
-					data-action="like"
-					data-share="true">
-				</div>
-			</details>
+			Give a ⭐ on this <a href="https://github.com/rplus/pokemongo-shiny/" target="_blank" rel="noopener">GitHub repo</a>
+			<br />
+			or report an issue :P
 		</li>
 	</ul>
 </footer>

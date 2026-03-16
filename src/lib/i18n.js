@@ -175,6 +175,10 @@ let _words = {
 		'en': 'Custom data source url',
 		'zh': '自訂資料網址',
 	},
+	'custom.default': {
+		'en': 'Default',
+		'zh': '預設',
+	},
 	'custom.reset_all_config': {
 		'en': 'RESET all config',
 		'zh': '重置全部設定',

@@ -2,8 +2,17 @@
 	import { _, locale, locales } from 'svelte-i18n';
 	import { config, default_config } from '@/stores.js';
 
+	const pm_source_url = {
+		type: 'json',
+		url: 'https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/pm',
+	};
+
 	function reset_data_source() {
 		$config.source_url = {...default_config.source_url};
+	}
+
+	function use_pm_data_source() {
+		$config.source_url = {...pm_source_url};
 	}
 
 	function reset_all_config() {
@@ -71,8 +80,14 @@
 							<option value="csv">csv</option>
 							<option value="json">json</option>
 						</select>
-						<input type="reset" onclick={reset_data_source}>
 					</label>
+
+					<div class="display:flex gap:.5em justify-content:flex-end">
+						<button type="button" onclick={use_pm_data_source}>
+							{$_('custom.default')}
+						</button>
+						<input type="reset" onclick={reset_data_source}>
+					</div>
 				</div>
 			</details>
 		</li>

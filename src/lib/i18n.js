@@ -1,5 +1,5 @@
 import { locale, init, addMessages } from 'svelte-i18n';
-import { set_item, get_item, isDev, } from '@lib/u.js';
+import { set_item, get_item, } from '@lib/u.js';
 
 let resources = {};
 let _words = {
@@ -228,7 +228,7 @@ for (let _w in _words) {
 }
 // console.log(resources);
 
-if (missing_words.length && isDev()) {
+if (missing_words.length && import.meta.env.DEV) {
 	console.warn({ missing_words });
 }
 

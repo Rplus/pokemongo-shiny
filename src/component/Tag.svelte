@@ -70,19 +70,7 @@
 	>
 		<div class="tag-cloud display:flex flex-wrap:wrap gap:.5em place-content:center">
 			{#each tags_cloud as tag (tag.label)}
-				<label class="tag
-					display:inline-flex place-items:center
-					border-radius:1em
-					padding:.5em|1em
-					line-height:1
-					border-bottom:3px|solid|#0000
-					cursor:pointer
-					text-transform:uppercase
-					color:#fff
-					background-color:#9996
-					text-shadow:1px|1px|1px|#0009
-					font-size:smaller
-					font-weight:900"
+				<label class="tag"
 					title="count:{tag.count}"
 				>
 					<input type="checkbox" class="sr-only-u" bind:checked={tag.checked}>
@@ -101,6 +89,20 @@
 
 <style>
 	.tag {
+		display: inline-flex;
+		place-items: center;
+		border-radius: 1em;
+		padding: .5em 1em;
+		line-height: 1;
+		border-bottom: 3px solid #0000;
+		cursor: pointer;
+		text-transform: uppercase;
+		color: #fff;
+		background-color: #9996;
+		text-shadow: 1px 1px 1px #0009;
+		font-size: smaller;
+		font-weight: 900;
+
 		&:has(input:checked) {
 			background-color: var(--pm-grid-color1, #990a);
 			border-bottom-color: var(--pm-grid-color2, var(--main-color));
@@ -109,8 +111,8 @@
 
 	.switcher {
 		appearance: none;
-		font-family: inherit;
-		font-size: smaller;
+		font-family: monospace;
+		font-size: larger;
 		cursor: pointer;
 
 		&::after,
@@ -119,7 +121,7 @@
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
-			padding: 1px 2px;
+			padding: 1px 3px;
 			opacity: 0.5;
 		}
 

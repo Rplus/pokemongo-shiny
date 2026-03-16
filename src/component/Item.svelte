@@ -29,7 +29,7 @@
 	class:img_diff={$config.img_diff}
 	data-index={pm.index}
 	onclick={() => handle_click_pm(pm.index)}
-	style="--group-order:{pm.order || 0};--dex-order:{pm.dex};"
+	style="--group-order:{pm.sort_order};--dex-order:{pm.dex};"
 	title={title}
 >
 	<div class="img-box"

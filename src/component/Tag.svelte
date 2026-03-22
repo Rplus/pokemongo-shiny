@@ -20,6 +20,9 @@
 		})
 	);
 
+	let primary_tags = $derived.by(() => tags_cloud.filter(tag => !tag.label.startsWith('-')));
+	let complement_tags = $derived.by(() => tags_cloud.filter(tag => tag.label.startsWith('-')));
+
 	$effect(() => {
 		set_item('filter_is_cap', is_cap);
 	})
@@ -69,7 +72,7 @@
 		 style="max-width: var(--max-width);"
 	>
 		<div class="tag-cloud display:flex flex-wrap:wrap gap:.5em place-content:center">
-			{#each tags_cloud as tag (tag.label)}
+			{#each primary_tags as tag (tag.label)}
 				<label class="tag
 					display:inline-flex place-items:center
 					border-radius:1em
@@ -90,9 +93,35 @@
 					<!-- <sup>({tag.count})</sup> -->
 				</label>
 			{/each}
+		</div>
 
-			<div class="border-right:1px|dotted height:1em align-self:center"></div>
+		{#if complement_tags.length}
+			<div class="tag-cloud tag-cloud-complement display:flex flex-wrap:wrap gap:.5em place-content:center margin-top:.5em padding-top:.5em">
+				{#each complement_tags as tag (tag.label)}
+					<label class="tag
+						display:inline-flex place-items:center
+						border-radius:1em
+						padding:.5em|1em
+						line-height:1
+						border-bottom:3px|solid|#0000
+						cursor:pointer
+						text-transform:uppercase
+						color:#fff
+						background-color:#9996
+						text-shadow:1px|1px|1px|#0009
+						font-size:smaller
+						font-weight:900"
+						title="count:{tag.count}"
+					>
+						<input type="checkbox" class="sr-only-u" bind:checked={tag.checked}>
+						{tag.label}
+						<!-- <sup>({tag.count})</sup> -->
+					</label>
+				{/each}
+			</div>
+		{/if}
 
+		<div class="tag-cloud-actions margin-top:.5em padding-top:.5em text-align:center">
 			<input type="reset" onclick={reset_tags}>
 		</div>
 		<svelte:element this={style_tag}>{style}</svelte:element>
@@ -136,6 +165,15 @@
 
 	.tag-details[open] {
 		padding-bottom: 1em;
+	}
+
+	.filter-box {
+		flex-direction: column;
+	}
+
+	.tag-cloud-complement,
+	.tag-cloud-actions {
+		border-top: 1px dashed #0003;
 	}
 	summary {
 		.tag-details[open] &,

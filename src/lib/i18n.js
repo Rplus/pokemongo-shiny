@@ -1,5 +1,5 @@
 import { locale, init, addMessages } from 'svelte-i18n';
-import { set_item, get_item, isDev, } from '@lib/u.js';
+import { set_item, get_item, } from '@lib/u.js';
 
 let resources = {};
 let _words = {
@@ -60,6 +60,10 @@ let _words = {
 	'tag.intersection_selected': {
 		'en': 'Union - [Intersection]',
 		'zh': '聯集 [交集]',
+	},
+	'tag.invert_selection': {
+		'en': 'Invert',
+		'zh': '反選',
 	},
 	'record': {
 		'en': 'Record',
@@ -175,6 +179,10 @@ let _words = {
 		'en': 'Custom data source url',
 		'zh': '自訂資料網址',
 	},
+	'custom.default': {
+		'en': 'Default',
+		'zh': '預設',
+	},
 	'custom.reset_all_config': {
 		'en': 'RESET all config',
 		'zh': '重置全部設定',
@@ -224,7 +232,7 @@ for (let _w in _words) {
 }
 // console.log(resources);
 
-if (missing_words.length && isDev()) {
+if (missing_words.length && import.meta.env.DEV) {
 	console.warn({ missing_words });
 }
 

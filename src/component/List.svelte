@@ -98,7 +98,7 @@
 		{status_visibility_class}"
 	>
 		{#each groups as group, index}
-			<div class="pm-group position:relative display:none flex-wrap:wrap place-content:center gap:.5em">
+			<div class="pm-group">
 				<!--
 				<div class="position:absolute color:#0003">
 					{group.label}
@@ -148,6 +148,11 @@
 .pm-group {
 	/* content-visibility: auto; */
 	/* contain-intrinsic-size: 300px; */
+	position: relative;
+	display: none;
+	flex-wrap: wrap;
+	place-content: center;
+	gap: .5em;
 }
 
 </style>

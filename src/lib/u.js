@@ -36,10 +36,6 @@ export async function get_all_records() {
 	return await get_lf_data('records') || [];
 }
 
-export function isDev() {
-	return location.hostname === 'localhost';
-}
-
 export async function fetch_data(url, type = 'json') {
 	try	{
 		let response = await fetch(url);

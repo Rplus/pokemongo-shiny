@@ -183,6 +183,9 @@ function get_default_tags(tags = [], pid = '', dex = 1) {
 	if (!tags.includes('costume')) {
 		tags.push('-costume');
 	}
+	if (!tags.includes('baby')) {
+		tags.push('-baby');
+	}
 	let form = pid.split('.f')[1];
 	let is_gigantamax = form === 'GIGANTAMAX' || tags.includes('GIGANTAMAX') || tags.includes('🦖GIGANTAMAX');
 	if (!is_gigantamax) {

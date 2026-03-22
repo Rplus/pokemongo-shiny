@@ -44,6 +44,12 @@
 		return ordered_style + selectors + `{ display:flex; }`;
 	});
 
+	function invert_selection_tags() {
+		tags_cloud.forEach(tag => {
+			tag.checked = !tag.checked;
+		})
+	}
+
 	function reset_tags() {
 		is_cap = false;
 		tags_cloud.forEach(tag => {
@@ -55,39 +61,22 @@
 
 </script>
 
-<details bind:open={$config.open_tags} class="tag-details margin:auto background-color:#9993 padding:0|3vw">
-	<summary class="text-align:center hide-for-print opacity:0 transition:opacity|.3s"
-		accesskey="t">
+<details bind:open={$config.open_tags} class="tag-details">
+	<summary accesskey="t" class="hide-for-print">
 		🔖 {$_('tag')}
-	<label class="display:inline-flex width:fit-content margin:.5em|auto">
-		<input class="switcher" type="checkbox" data-inactive="∪" data-active="∩"
-			title={is_cap ? $_('tag.intersection_selected') : $_('tag.union_selected')}
-			bind:checked={is_cap}
-		/>
-	</label>
+		<label>
+			<input class="switcher" type="checkbox" data-inactive="∪" data-active="∩"
+				title={is_cap ? $_('tag.intersection_selected') : $_('tag.union_selected')}
+				bind:checked={is_cap}
+			/>
+		</label>
 	</summary>
 
 
-	<div class="filter-box display:flex align-items:center justify-content:center margin:auto"
-		 style="max-width: var(--max-width);"
-	>
-		<div class="tag-cloud display:flex flex-wrap:wrap gap:.5em place-content:center">
+	<div class="filter-box margin:auto" style="max-width: var(--max-width);">
+		<div class="tag-cloud">
 			{#each primary_tags as tag (tag.label)}
-				<label class="tag
-					display:inline-flex place-items:center
-					border-radius:1em
-					padding:.5em|1em
-					line-height:1
-					border-bottom:3px|solid|#0000
-					cursor:pointer
-					text-transform:uppercase
-					color:#fff
-					background-color:#9996
-					text-shadow:1px|1px|1px|#0009
-					font-size:smaller
-					font-weight:900"
-					title="count:{tag.count}"
-				>
+				<label class="tag" title="count:{tag.count}">
 					<input type="checkbox" class="sr-only-u" bind:checked={tag.checked}>
 					{tag.label}
 					<!-- <sup>({tag.count})</sup> -->
@@ -96,23 +85,9 @@
 		</div>
 
 		{#if complement_tags.length}
-			<div class="tag-cloud tag-cloud-complement display:flex flex-wrap:wrap gap:.5em place-content:center margin-top:.5em padding-top:.5em">
+			<div class="tag-cloud tag-cloud-complement">
 				{#each complement_tags as tag (tag.label)}
-					<label class="tag
-						display:inline-flex place-items:center
-						border-radius:1em
-						padding:.5em|1em
-						line-height:1
-						border-bottom:3px|solid|#0000
-						cursor:pointer
-						text-transform:uppercase
-						color:#fff
-						background-color:#9996
-						text-shadow:1px|1px|1px|#0009
-						font-size:smaller
-						font-weight:900"
-						title="count:{tag.count}"
-					>
+					<label class="tag" title="count:{tag.count}">
 						<input type="checkbox" class="sr-only-u" bind:checked={tag.checked}>
 						{tag.label}
 						<!-- <sup>({tag.count})</sup> -->
@@ -121,8 +96,9 @@
 			</div>
 		{/if}
 
-		<div class="tag-cloud-actions margin-top:.5em padding-top:.5em text-align:center">
+		<div class="tag-cloud-actions">
 			<input type="reset" onclick={reset_tags}>
+			<!-- <input type="button" value={$_('tag.invert_selection')} onclick={invert_selection_tags}> -->
 		</div>
 		<svelte:element this={style_tag}>{style}</svelte:element>
 	</div>
@@ -130,6 +106,20 @@
 
 <style>
 	.tag {
+		display: inline-flex;
+		place-items: center;
+		border-radius: 1em;
+		padding: .5em 1em;
+		line-height: 1;
+		border-bottom: 3px solid #0000;
+		cursor: pointer;
+		text-transform: uppercase;
+		color: #fff;
+		background-color: #9996;
+		text-shadow: 1px 1px 1px #0009;
+		font-size: smaller;
+		font-weight: 900;
+
 		&:has(input:checked) {
 			background-color: var(--pm-grid-color1, #990a);
 			border-bottom-color: var(--pm-grid-color2, var(--main-color));
@@ -138,8 +128,8 @@
 
 	.switcher {
 		appearance: none;
-		font-family: inherit;
-		font-size: smaller;
+		font-family: monospace;
+		font-size: larger;
 		cursor: pointer;
 
 		&::after,
@@ -148,7 +138,7 @@
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
-			padding: 1px 2px;
+			padding: 1px 3px;
 			opacity: 0.5;
 		}
 
@@ -163,23 +153,51 @@
 		}
 	}
 
-	.tag-details[open] {
-		padding-bottom: 1em;
-	}
+	.tag-details {
+		margin: auto;
+		background-color: #9993;
+		padding: 0 3vw;
 
-	.filter-box {
-		flex-direction: column;
-	}
+		&[open] {
+			padding-bottom: 1em;
+		}
 
-	.tag-cloud-complement,
-	.tag-cloud-actions {
-		border-top: 1px dashed #0003;
-	}
-	summary {
-		.tag-details[open] &,
-		.tag-details:hover & {
+		summary {
+			text-align: center;
+			opacity: 0;
+			transition: opacity .3s;
+
+			label {
+				display: inline-flex;
+				width: fit-content;
+				margin: .5em auto;
+			}
+		}
+
+		&[open] summary,
+		&:hover summary {
 			opacity: 1;
 		}
 	}
 
+	.tag-cloud {
+		display: flex;
+		flex-wrap: wrap;
+		gap: .5em;
+		place-content: center;
+	}
+
+	.tag-cloud-complement {
+		margin-top: .5em;
+		padding-top: .5em;
+		border-top: 1px dashed #0003;
+	}
+
+	.tag-cloud-actions {
+		max-width: 70%;
+		border-top: 1px dashed #0003;
+		margin: .5em auto 0;
+		padding-top: .5em;
+		text-align: center;
+	}
 </style>

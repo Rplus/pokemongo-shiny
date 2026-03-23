@@ -45,19 +45,6 @@ export function handle_pms(pms_json) {
 		confirm_to_reset();
 	}
 
-	let gen_range = [
-		0,
-		151,
-		251,
-		386,
-		493,
-		649,
-		721,
-		809,
-		905,
-		1025,
-	];
-
 	// handle groups
 	let root_map = {};
 	let root_index_map = {};
@@ -77,13 +64,7 @@ export function handle_pms(pms_json) {
 			max_index = index;
 		}
 
-
-		let gen = 0;
-		gen_range.forEach((g, index) => {
-			if (dex > g) {
-				gen = index + 1;
-			}
-		});
+		let gen = get_gen(dex) ?? 1;
 
 		{ // collect tags
 			let _tags = (pm.tag || '').split(/\=/);
@@ -173,6 +154,13 @@ export function handle_pms(pms_json) {
 		max_index,
 		tags,
 	};
+}
+
+function get_gen(dex_num = 0) {
+	get_gen._range = get_gen._range || [ 0, 151, 251, 386, 493, 649, 721, 809, 905, 1025, ];
+	const index = get_gen._range.findIndex(limit => limit > dex_num);
+	if (index > 0) return index;
+	// if dex error return undefined
 }
 
 export function get_name(names, lang = 'en') {

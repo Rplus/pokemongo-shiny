@@ -20,6 +20,9 @@
 		})
 	);
 
+	let primary_tags = $derived.by(() => tags_cloud.filter(tag => !tag.label.startsWith('-')));
+	let complement_tags = $derived.by(() => tags_cloud.filter(tag => tag.label.startsWith('-')));
+
 	$effect(() => {
 		set_item('filter_is_cap', is_cap);
 	})
@@ -72,7 +75,7 @@
 
 	<div class="filter-box margin:auto" style="max-width: var(--max-width);">
 		<div class="tag-cloud">
-			{#each tags_cloud as tag (tag.label)}
+			{#each primary_tags as tag (tag.label)}
 				<label class="tag" title="count:{tag.count}">
 					<input type="checkbox" class="sr-only-u" bind:checked={tag.checked}>
 					{tag.label}
@@ -80,6 +83,18 @@
 				</label>
 			{/each}
 		</div>
+
+		{#if complement_tags.length}
+			<div class="tag-cloud tag-cloud-complement">
+				{#each complement_tags as tag (tag.label)}
+					<label class="tag" title="count:{tag.count}">
+						<input type="checkbox" class="sr-only-u" bind:checked={tag.checked}>
+						{tag.label}
+						<!-- <sup>({tag.count})</sup> -->
+					</label>
+				{/each}
+			</div>
+		{/if}
 
 		<div class="tag-cloud-actions">
 			<input type="reset" onclick={reset_tags}>
@@ -170,6 +185,12 @@
 		flex-wrap: wrap;
 		gap: .5em;
 		place-content: center;
+	}
+
+	.tag-cloud-complement {
+		margin-top: .5em;
+		padding-top: .5em;
+		border-top: 1px dashed #0003;
 	}
 
 	.tag-cloud-actions {

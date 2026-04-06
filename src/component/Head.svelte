@@ -78,7 +78,8 @@
 					>
 
 					<div class="number font-size:1.2rem">
-						{status_counter[index]}
+						<!-- workaround pull#77 -->
+						{index === 2 ? counts.own.summary : status_counter[index]}
 					</div>
 					<div class="white-space:nowrap overflow:hidden text-overflow:ellipsis width:100% padding:0|2 margin-top:.25em font-size:smaller text-transform:capitalize opacity:0.5">
 						{$_(`status.${status_labels[index]}`)}

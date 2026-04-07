@@ -84,11 +84,15 @@ export function handle_pms(pms_json) {
 			pm.suffix = pm.suffix.replace(/\|/g, '\n');
 		}
 
+		let order = get_defined_order(pm.order);
+
 		let op_pm = {
 			...pm,
+			order,
 			index,
 			dex,
 			name: names[dex],
+			sort_order: order ?? index,
 			time_order: +new Date(pm.debut) / 1000 + dex,
 			// costume: pm.pid.includes('.'),
 			// shiny: new Date(pm.debut) < today,
@@ -129,10 +133,23 @@ export function handle_pms(pms_json) {
 					pids: [],
 					pms: [],
 					root_groups: [],
+					min_dex: dex,
+					sort_index: index,
+					sort_order: op_pm.sort_order,
 				};
 			}
-			_root.groups[_group_index].pids.push(pm.pid);
-			_root.groups[_group_index].pms.push(op_pm);
+			let group = _root.groups[_group_index];
+			group.pids.push(pm.pid);
+			group.pms.push(op_pm);
+			group.min_dex = Math.min(group.min_dex, dex);
+
+			if (
+				op_pm.sort_order < group.sort_order ||
+				(op_pm.sort_order === group.sort_order && index < group.sort_index)
+			) {
+				group.sort_order = op_pm.sort_order;
+				group.sort_index = index;
+			}
 		}
 
 		return op_pm;
@@ -142,15 +159,14 @@ export function handle_pms(pms_json) {
 	root_map = null;
 	root_index_map = null;
 
-	let sort_by_min_dex = (a, b) => {
-		let minA = Math.min(...a.pms.map(p => p.dex)) || 0;
-		let minB = Math.min(...b.pms.map(p => p.dex)) || 0;
-		return minA - minB;
-	};
+	let groups = all_groups.map(i => i.groups).flat();
+	groups.forEach(group => {
+		group.pms.sort(sort_by_effective_order);
+	});
 
 	return {
 		pms,
-		groups: all_groups.map(i => i.groups).flat().sort(sort_by_min_dex),
+		groups: groups.sort(sort_groups),
 		max_index,
 		tags,
 	};
@@ -165,6 +181,37 @@ function get_gen(dex_num = 0) {
 
 export function get_name(names, lang = 'en') {
 	return names?.[lang] || names?.en || '';
+}
+
+function get_defined_order(order) {
+	if (order === '' || order === undefined || order === null) {
+		return undefined;
+	}
+
+	let op = Number(order);
+	return Number.isFinite(op) ? op : undefined;
+}
+
+function sort_by_effective_order(a, b) {
+	let orderA = a.sort_order ?? a.index ?? 0;
+	let orderB = b.sort_order ?? b.index ?? 0;
+
+	if (orderA !== orderB) {
+		return orderA - orderB;
+	}
+
+	return (a.index ?? a.sort_index ?? 0) - (b.index ?? b.sort_index ?? 0);
+}
+
+function sort_groups(a, b) {
+	let minA = a.min_dex || 0;
+	let minB = b.min_dex || 0;
+
+	if (minA !== minB) {
+		return minA - minB;
+	}
+
+	return sort_by_effective_order(a, b);
 }
 
 function get_default_tags(tags = [], pid = '', dex = 1) {

@@ -94,7 +94,7 @@
 	flex-wrap: wrap;
 	gap: 2em;
 	max-width: var(--max-width, 1200px);
-	margin: 0 auto;
+	margin: 2em auto;
 	padding: 0 3vw 3em;
 	text-align: center;
 	justify-content: center;

@@ -11,8 +11,6 @@
 			.reduce((all, tag) => {
 				const target = filter_manager.get_cate([...tag][0]);
 
-				// console.log(111, pokemonStore.tags, pokemonStore.pid_with_tags);
-
 				if (!all[target]) {
 					all[target] = [];
 				}
@@ -171,10 +169,10 @@
 	}
 }
 
-
 .tag-details {
 	position: sticky;
 	top: 0;
+	top: -.5em;
 	z-index: 100;
 	margin: auto;
 	background-color: #9993;

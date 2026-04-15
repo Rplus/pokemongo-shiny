@@ -1,8 +1,6 @@
-import { locale, init, addMessages } from 'svelte-i18n';
 import { set_item, get_item, } from '@lib/u.js';
 
-let resources = {};
-let _words = {
+const dictionaries = {
 	'nickname': {
 		'en': 'Nickname',
 		'zh': '暱稱',
@@ -210,45 +208,59 @@ let _words = {
 	},
 };
 
-let langs = [...new Set(
-	Object.values(_words)
-		.map(i => Object.keys(i))
-		.flat()
+const available_langs = [...new Set(
+	Object.values(dictionaries).flatMap(_i => Object.keys(_i))
 )];
 
-let missing_words = [];
+let _current_lang = $state(get_initial_lang());
 
-for (let _w in _words) {
-	for (let lng of langs) {
-		if (!resources[lng]) {
-			resources[lng] = {};
-		}
-		if (_words[_w][lng]) {
-			resources[lng][_w] = _words[_w][lng];
-		} else {
-			missing_words.push([lng, _w].join());
-		}
+// check missing translations under dev-mode
+if (import.meta.env.DEV) {
+	const missing = [];
+
+	for (const [key, translations] of Object.entries(dictionaries)) {
+		available_langs.forEach(lang => {
+			if (!translations[lang]) {
+				missing.push(`${lang}: ${key}`);
+			}
+		});
+	}
+
+	if (missing.length > 0) {
+		console.warn('i18n: Missing translations detected:', missing);
 	}
 }
-// console.log(resources);
 
-if (missing_words.length && import.meta.env.DEV) {
-	console.warn({ missing_words });
-}
+export const i18n = {
+	get langs() {
+		return available_langs;
+	},
+	get lang() {
+		return _current_lang;
+	},
+	set lang(val) {
+		if (available_langs.includes(val)) {
+			_current_lang = val;
+			set_item('lang', val); // Save to storage whenever lang changes
+			console.log('Language changed to:', val);
+		}
+	},
 
-langs.forEach(lng => addMessages(lng, resources[lng]) );
+	get t() {
+		return (key) => {
+			const _entry = dictionaries[key];
+			// Priority: Current -> English -> Key itself
+			return _entry?.[_current_lang] || _entry?.['en'] || key;
+		};
+	}
+};
 
-let lang_index = langs.indexOf(
-	navigator.language && navigator.language.split('-').shift()
-);
-let prefer_lang = lang_index === -1 ? 'en' : langs[lang_index];
+// Determine initial language (Priority: Storage > Browser > Fallback)
+function get_initial_lang() {
+	const _stored = get_item('lang');
+	if (_stored && available_langs.includes(_stored)) return _stored;
 
-init({
-	fallbackLocale: 'en',
-	initialLocale: get_item('lang') || prefer_lang,
-});
-
-locale.subscribe(_locale => {
-	console.log('_locale change', _locale);
-	set_item('lang', _locale);
-});
+	// Detect browser language (e.g., 'zh-TW' -> 'zh')
+	const _browser_lang = navigator.language?.split('-').shift();
+	return available_langs.includes(_browser_lang) ? _browser_lang : 'en';
+};

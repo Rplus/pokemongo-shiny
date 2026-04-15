@@ -1,36 +1,28 @@
 <script>
-	import { status, name, } from '@/stores.js'
 	import { recorder, } from '@lib/recorder.svelte.js';
-	import { _, } from 'svelte-i18n';
-
-	function add_record() {
-		recorder.add({
-			name: $name,
-			status: $status,
-		});
-	}
+	import { i18n } from '@lib/i18n.svelte.js';
 </script>
 
-<label class="btn-icon ctrl-btn bottom:1rem hide-for-print" for="ctrl-checkbox">
+<label class="btn-icon ctrl-btn hide-for-print" for="ctrl-checkbox" style="bottom:1rem">
 	⚙️
-	<span class="sr-only">
+	<span class="sr-only-u">
 		toggle control panel
 	</span>
 </label>
 
 
-<button class="btn-icon record-btn bottom:3rem hide-for-print"
-	onclick={() => add_record()}
-	title={$_('record.save')}
+<button class="btn-icon record-btn hide-for-print" style="bottom:3rem"
+	onclick={recorder.add_current}
+	title={i18n.t('record.save')}
 >
 	💾
-	<span class="sr-only">
+	<span class="sr-only-u">
 		Save current record
 	</span>
 </button>
 
-<label class="btn-icon locker-btn bottom:5rem hide-for-print" for="list-locker">
-	<span class="sr-only">
+<label class="btn-icon locker-btn hide-for-print" for="list-locker" style="bottom: 5rem">
+	<span class="sr-only-u">
 		Lock
 	</span>
 </label>

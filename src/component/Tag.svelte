@@ -1,182 +1,218 @@
 <script>
-	import { pm_data, } from '@lib/pm.svelte.js';
-	import { _, } from 'svelte-i18n';
 	import { ordered_style, get_item, set_item, } from '@lib/u.js';
-	import { config, } from '@/stores.js';
+	import { pokemonStore, } from '@lib/pm.svelte.js';
+	import { i18n } from '@lib/i18n.svelte.js';
+	import { config } from '@lib/config.svelte.js';
+	import { filter_manager } from '@lib/filter.svelte.js';
 
-	let { tags, } = pm_data;
+	let tags = $derived(
+		Object.keys(pokemonStore.tags)
+			.toSorted()
+			.reduce((all, tag) => {
+				const target = filter_manager.get_cate([...tag][0]);
 
-	let cached_tags = get_item('checked_tags') || [];
+				// console.log(111, pokemonStore.tags, pokemonStore.pid_with_tags);
 
-	let is_cap = $state(get_item('filter_is_cap') || false);
+				if (!all[target]) {
+					all[target] = [];
+				}
 
-	let tags_cloud = $state(
-		Object.keys(tags).sort().map(tag => {
-			return {
-				label: tag,
-				checked: cached_tags.includes(tag),
-				count: tags[tag].length,
-			};
-		})
+				all[target].push({
+					label: tag,
+					count: pokemonStore.tags[tag].length,
+				});
+
+				return all;
+			}, {})
 	);
 
+	// init
 	$effect(() => {
-		set_item('filter_is_cap', is_cap);
-	})
-
-	let style = $derived.by(() => {
-		let _tags = tags_cloud.map(tag => tag.checked && tag.label).filter(Boolean);
-		set_item('checked_tags', _tags);
-
-		if (!_tags.length) {
-			return '';
-		}
-
-		let selectors = '';
-		if (is_cap) {
-			selectors = '.pm-list .pm' + _tags.map(tag => `.tag-${tag}`).join('');
-		} else {
-			selectors = _tags.map(tag => `.pm-list .pm.tag-${tag}`).join(',');
-		}
-		return ordered_style + selectors + `{ display:flex; }`;
+		const _tags = Object.keys(pokemonStore.tags);
+		_tags.forEach(tag => {
+			if (filter_manager.filter_state[tag] === undefined) {
+				filter_manager.filter_state[tag] = 0;
+			}
+		});
 	});
 
-	function invert_selection_tags() {
-		tags_cloud.forEach(tag => {
-			tag.checked = !tag.checked;
-		})
-	}
-
-	function reset_tags() {
-		is_cap = false;
-		tags_cloud.forEach(tag => {
-			tag.checked = false;
-		})
-	}
-
-	let style_tag = 'style';
 
 </script>
 
-<details bind:open={$config.open_tags} class="tag-details">
+
+<details class="tag-details" bind:open={config.open_tags}>
 	<summary accesskey="t" class="hide-for-print">
-		🔖 {$_('tag')}
-		<label>
-			<input class="switcher" type="checkbox" data-inactive="∪" data-active="∩"
-				title={is_cap ? $_('tag.intersection_selected') : $_('tag.union_selected')}
-				bind:checked={is_cap}
-			/>
-		</label>
+		🏷️ {i18n.t('tag')}
 	</summary>
 
-
-	<div class="filter-box margin:auto" style="max-width: var(--max-width);">
+	<form class="filter-box">
 		<div class="tag-cloud">
-			{#each tags_cloud as tag (tag.label)}
-				<label class="tag" title="count:{tag.count}">
-					<input type="checkbox" class="sr-only-u" bind:checked={tag.checked}>
-					{tag.label}
-					<!-- <sup>({tag.count})</sup> -->
-				</label>
+			{#each filter_manager.filter_cates as cate}
+				<section class="tag-cate flex gap2">
+					<h3 class="category-title">{cate}</h3>
+
+					<div class="hr"></div>
+
+					<div class="tag-list flex gap1">
+						{#each tags[cate] as tag}
+							<div style="position: relative">
+								<button
+									type="button"
+									class="tag"
+									aria-label="filter label {tag.label}, status: {filter_manager.filter_state[tag.label]}"
+									data-state={filter_manager.filter_state[tag.label]}
+									onclick={() => filter_manager.toggle_tag(tag.label, 1)}
+								>
+									<span aria-hidden="true">{tag.label}</span>
+								</button>
+
+								<button
+									type="button"
+									class="tag-minus"
+									onclick={() => filter_manager.toggle_tag(tag.label, -1)}
+								>
+									⛔
+								</button>
+							</div>
+
+						{/each}
+					</div>
+				</section>
 			{/each}
 		</div>
 
 		<div class="tag-cloud-actions">
-			<input type="reset" onclick={reset_tags}>
-			<!-- <input type="button" value={$_('tag.invert_selection')} onclick={invert_selection_tags}> -->
+			<input type="reset" onclick={() => filter_manager.reset_filter()}>
 		</div>
-		<svelte:element this={style_tag}>{style}</svelte:element>
-	</div>
+	</form>
 </details>
 
+
+
 <style>
-	.tag {
-		display: inline-flex;
-		place-items: center;
-		border-radius: 1em;
-		padding: .5em 1em;
-		line-height: 1;
-		border-bottom: 3px solid #0000;
-		cursor: pointer;
-		text-transform: uppercase;
-		color: #fff;
-		background-color: #9996;
-		text-shadow: 1px 1px 1px #0009;
-		font-size: smaller;
-		font-weight: 900;
+.tag-cate {
+	margin-bottom: 1rem;
+}
+.tag-list {
+	flex-wrap: wrap;
+}
+.category-title {
+	margin: 0;
+}
 
-		&:has(input:checked) {
-			background-color: var(--pm-grid-color1, #990a);
-			border-bottom-color: var(--pm-grid-color2, var(--main-color));
-		}
+.hr {
+	border-right: 2px dashed #9993;
+}
+
+.tag {
+	position: relative;
+	display: inline-flex;
+	place-items: center;
+	border-radius: 1em;
+	padding: .5em 1em;
+	line-height: 1;
+	border: 0;
+	border-bottom: 3px solid #0000;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #9999;
+	text-shadow: 1px 1px 1px #0009;
+	font-size: smaller;
+	font-weight: 900;
+	user-select: none;
+
+	&::before {
+		content: var(--symbol, '');
+		position: absolute;
+		top: 0;
+		left: -.25em;
+		z-index: 1;
 	}
 
-	.switcher {
-		appearance: none;
-		font-family: monospace;
-		font-size: larger;
-		cursor: pointer;
+	&[data-state="1"] {
+		--symbol: '➕';
+		background-color: var(--pm-grid-color1, #990a);
+		border-bottom-color: var(--pm-grid-color2, var(--main-color));
+	}
+	&[data-state="-1"] {
+		--symbol: '➖';
+		background-color: #6006;
+		border-bottom-color: #9003;
 
-		&::after,
-		&::before {
-			content: attr(data-inactive);
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			padding: 1px 3px;
-			opacity: 0.5;
-		}
-
-		&::after {
-			content: attr(data-active);
-		}
-
-		&:not(:checked)::before,
-		&:checked::after {
-			box-shadow: inset 0 0 0 1px #6669;
-			background-color: #9999;
+		& span {
+			filter: blur(1px);
 		}
 	}
+}
 
-	.tag-details {
-		margin: auto;
-		background-color: #9993;
-		padding: 0 3vw;
+.tag-minus {
+	position: absolute;
+	top: -.5em;
+	right: -.5em;
+	border: 0;
+	opacity: 0;
+  appearance: none;
+  background: none;
+	text-shadow: 1px 1px 1px #0009;
+	/* cursor: not-allowed; */
+	cursor: pointer;
 
-		&[open] {
-			padding-bottom: 1em;
-		}
-
-		summary {
-			text-align: center;
-			opacity: 0;
-			transition: opacity .3s;
-
-			label {
-				display: inline-flex;
-				width: fit-content;
-				margin: .5em auto;
-			}
-		}
-
-		&[open] summary,
-		&:hover summary {
-			opacity: 1;
-		}
+	.tag-list > div:hover & {
+		opacity: .5;
 	}
 
-	.tag-cloud {
-		display: flex;
-		flex-wrap: wrap;
-		gap: .5em;
-		place-content: center;
+	&.tag-minus.tag-minus:hover {
+		opacity: 1;
 	}
 
-	.tag-cloud-actions {
-		max-width: 70%;
-		border-top: 1px dashed #0003;
-		margin: .5em auto 0;
-		padding-top: .5em;
+	&:active {
+		margin-top: 2px;
+	}
+}
+
+
+.tag-details {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	margin: auto;
+	background-color: #9993;
+	background-color: #dddd;
+	padding: 0 3vw;
+
+	&[open] {
+		padding-bottom: 1em;
+	}
+
+	summary {
 		text-align: center;
+		opacity: 0;
+		transition: opacity .3s;
+		padding: 0.5em;
 	}
+
+	&[open] summary,
+	&:hover summary {
+		opacity: 1;
+	}
+}
+
+.tag-cloud {
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.tag-cloud-actions {
+	max-width: 70%;
+	border-top: 1px dashed #0003;
+	margin: .5em auto 0;
+	padding-top: .5em;
+	text-align: center;
+}
+
+.filter-box {
+	margin: 0 auto;
+	max-width: var(--max-width, 1200px);
+}
 </style>

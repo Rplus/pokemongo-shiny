@@ -1,22 +1,19 @@
 <script>
-	import { _, locale, locales } from 'svelte-i18n';
-	import { config, default_config } from '@/stores.js';
+	import { i18n } from '@lib/i18n.svelte.js';
+	// import { config, DEFAULT_CONFIG } from '@/stores.js';
+	import { config, DEFAULT_CONFIG, reset_all_config } from '@lib/config.svelte.js';
 
 	const pm_source_url = {
 		type: 'json',
-		url: 'https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/pm',
+		url: 'https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/pm2026',
 	};
 
 	function reset_data_source() {
-		$config.source_url = {...default_config.source_url};
+		config.source_url = {...DEFAULT_CONFIG.source_url};
 	}
 
 	function use_pm_data_source() {
-		$config.source_url = {...pm_source_url};
-	}
-
-	function reset_all_config() {
-		$config = {...default_config};
+		config.source_url = {...pm_source_url};
 	}
 
 </script>
@@ -25,9 +22,9 @@
 	<ul>
 		<li data-marker="🌐">
 			<label>
-				{$_('lang')}
-				<select bind:value={$locale}>
-					{#each $locales as lang}
+				{i18n.t('lang')}
+				<select bind:value={i18n.lang}>
+					{#each i18n.langs as lang}
 						<option value={lang}>{lang}</option>
 					{/each}
 				</select>
@@ -38,8 +35,8 @@
 
 		<li data-marker="🔎">
 			<label>
-				<input type="checkbox" bind:checked={$config.img_diff}>
-				{$_('image.diff')}
+				<input type="checkbox" bind:checked={config.img_diff}>
+				{i18n.t('image.diff')}
 			</label>
 		</li>
 
@@ -47,15 +44,15 @@
 
 		<li data-marker="📌">
 			<label>
-				<input type="checkbox" bind:checked={$config.show_name}>
-				{$_('show.name')}
+				<input type="checkbox" bind:checked={config.show_name}>
+				{i18n.t('show.name')}
 			</label>
 		</li>
 
 		<li data-marker="📌">
 			<label>
-				<input type="checkbox" bind:checked={$config.show_suffix}>
-				{$_('show.suffix')}
+				<input type="checkbox" bind:checked={config.show_suffix}>
+				{i18n.t('show.suffix')}
 			</label>
 		</li>
 
@@ -65,26 +62,26 @@
 
 			<details>
 				<summary>
-					🚧 {$_('custom.source_url')} 🚧
+					🚧 {i18n.t('custom.source_url')} 🚧
 				</summary>
 
 				<div>
 					pms:
-					<label class="display:flex gap:.25em margin-bottom:.5em">
+					<label class="flex gap1" style="margin-bottom:.5em">
 						<!-- https://api.npoint.io/6acfd46ce5bfdbca61af -->
 						<input type="text"
-							class="width:4em flex-grow:1"
-							bind:value={$config.source_url.url}
+							tyle="width:4em; flex-grow:1;"
+							bind:value={config.source_url.url}
 						>
-						<select bind:value={$config.source_url.type}>
+						<select bind:value={config.source_url.type}>
 							<option value="csv">csv</option>
 							<option value="json">json</option>
 						</select>
 					</label>
 
-					<div class="display:flex gap:.5em justify-content:flex-end">
+					<div class="flex jc-fe gap2">
 						<button type="button" onclick={use_pm_data_source}>
-							{$_('custom.default')}
+							{i18n.t('custom.default')}
 						</button>
 						<input type="reset" onclick={reset_data_source}>
 					</div>
@@ -94,9 +91,9 @@
 
 		<hr>
 
-		<div class="display:flex">
-			<button class="margin:auto" onclick={reset_all_config}>
-				{$_('custom.reset_all_config')}
+		<div class="flex">
+			<button style="margin:auto" onclick={reset_all_config}>
+				{i18n.t('custom.reset_all_config')}
 			</button>
 		</div>
 	</ul>

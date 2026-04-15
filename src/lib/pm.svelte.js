@@ -1,158 +1,241 @@
 import pm_local_csv_url from '@data/pm.csv?url';
 import raw_names from '@data/name.csv';
 import { csv2json, fetch_data, get_item, confirm_to_reset, } from '@lib/u.js';
+import { recorder, } from '@lib/recorder.svelte.js';
+import { session } from '@lib/config.svelte.js';
 
-export const pm_data = await get_pms();
+class PokemonManager {
+	groups = $state([]);
+	tags = $state([]);
+	is_loading = $state(true);
+	error = $state(null);
+	pid_with_tags = $state(new Map());
 
-export async function get_pms() {
-	let data_source = {
-		url: pm_local_csv_url,
-		type: 'csv',
-	};
+	get config_url() {
+		return localStorage.getItem('pokemon_api_url') || pm_local_csv_url;
+	}
 
-	let config = get_item('config');
-	if (config?.source_url?.url) {
-		data_source = {
-			...data_source,
-			...config.source_url,
+	async init() {
+		this.is_loading = true;
+		this.error = null;
+
+		try {
+			// Step 1: Basic setup
+			const response = await fetch(this.config_url);
+			if (!response.ok) throw new Error('Network response was not ok');
+
+			const csv_text = await response.text();
+			const { groups, tags, pid_with_tags, } = handle_pms(csv2json(csv_text));
+
+			this.groups = groups;
+			this.tags = tags;
+			this.pid_with_tags = pid_with_tags;
+
+			// Step 2: Data priority logic (The core sequence)
+			// Priority 1: URL session (already parsed in config.svelte.js)
+			if (session.status) {
+				this.fn_overwrite_status(session.status);
+			} else {
+				// Priority 2: Latest record
+				await recorder.init();
+
+				if (recorder.records && recorder.records.length > 0) {
+					// Use the first record (index 0)
+					this.fn_overwrite_status(recorder.records[0].status);
+					session.name = recorder.records[0].name;
+				}
+				// Priority 3: Default empty (already set by handle_pms)
+			}
+
+		} catch (err) {
+			this.error = "Failed to load data: " + err.message;
+		} finally {
+			this.is_loading = false;
+		}
+	}
+
+	sorted_pms = $derived.by(() => {
+		return this.groups
+			.flatMap(group => group[1] || [])
+			.toSorted((a, b) => a._gidx - b._gidx || a._pidx - b._pidx);
+	});
+
+	// status_counts uses the pre-sorted list, making it much faster
+	status_counts = $derived.by(() => {
+		const counts = { 0: 0, 1: 0, 2: 0, 3: 0 };
+		this.sorted_pms.forEach(pm => {
+			const s = Number(pm.status || 0);
+			if (counts[s] !== undefined) counts[s]++;
+		});
+		return counts;
+	});
+
+	status_summary = $derived.by(() => {
+		const counts = this.status_counts;
+		return [
+			{ label: 'none',  count: counts[0], },
+			{ label: 'met',   count: counts[1], },
+			{ label: 'own',   count: counts[2] + counts[3], },
+			{ label: 'extra', count: counts[3], },
+		];
+	});
+
+	status_percent = $derived.by(() => {
+		const counts = this.status_counts;
+		const total = counts[0] + counts[1] + counts[2] + counts[3];
+		return {
+			seen: 100 * (counts[1] + counts[2] + counts[3]) / total,
+			captured: 100 * (counts[2] + counts[3]) / total,
 		};
+	});
+
+	status_string = $derived.by(() => {
+		const grouped_map = new Map();
+
+		this.sorted_pms.forEach(pm => {
+			if (!grouped_map.has(pm._gidx)) grouped_map.set(pm._gidx, []);
+			grouped_map.get(pm._gidx).push(pm.status ?? 0);
+		});
+		return Array.from(grouped_map, ([key, values]) => `${key}.${values.join('')}`).join('-');
+	});
+
+	/**
+	 * Overwrite status from a serialized string (e.g., "1.012-4.001")
+	 * Optimized to avoid nested sorting and ensure O(n) complexity
+	 */
+	fn_overwrite_status(status_str = '1.000-4.000') {
+		if (!status_str || typeof status_str !== 'string') return;
+
+		// 1. Create a flat lookup map for O(1) access
+		// Key format: "_gidx_positionInGroup"
+		const status_lookup = new Map();
+		const sections = status_str.split('-');
+
+		sections.forEach(section => {
+			const [idx1, statuses] = section.split('.');
+			if (idx1 && statuses) {
+				statuses.split('').forEach((s, i) => {
+					status_lookup.set(`${idx1}_${i}`, Number(s));
+				});
+			}
+		});
+
+		// 2. Update status by matching _gidx and sequence
+		// We assume groups are already structured by _gidx
+		this.groups.forEach(group => {
+			const pms = group[1]; // Based on your handle_pms structure [key, pms_array]
+			if (!Array.isArray(pms)) return;
+
+			pms.forEach(pm => {
+				// Use the absolute _pidx (position in family) instead of loop index
+				const g_idx = pm._gidx;
+				const p_idx = pm._pidx;
+
+				const new_val = status_lookup.get(`${g_idx}_${p_idx}`);
+				if (new_val !== undefined) {
+					pm.status = new_val;
+				}
+			});
+		});
 	}
 
-	let pm_raw_data = await fetch_data(data_source.url, data_source.type);
+	// totalPms = $derived(this.groups.reduce((sum, g) => sum + g.pms.length, 0));
 
-	if (data_source.type === 'csv') {
-		pm_raw_data = csv2json(pm_raw_data);
-	}
-
-	return handle_pms(pm_raw_data);
+	// // 提供一個方法讓使用者切換遠端點
+	// async switchSource(newUrl) {
+	// 	localStorage.setItem('pokemon_api_url', newUrl);
+	// 	await this.init(); // 重新走一遍撈取流程
+	// }
 }
 
-export function handle_pms(pms_json) {
-	// handle name
-	// console.log({raw_names});
+export const pokemonStore = new PokemonManager();
+
+
+function handle_pms(pms) {
 	const names = raw_names.reduce((all, item) => {
 		let { dex, ...name } = item;
 		all[+dex] = name;
 		return all;
 	}, []);
 
-	// handle pm debut
 	const today = new Date();
 
-	let max_index = 0;
+	const all_groups = new Map();
+	const tags = {};
+	const pid_with_tags = new Map();
 
-	if (pms_json[0]?.pid === undefined) {
-		confirm_to_reset();
-	}
+	let _fdex = 0;
+	let _fcounter = 0;
 
-	// handle groups
-	let root_map = {};
-	let root_index_map = {};
-	let all_groups = [];
-
-	let tags = {};
-	let pms = pms_json.map(pm => {
-		let dex = +(pm.pid.match(/pm(\d+)/)?.[1]);
-
-		if (!(new Date(pm.debut) < today)) {
+	pms.filter(Boolean).forEach(pm => {
+		const debut_timing = +(new Date(pm.debut));
+		if (!(debut_timing < today)) {
 			return;
 		}
+		const dex = +(pm.pid.match(/pm(\d+)/)?.[1]);
 
-		let index = +pm.index;
+		pm.dex = dex;
+		pm.name = names[dex];
+		pm.time_order = debut_timing / 1000 + dex;
+		pm.status = '0';
 
-		if (index > max_index) {
-			max_index = index;
+		// if (pm.family_dex !== '1' && pm.family_dex !== '422') {
+		// 	return
+		// }
+
+		{ // get status index key
+			if (_fdex === pm.family_dex) {
+				_fcounter += 1;
+			} else {
+				_fdex = pm.family_dex;
+				_fcounter = 1;
+			}
+			pm._gidx = Number(pm.family_dex);
+			pm._pidx = Number(_fcounter - 1);
+			// pm.key = `${pm.family_dex}.${_fcounter}`;
 		}
 
-		let gen = get_gen(dex) ?? 1;
+		{ // tags
+			pm.tag = [...new Set(
+					[
+						`🧬gen${get_gen(dex) ?? 1}`,
+						...(pm.tag || '').split(/\=/),
+						...get_default_tags(pm.pid, dex)
+					]
+				)].filter(Boolean);
 
-		{ // collect tags
-			let _tags = (pm.tag || '').split(/\=/);
-			_tags.push(`🧬gen${gen}`);
-			_tags = get_default_tags(_tags, pm.pid, dex);
-			pm.tag = [...new Set(_tags)].filter(Boolean);
+			// collect tags
 			pm.tag.forEach(tag => {
 				if (!tags[tag]) {
 					tags[tag] = [];
 				}
 				tags[tag].push(pm.pid);
 			});
+
+			pid_with_tags.set(pm.pid, pm.tag);
 		}
 
-		// replace | to a newline
-		if (pm.suffix) {
-			pm.suffix = pm.suffix.replace(/\|/g, '\n');
+		{ // suffix, replace | to a newline
+			if (pm.suffix) {
+				pm.suffix = pm.suffix.replace(/\|/g, '\n');
+			}
 		}
-
-		let op_pm = {
-			...pm,
-			index,
-			dex,
-			name: names[dex],
-			time_order: +new Date(pm.debut) / 1000 + dex,
-			// costume: pm.pid.includes('.'),
-			// shiny: new Date(pm.debut) < today,
-			status: '0',
-		};
 
 		{ // grouping~
-			let _group = pm.group || pm.pid;
-			let _root_group = _group.split('_')[0];
-
-			if (!root_map[dex]) {
-				root_map[dex] = [];
-			}
-			if (root_map[dex].indexOf(_root_group) === -1) {
-				root_map[dex].push(_root_group);
+			const group_id = `${pm.family_dex}.${pm.group}`;
+			if (!all_groups.has(group_id)) {
+				// Initialize with an empty array if family not seen yet
+				all_groups.set(group_id, []);
 			}
 
-			let root_group = root_map[dex][0];
-
-			let root_index = root_index_map[root_group];
-			if (!root_index && root_index !== 0) {
-				root_index = all_groups.length;
-				root_index_map[root_group] = root_index;
-
-				all_groups[root_index] = {
-					root: root_group,
-					groups: [],
-				};
-			}
-
-			let _root = all_groups[root_index];
-
-			let _group_index = _root.groups.findIndex(g => g.label === _group);
-			if (_group_index === -1) {
-				_group_index = _root.groups.length;
-				_root.groups[_group_index] = {
-					label: _group,
-					pids: [],
-					pms: [],
-					root_groups: [],
-				};
-			}
-			_root.groups[_group_index].pids.push(pm.pid);
-			_root.groups[_group_index].pms.push(op_pm);
+			all_groups.get(group_id).push(pm);
 		}
-
-		return op_pm;
-	})
-	.filter(Boolean);
-
-	root_map = null;
-	root_index_map = null;
-
-	let sort_by_min_dex = (a, b) => {
-		let minA = Math.min(...a.pms.map(p => p.dex)) || 0;
-		let minB = Math.min(...b.pms.map(p => p.dex)) || 0;
-		return minA - minB;
-	};
+	});
 
 	return {
-		pms,
-		groups: all_groups.map(i => i.groups).flat().sort(sort_by_min_dex),
-		max_index,
+		groups: Array.from(all_groups).sort(sort_by_group_id),
 		tags,
+		pid_with_tags,
 	};
 }
 
@@ -163,17 +246,21 @@ function get_gen(dex_num = 0) {
 	// if dex error return undefined
 }
 
-export function get_name(names, lang = 'en') {
-	return names?.[lang] || names?.en || '';
-}
+function sort_by_group_id (a, b) {
+	return a[0].localeCompare(b[0], undefined, {
+		numeric: true,
+		sensitivity: 'base' // Case-insensitive: "p" and "P" are treated the same
+	});
+};
 
-function get_default_tags(tags = [], pid = '', dex = 1) {
-	if (!tags.includes('costume')) {
-		tags.push('-costume');
-	}
-	if (!tags.includes('baby')) {
-		tags.push('-baby');
-	}
+function get_default_tags(pid = '', dex = 1) {
+	let tags = [];
+	// if (!tags.includes('costume')) {
+	// 	tags.push('-costume');
+	// }
+	// if (!tags.includes('baby')) {
+	// 	tags.push('-baby');
+	// }
 	switch (pid.split('.f')[1]) {
 		case 'HISUIAN':
 			tags.push('📍hisuian');
@@ -185,16 +272,16 @@ function get_default_tags(tags = [], pid = '', dex = 1) {
 			tags.push('📍alola');
 			break;
 		case 'MEGA':
-			tags.push('🚀mega');
+			tags.push('🏷️mega');
 			break;
 		case 'ORIGIN':
-			tags.push('🔀ORIGIN');
+			tags.push('🏷️origin');
 			break;
 		case 'DYNAMAX':
-			tags.push('🦖DYNAMAX');
+			tags.push('🏷️dynamax');
 			break;
 		case 'GIGANTAMAX':
-			tags.push('🦖GIGANTAMAX');
+			tags.push('🏷️gigantamax');
 			break;
 		default:
 			break;
@@ -228,4 +315,8 @@ function get_default_tags(tags = [], pid = '', dex = 1) {
 	}
 
 	return tags;
+}
+
+export function get_name(names, lang = 'en') {
+	return names?.[lang] || names?.en || '';
 }

@@ -1,48 +1,43 @@
 <script>
-	import { get_name, } from '@lib/pm.svelte.js';
-	import { _, locale, } from 'svelte-i18n';
-	import { config, } from '@/stores.js';
+	import { pokemonStore, get_name, } from '@lib/pm.svelte.js';
+	import { i18n } from '@lib/i18n.svelte.js';
+	import { config } from '@lib/config.svelte.js';
+	import { get_pm_img_src, } from '@lib/u.js';
 
-	let { pm, status, handle_click_pm, } = $props();
+	let { pm, } = $props();
 
-	let folder_path = import.meta.env.DEV
-		? `http://localhost:1111/new-imgs`
-		: `https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/Addressable%20Assets`;
+	let pm_name = $derived(get_name(pm.name, i18n.lang));
+	let title = $derived(`#${pm.dex} ${pm_name} \n@${pm.debut}`);
 
 	let tags_class = pm.tag.map(tag => ` tag-${tag}`).join('');
-
 	let src = get_pm_img_src(pm.pid, true, pm.src);
 	let src0 = get_pm_img_src(pm.pid, false, pm.src /* TODO */ );
 
-	function get_pm_img_src(pid = '', shiny = true, direct_src = '') {
-		if (direct_src) {
-			return direct_src;
-		}
-		return `${folder_path}/${pid}${shiny ? '.s' : ''}.icon.png`;
+	function handle_click_pm() {
+		pm.status = (pm.status + 1) % 4;
 	}
-
-	let title = `#${pm.dex} ${get_name(pm.name, $locale)} @${pm.debut}`
 
 </script>
 
-<button class="pm status-{status} {tags_class}"
-	class:img_diff={$config.img_diff}
-	data-index={pm.index}
-	onclick={() => handle_click_pm(pm.index)}
-	style="--group-order:{pm.order || 0};--dex-order:{pm.dex};"
+
+
+<button class="pm status-{pm.status}"
+	class:img_diff={config.img_diff}
+	type="button"
+	data-pid={pm.pid}
+	aria-label="Pokemon {pm_name}, status {pm.status}"
+	style="--group-order:{pm.order || 0}; --dex-order:{pm.dex};"
 	title={title}
+	onclick={handle_click_pm}
 >
-	<div class="img-box"
-		style="--w: 140%; --t:-30%; --l: -5%; {pm.style}"
-	>
-		<!--
-		-->
-		{#if $config.img_diff}
+	<div class="img-box" style="--w: 140%; --t:-30%; --l: -5%; {pm.style}">
+
+		{#if config.img_diff}
 			<img
 				width="96"
 				height="96"
 				src={src0}
-				alt={pm.pid}
+				alt={title}
 				loading="lazy"
 			/>
 		{/if}
@@ -50,23 +45,16 @@
 			width="96"
 			height="96"
 			src={src}
-			alt={pm.pid}
+			alt={title}
 			loading="lazy"
 		/>
 	</div>
 
-
-	<!--
-	<div
-		class="position:absolute bottom:5% right:5% pointer-events:none"
-	>{status}</div>
-	-->
-
-	<div class="caption" hidden={!$config.show_name}>
+	<div class="caption" hidden={!config.show_name}>
 		<div class="name">
-			{get_name(pm.name, $locale)}
+			{pm_name}
 
-			{#if $config.show_suffix}
+			{#if config.show_suffix}
 				<span>{pm.suffix}</span>
 			{/if}
 		</div>
@@ -75,9 +63,13 @@
 			#{pm.dex}
 		</div>
 	</div>
+
 </button>
 
+
+
 <style>
+@layer component {
 	img {
 		font-family: inherit;
 		position: relative;
@@ -204,4 +196,6 @@
 			opacity: 0;
 		}
 	}
+}
+
 </style>

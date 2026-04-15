@@ -1,81 +1,82 @@
-import {
-	rev_sort_by,
-	set_all_records,
-	get_all_records,
-} from '@lib/u.js';
+import { rev_sort_by, set_all_records, get_all_records } from '@lib/u.js';
+import { pokemonStore, } from '@lib/pm.svelte.js';
+import { session } from '@lib/config.svelte.js';
 
-export const recorder = await create_recorder();
+class RecorderManager {
+	// 1. Reactive state
+	records = $state([]);
 
-async function create_recorder() {
-	let cached_records = await get_all_records();
-	// console.log(31, {cached_records});
-	let records = $state(cached_records);
-
-	function find_index_by_name(name = '') {
-		return records.findIndex(i => i.name === name);
+	constructor() {
+		this.init();
 	}
 
-	function sort_by_time() {
-		records.sort(rev_sort_by('time'));
+	async init() {
+		const _cached = await get_all_records();
+		this.records = _cached || [];
+		return this.records;
 	}
 
-	function add({name, status}) {
-		let index = find_index_by_name(name);
-		if (index === -1) {
-			index = records.length;
-		}
+	add_current = () => {
+		this.add({
+			name: session.name,
+			status: pokemonStore.status_string,
+		})
+	}
 
-		records[index] = {
+	add = ({ name, status }) => {
+		let _index = this.records.findIndex(i => i.name === name);
+
+		const _new_record = {
 			name,
 			status,
-			time: +new Date(),
+			time: Date.now(),
 		};
-		sort_by_time();
-		save();
-	}
 
-	function remove(index = 0, alert_txt = '') {
-		if (!alert_txt) {
-			alert_txt = `【${records[index].name}】 will be deleted. \nAre you sure want to *DELETE* this record?`;
+		if (_index === -1) {
+			this.records.push(_new_record);
+		} else {
+			this.records[_index] = _new_record;
 		}
-		let cheked = confirm(alert_txt);
-		if (!cheked) { return; }
-		records.splice(index, 1);
-		save();
-	}
 
-	function save() {
-		set_all_records($state.snapshot(records));
-	}
+		this.sort_and_save();
+	};
 
-	function renew(index = 0) {
-		records[index].time = +new Date();
-		sort_by_time();
-	}
+	remove = (index = 0, alert_txt = '') => {
+		const _target = this.records[index];
+		if (!_target) return;
 
-	function set(data) {
-		records = data;
-	}
+		const _msg = alert_txt || `【${_target.name}】 will be deleted. \nAre you sure?`;
+		if (!confirm(_msg)) return;
 
-	function reset(alert_txt = '', alert_txt2 = '') {
-		let is_accidentally = confirm(alert_txt);
-		if (!is_accidentally) {
-			let cheked = confirm(alert_txt2);
-			if (!cheked) { return; }
-			set([])
-			save();
+		this.records.splice(index, 1);
+		this.save();
+	};
+
+	// 3. Encapsulate sort and save logic
+	sort_and_save = () => {
+		// Svelte 5 sort can be done in-place on $state arrays
+		this.records.sort(rev_sort_by('time'));
+		this.save();
+	};
+
+	save = () => {
+		set_all_records($state.snapshot(this.records));
+	};
+
+	renew = (index = 0) => {
+		if (this.records[index]) {
+			this.records[index].time = Date.now();
+			this.sort_and_save();
 		}
-	}
+	};
 
-	return {
-		get records() {
-			return records;
-		},
-		add,
-		renew,
-		set,
-		save,
-		reset,
-		remove,
+	reset = (alert_txt = '', alert_txt2 = '') => {
+		if (confirm(alert_txt) || confirm(alert_txt2)) {
+			this.records = [];
+			this.save();
+		}
 	};
 }
+
+// Export a single instance
+export const recorder = new RecorderManager();

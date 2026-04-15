@@ -1,5 +1,5 @@
-import '@master/css';
-import '@lib/i18n.js';
+// import '@master/css';
+// import '@lib/i18n.js';
 import './app.css';
 
 import { mount } from 'svelte';

@@ -1,19 +1,13 @@
 <script>
-	import Tag from '@comp/Tag.svelte';
 	import Record from '@comp/Record.svelte';
 	import Export from '@comp/Export.svelte';
 	import Share from '@comp/Share.svelte';
 	import Custom from '@comp/Custom.svelte';
 	import CustomStyle from '@comp/CustomStyle.svelte';
 
-	import { _, } from 'svelte-i18n';
+	import { i18n } from '@lib/i18n.svelte.js';
 	import { get_item, set_item, } from '@lib/u.js';
 
-	let ctrl_visibility = $state(false);
-
-	function toggle_ctrl() {
-		ctrl_visibility = !ctrl_visibility;
-	}
 	const default_io = {
 		record: true,
 		share: false,
@@ -22,7 +16,13 @@
 		custom: false,
 	};
 
-	let io = $state(get_item('ctrl_io') || default_io);
+	let ctrl_visibility = $state(false);
+
+	let io = $state({
+		...default_io,
+		...get_item('ctrl_io'),
+	});
+
 	$effect(() => {
 		set_item('ctrl_io', $state.snapshot(io));
 	});
@@ -36,7 +36,7 @@
 	<div class="ctrl-content">
 		<!--
 		<details bind:open={io.tag}>
-			<summary>🔖 {$_('tag')}</summary>
+			<summary>🔖 {i18n.t('tag')}</summary>
 			<div>
 				<Tag />
 			</div>
@@ -44,33 +44,33 @@
 		-->
 
 		<details bind:open={io.record}>
-			<summary>💾 {$_('record')}</summary>
+			<summary>💾 {i18n.t('record')}</summary>
 			<div>
 				<Record />
 			</div>
 		</details>
 
 		<details bind:open={io.share}>
-			<summary>🎁 {$_('share')}</summary>
+			<summary>🎁 {i18n.t('share')}</summary>
 			<div>
 				<Share />
 			</div>
 		</details>
 
 		<details bind:open={io.export}>
-			<summary>📥 {$_('export')}</summary>
+			<summary>📥 {i18n.t('export')}</summary>
 			<div>
 				<Export />
 			</div>
 		</details>
 
 		<details bind:open={io.custom_style}>
-			<summary>🎨 {$_('custom.style')}</summary>
+			<summary>🎨 {i18n.t('custom.style')}</summary>
 			<CustomStyle />
 		</details>
 
 		<details bind:open={io.custom}>
-			<summary>🔧 {$_('custom')}</summary>
+			<summary>🔧 {i18n.t('custom')}</summary>
 			<Custom />
 		</details>
 	</div>

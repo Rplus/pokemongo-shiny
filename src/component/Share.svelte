@@ -1,11 +1,10 @@
 <script>
-	import { _, locale } from 'svelte-i18n';
-
-	import { name, status } from '@/stores.js';
-	import { derived } from 'svelte/store';
+	import { i18n } from '@lib/i18n.svelte.js';
+	import { session } from '@lib/config.svelte.js';
+	import { pokemonStore, } from '@lib/pm.svelte.js';
 	import { fetch_data, gen_href, } from '@lib/u.js';
 
-	let url = $derived.by(() => gen_href($status, $name));
+	let url = $derived(gen_href(pokemonStore.status_string, session.name));
 
 	let short_href = $state(null);
 
@@ -23,7 +22,7 @@
 		// short_href = await fetch_data(`https://corsproxy.io/?${encoded_url}`, 'text');
 		// short_href = await fetch_data(`https://api.allorigins.win/raw?url=${encoded_url}`, 'text');
 		short_href = await fetch_data(`https://cors-anywhere.herokuapp.com/http://tinyurl.com/api-create.php?url=${url}`, 'text');
-		console.log(2221, short_href);
+		console.log({short_href});
 		// TODO: preview shorturl https://tinyurl.com/preview/ooxxoxox
 		is_fetching = null;
 	}
@@ -36,51 +35,52 @@
 
 
 <div>
-	{$_('share.intro')}
+	{i18n.t('share.intro')}
 
 	<ul>
 		<li>
 			<a href={ url }>
-				{$_('share.full.url')}
+				{i18n.t('share.full.url')}
 			</a>
 		</li>
 	</ul>
 
 	<details>
 		<summary>If you need to get a short link</summary>
-		<div>
-			<div>
+		<div style="line-height: 1.3">
+			<p>
 				1. Go to cors-anywhere site,
 				<br>
 				and click its button to request temporary access.
 				<br>
 				<a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">https://cors-anywhere.herokuapp.com/corsdemo</a>
-			</div>
+			</p>
 
-			<div>
-				2. Click
+			<p>
+				2. Click ↴
 				<br>
-				<button onclick={gen_short_href}>📦 {$_('share.get.short.url')}</button>
-			</div>
+				<button onclick={gen_short_href}>📦 {i18n.t('share.get.short.url')}</button>
+			</p>
 
-			<div>
-				3.
-				Here is
-				<a class="short-link text-decoration:"
-					href={short_href}
-					class:fetching={is_fetching}
-					rel="noopener"
-					target="_blank"
-				>
-					{$_('share.short.link')}
-				</a>
-			</div>
+			{#if short_href}
+				<div>
+					3. Here is {i18n.t('share.short.link')}
+					<br>
+					<a class="short-link text-decoration:"
+						href={short_href}
+						class:fetching={is_fetching}
+						rel="noopener"
+						target="_blank"
+					>
+						{short_href}
+					</a>
+				</div>
 
-			<div>
-				{#if short_href}
+				<div>
 					<img class="display:block margin-top:2px" src={ get_qrcode_img(short_href) } alt="qrcode for short url">
-				{/if}
-			</div>
+				</div>
+			{/if}
+
 		</div>
 
 	</details>
@@ -97,11 +97,10 @@
 		content: '⌛ ';
 	}
 
-	.short-link[href]::after {
-		content: attr(href) ' ✅';
+	.short-link[href] {
 		display: block;
+		width: fit-content;
 		line-height: 1;
-		/* font-size: smaller; */
 		font-family: monospace;
 	}
 

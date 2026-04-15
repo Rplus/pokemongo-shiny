@@ -1,30 +1,35 @@
 <script>
-	import { _, locale } from 'svelte-i18n';
+	import { i18n } from '@lib/i18n.svelte.js';
 	import { pick, get_time_string, } from '@lib/u.js';
 
-	import { pm_data, } from '@lib/pm.svelte.js';
-	import { name, status, } from '@/stores.js';
+	import { pokemonStore, } from '@lib/pm.svelte.js';
+	import { session, } from '@lib/config.svelte.js';
 
-	const titles = ['index', 'debut', 'pid', 'name', 'suffix', 'group', 'src', 'status', ];
+	const titles = ['family_dex', 'debut', 'pid', 'name', 'suffix', 'group', 'src', 'status', 'tag', 'order', ]
 
 	function export_as_csv() {
-		let _status = $status;
-		let _locale = $locale;
-		let csv = pm_data.pms.map((pm, index) => {
-			return titles.map(prop => {
-				if (prop === 'name') {
-					return pm[prop][_locale] || '';
-				} else if (prop === 'status') {
-					return _status[pm.index] || 0;
-				}
-				return pm[prop] ?? '';
-			}).join(',');
+		const _lang = i18n.lang;
+		const csv = '';
+		const groups = $state.snapshot(pokemonStore.groups);
+
+		let op = [titles];
+		groups.forEach(group => {
+			group[1].forEach(pm => {
+				op[op.length] = titles.map(prop => {
+					if (prop === 'name') {
+						return pm[prop][_lang] || '';
+					} else if (prop === 'suffix') {
+						// workaround: dirty hack for csv newline
+						return pm[prop] ? `"${pm[prop]}"` : '';
+					}
+					return pm[prop] ?? '';
+				}).join(',')
+			})
 		});
-		csv.unshift(titles);
 
 		downloadURI(
-			getAllText(csv.join('\n')),
-			`pm-go-shiny-【${$name}】-${get_time_string(new Date())}.csv`
+			getAllText(op.join('\n')),
+			`pm-go-shiny-【${session.name}】-${get_time_string(new Date())}.csv`
 		);
 	}
 
@@ -47,7 +52,7 @@
 
 <div>
 	<hr>
-	<div class="text-align:right">
-		<button onclick={export_as_csv}>📥 {$_('export.as.csv')}</button>
+	<div style="text-align: right">
+		<button onclick={export_as_csv}>📥 {i18n.t('export.as.csv')}</button>
 	</div>
 </div>

@@ -1,6 +1,6 @@
 import * as localForage  from 'localforage';
 
-const STORAGE_KEY = 'pm-shiny-sv5';
+const STORAGE_KEY = 'pm-shiny-26';
 
 export function set_item(key, data) {
 	if (!key) { return false; }
@@ -73,23 +73,29 @@ export function gen_href(status, name) {
 	return a.toString();
 }
 
-export function csv2json(csv) {
-	const lines = csv.split(/\r?\n/gm);
-	const result = [];
-	const headers = lines[0].split(',');
+export function csv2json(csv) { // by ai
+	// Split lines by newline ONLY if it's not inside double quotes
+	const lines = csv.split(/\r?\n(?=(?:(?:[^"]*"){2})*[^"]*$)/);
 
-	for (let i = 1; i < lines.length; i++) {
-		if (!lines[i]) {
-			continue;
-		}
-		const obj = {};
-		const currentline = lines[i].split(',');
+	// Extract headers and remove potential surrounding quotes/spaces
+	const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
 
-		for (let j = 0; j < headers.length; j++) {
-			obj[headers[j]] = currentline[j].replace(/\r$/, '');
-		}
-		result.push(obj);
-	}
+	// Map remaining lines to objects
+	const result = lines.slice(1).map(line => {
+		// Match fields: accounts for quoted strings containing commas or newlines
+		const values = line.match(/(".*?"|[^,]+|(?<=,)(?=,)|(?<=,)$|^$)/g) || [];
+
+		return headers.reduce((obj, header, i) => {
+			let val = values[i] ? values[i].trim() : "";
+
+			// Remove outer quotes and unescape double-quotes ("" -> ")
+			val = val.replace(/^"|"$/g, '').replace(/""/g, '"');
+
+			obj[header] = val;
+			return obj;
+		}, {});
+	});
+
 	return result;
 }
 
@@ -134,6 +140,8 @@ export function preventDefault(fn) {
 	};
 }
 
+export const sum_array = (arr) => arr.reduce((acc, val) => acc + val, 0);
+
 export const ordered_style = `
 .pm-list {
 	gap: 1em;
@@ -145,3 +153,12 @@ export const ordered_style = `
 	display: none;
 	order: var(--dex-order);
 }`;
+
+
+const FOLDER_PATH = import.meta.env.DEV
+		? `http://localhost:1111/new-imgs`
+		: `https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/Addressable%20Assets`;
+
+export function get_pm_img_src(pid = '', shiny = true, direct_src = '') {
+	return direct_src || `${FOLDER_PATH}/${pid}${shiny ? '.s' : ''}.icon.png`;
+}

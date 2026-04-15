@@ -142,19 +142,6 @@ export function preventDefault(fn) {
 
 export const sum_array = (arr) => arr.reduce((acc, val) => acc + val, 0);
 
-export const ordered_style = `
-.pm-list {
-	gap: 1em;
-}
-.pm-group {
-	display: contents !important;
-}
-.pm-group .pm {
-	display: none;
-	order: var(--dex-order);
-}`;
-
-
 const FOLDER_PATH = import.meta.env.DEV
 		? `http://localhost:1111/new-imgs`
 		: `https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/Addressable%20Assets`;

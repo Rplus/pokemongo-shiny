@@ -1,5 +1,5 @@
 <script>
-	import { ordered_style, get_item, set_item, } from '@lib/u.js';
+	// import { ordered_style, get_item, set_item, } from '@lib/u.js';
 	import { pokemonStore, } from '@lib/pm.svelte.js';
 	import { i18n } from '@lib/i18n.svelte.js';
 	import { config } from '@lib/config.svelte.js';

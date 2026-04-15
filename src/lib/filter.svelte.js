@@ -1,5 +1,16 @@
 import { pokemonStore, } from '@lib/pm.svelte.js';
 
+const custom_style_when_filtered = `
+.pm-list {
+	gap: 1em;
+}
+.pm-group.pm-group {
+	display: contents;
+}
+.pm-group .pm {
+	order: var(--dex-order);
+}`;
+
 class FilterManager {
 	filter_cates = ['🧬', '📍', '🐣', '🧩'];
 	filter_state = $state({});
@@ -81,7 +92,7 @@ class FilterManager {
 		// [data-pid="xxx"] handles pids with dots perfectly
 		return _hide_list
 			.map(_id => `.pm[data-pid="${_id}"]`)
-			.join(',\n') + '{display:none !important;}' + '.pm-group.pm-group {display:contents }';
+			.join(',\n') + '{display:none !important;}' + custom_style_when_filtered;
 	}
 }
 

@@ -241,7 +241,7 @@ function handle_pms(pms) {
 
 function get_gen(dex_num = 0) {
 	get_gen._range = get_gen._range || [ 0, 151, 251, 386, 493, 649, 721, 809, 905, 1025, ];
-	const index = get_gen._range.findIndex(limit => limit > dex_num);
+	const index = get_gen._range.findIndex(limit => limit >= dex_num);
 	if (index > 0) return index;
 	// if dex error return undefined
 }

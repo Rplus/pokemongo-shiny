@@ -5,7 +5,7 @@ import { set_item, get_item, } from '@lib/u.js';
 
 export const session = $state({
 	status: '',
-	name: '?',
+	name: '_username_',
 });
 
 export const DEFAULT_CONFIG = Object.freeze({

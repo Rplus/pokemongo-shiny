@@ -31,8 +31,6 @@
 		</div>
 	{/each}
 
-	<hr>
-
 	<input type="checkbox" id="list-locker" class="sr-only-u" bind:checked={config.locked} />
 
 	<main class="pm-list">

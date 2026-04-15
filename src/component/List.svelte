@@ -99,6 +99,12 @@
 	text-align: center;
 	justify-content: center;
 
+	@media (max-width: 600px) {
+		gap: 1.5em 1em;
+		padding-left: 2vw;
+		padding-right: 2vw;
+	}
+
 	/* FIXME */
 	/* max-height: 50vh; */
 	/* overflow-y: scroll; */

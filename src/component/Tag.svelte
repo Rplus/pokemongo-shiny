@@ -172,7 +172,7 @@
 .tag-details {
 	position: sticky;
 	top: 0;
-	top: -.5em;
+	top: -.25em;
 	z-index: 100;
 	margin: auto;
 	background-color: #9993;
@@ -187,7 +187,8 @@
 		text-align: center;
 		opacity: 0;
 		transition: opacity .3s;
-		padding: 0.5em;
+		padding: 0.5em 0;
+		font-size: smaller;
 	}
 
 	&[open] summary,

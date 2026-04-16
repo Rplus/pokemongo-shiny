@@ -35,7 +35,7 @@
 <svelte:window onbeforeunload={handle_before_unload}/>
 
 
-<List />
+<List isLoading={pokemonStore.isLoading} />
 <Ctrl />
 <Float_Btns />
 

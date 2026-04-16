@@ -1,20 +1,26 @@
 <script>
 	import { i18n } from '@lib/i18n.svelte.js';
 	// import { config, DEFAULT_CONFIG } from '@/stores.js';
-	import { config, DEFAULT_CONFIG, reset_all_config } from '@lib/config.svelte.js';
-
-	const pm_source_url = {
-		type: 'json',
-		url: 'https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/pm2026',
-	};
+	import { config, DEFAULT_CONFIG, DEFAULT_PM_DATA_SOURCE, LOCAL_PM_DATA_SOURCE, reset_all_config } from '@lib/config.svelte.js';
 
 	function reset_data_source() {
-		config.source_url = {...DEFAULT_CONFIG.source_url};
+		config.data_source = {...DEFAULT_CONFIG.data_source};
+		confirm_to_reload();
 	}
 
-	function use_pm_data_source() {
-		config.source_url = {...pm_source_url};
+	function confirm_to_reload() {
+		if (window.confirm(i18n.t('custom.confirm_for_reloading_to_apply'))) {
+			location.reload();
+		}
 	}
+
+	// function use_pm_data_source() {
+	// 	config.data_source = {...DEFAULT_PM_DATA_SOURCE};
+	// }
+
+	// function use_local_source() {
+	// 	config.data_source = {...LOCAL_PM_DATA_SOURCE};
+	// }
 
 </script>
 
@@ -62,7 +68,7 @@
 
 			<details>
 				<summary>
-					🚧 {i18n.t('custom.source_url')} 🚧
+					🚧 {i18n.t('custom.data_source')} 🚧
 				</summary>
 
 				<div>
@@ -71,18 +77,23 @@
 						<!-- https://api.npoint.io/6acfd46ce5bfdbca61af -->
 						<input type="text"
 							tyle="width:4em; flex-grow:1;"
-							bind:value={config.source_url.url}
+							bind:value={config.data_source.url}
 						>
-						<select bind:value={config.source_url.type}>
+						<select bind:value={config.data_source.type}>
 							<option value="csv">csv</option>
 							<option value="json">json</option>
 						</select>
 					</label>
 
 					<div class="flex jc-fe gap2">
+						<button onclick={confirm_to_reload}>
+							Apply
+						</button>
+						<!--
 						<button type="button" onclick={use_pm_data_source}>
 							{i18n.t('custom.default')}
 						</button>
+						-->
 						<input type="reset" onclick={reset_data_source}>
 					</div>
 				</div>

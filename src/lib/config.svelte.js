@@ -1,7 +1,18 @@
+import pm_local_csv_url from '@data/pm.csv?url';
 import { set_item, get_item, } from '@lib/u.js';
 
 // export let status = $state('');
 // export let name = $state('?');
+
+export const DEFAULT_PM_DATA_SOURCE = {
+	url: `https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/'pm2026'`,
+	type: 'json',
+};
+
+export const LOCAL_PM_DATA_SOURCE = {
+	url: pm_local_csv_url,
+	type: 'csv',
+};
 
 export const session = $state({
 	status: '',
@@ -11,7 +22,7 @@ export const session = $state({
 export const DEFAULT_CONFIG = Object.freeze({
 	// ui
 	locked: false,
-	open_tags: true,
+	open_tags: false,
 
 	// grid
 	img_diff: false,
@@ -25,7 +36,7 @@ export const DEFAULT_CONFIG = Object.freeze({
 	main_color: '#213547',
 	grid_colors: ['#dddddd', '#dada0b', '#a1a112'],
 	gradient_colors: ['#000000', '#63452c'],
-	source_url: { type: 'json', url: '' },
+	data_source: {...DEFAULT_PM_DATA_SOURCE},
 	status_visibility: [true, true, true, true, ],
 });
 

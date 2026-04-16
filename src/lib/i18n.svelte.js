@@ -173,9 +173,13 @@ const dictionaries = {
 		'en': 'Grid size',
 		'zh': '格子尺寸',
 	},
-	'custom.source_url': {
-		'en': 'Custom data source url',
-		'zh': '自訂資料網址',
+	'custom.data_source': {
+		'en': 'Custom data source',
+		'zh': '自訂資料來源',
+	},
+	'custom.confirm_for_reloading_to_apply': {
+		'en': 'Reload to apply new data source?',
+		'zh': '重新載入以套用新資料來源？',
 	},
 	'custom.default': {
 		'en': 'Default',

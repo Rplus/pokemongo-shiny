@@ -1,8 +1,8 @@
-import pm_local_csv_url from '@data/pm.csv?url';
+// import pm_local_csv_url from '@data/pm.csv?url';
 import raw_names from '@data/name.csv';
 import { csv2json, fetch_data, get_item, confirm_to_reset, } from '@lib/u.js';
 import { recorder, } from '@lib/recorder.svelte.js';
-import { session } from '@lib/config.svelte.js';
+import { session, DEFAULT_PM_DATA_SOURCE, LOCAL_PM_DATA_SOURCE } from '@lib/config.svelte.js';
 
 class PokemonManager {
 	groups = $state([]);
@@ -11,21 +11,13 @@ class PokemonManager {
 	error = $state(null);
 	pid_with_tags = $state(new Map());
 
-	get config_url() {
-		return localStorage.getItem('pokemon_api_url') || pm_local_csv_url;
-	}
-
 	async init() {
 		this.is_loading = true;
 		this.error = null;
 
 		try {
 			// Step 1: Basic setup
-			const response = await fetch(this.config_url);
-			if (!response.ok) throw new Error('Network response was not ok');
-
-			const csv_text = await response.text();
-			const { groups, tags, pid_with_tags, } = handle_pms(csv2json(csv_text));
+			const { groups, tags, pid_with_tags } = await fetch_pms_data();
 
 			this.groups = groups;
 			this.tags = tags;
@@ -149,6 +141,35 @@ class PokemonManager {
 }
 
 export const pokemonStore = new PokemonManager();
+
+function get_source() {
+	const source_url = get_item('config.source_url.url');
+	const source_type = get_item('config.source_url.type');
+
+	if (source_url && source_type) {
+		return { url: source_url, type: source_type };
+	}
+
+	return DEFAULT_PM_DATA_SOURCE || LOCAL_PM_DATA_SOURCE;
+}
+
+async function fetch_pms_data() {
+	const source = get_source();
+	const response = await fetch(source.url);
+
+	if (!response.ok) throw new Error('Network response was not ok');
+
+	let raw_data;
+	// Handle format based on file extension
+	if (source.type === 'csv') {
+		const text = await response.text();
+		raw_data = csv2json(text);
+	} else {
+		raw_data = await response.json();
+	}
+
+	return handle_pms(raw_data);
+}
 
 
 function handle_pms(pms) {

@@ -22,22 +22,13 @@ try to reset your config setting by url paramerter `reset=1`:
 
 There are many methods for data usage.
 
-### A. (default): use site's csv data
-
-  if you want to update this,
-  just create a PR for this project to update the [`pm.csv`](https://github.com/Rplus/pokemongo-shiny/blob/main/src/assets/data/pm.csv)
-
-### B. custom csv data url:
-
-  you can host csv file by yourself, and just enter your csv url into sidebar to apply pm data.
-
-### C. use my google spreadsheet
+### A. (Default) use my google spreadsheet
 
   just enter my spreadsheet public url into side-panel:  
-  <https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/pm>
+  <https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/'pm2026'>
 
   if you want to update my spreadsheet  
-  <https://docs.google.com/spreadsheets/d/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/edit?gid=1540699392>  
+  <https://docs.google.com/spreadsheets/d/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/edit>  
   click right-top button to send me a request for getting a edit permission.  
   And then, you could help me to update the data easy, that's really great!
 
@@ -46,18 +37,32 @@ There are many methods for data usage.
   you can copy the spreadsheet to your own Google spreadsheet.  
   And then change the custom data url to your spreadsheet and just give it a try.
 
-### D. use your google spreadsheet
+### B. use your google spreadsheet
 
   you need to get the spreadsheet public url, the easiest method is:  
   `https://opensheet.elk.sh/spreadsheet_id/tab_name`  
   just change the `spreadsheet_id/tab_name` with your google spreadsheet page.  
   And then, you could update spreadsheet by yourself.
 
+  ※  
+  If your tab name contains number, you must to use `spreadsheet_id/'tab_name123'` instead of `spreadsheet_id/tab_name123`
+
+### C. custom csv data url:
+
+  you can host csv file by yourself, and just enter your csv url into sidebar to apply pm data.
+
+### D. (fallback): use site's csv data
+
+  We don't use it now, but it is a good data source when developing.  
+  if you want to update this,  
+  just create a PR for this project to update the [`pm.csv`](https://github.com/Rplus/pokemongo-shiny/blob/main/src/assets/data/pm.csv)
+
+
 PS1:
-custom data url:
+How to custom data url:
   1. open custom section in side-panel
   2. input the data url in the latest input
-  3. choise right file type (json or csv)
+  3. choise correct file type (json or csv)
   4. reload to check
 
 PS2:
@@ -67,22 +72,29 @@ if you get in a trouble when custom data url, just reset all setting by trigger 
 
 ## Data property
 
+Our data status example for 3 families:  
+`<web-url>/?status=1.00101012-4.0111010-7.111203`
+
+* The number before . is **family_dex**, which identifies the family.
+* The number after . is **status number set**, and its order is consistent with the source spreadsheet.
+* Families are combined using -.
+
+This represents our data status format.
+
 all csv columns/properties:
 
 | property | required? | type | description |
 | -------- | -------- | ----- | ----- |
-| `index`  | required | number | uni index, **SHOULD NOT CHANGE** after save |
-| `debut`  | required | string | released date |
-| `pid`    | required | string | uni key, image file name. format: `pm25.cFALL_2018`... |
-| `group`  | required | string | grouping key. write for free, but you could use the same prefix to make groups adjacent |
-| `order`  | -        | number | group position, will use `index` when no order number~  |
+| `family_dex`  | required | number | usally the pokedex of the first pokemon of family,<br>please group together data rows with the same family_dex |
+| `debut`  | required | string | shiny form released date |
+| `pid`    | required | string | uni key, image file name.<br>format: `pm25.cFALL_2018`... |
+| `group`  | required | string | A flexible string used for grouping; <br>this will be used to sort the groups, and you may append a numeric suffix when needed to adjust the group order." |
 | `tag`    | -        | string | tags for pokemon, combine tags with `=`.<br> e.q. `tag1=tag2=tag3` |
+| `order`  | -        | number | pokemon position in group, will use `index` when no order number~<br>e.q. set the order to `-1` for baby so that they can be placed at the very front.  |
 | `suffix` | -        | string | suffix name, write mega or other types.<br>e.q. `(Y)`, `#7` |
 | `style`  | -        | string | custom image style,<br>e.q. `--w:140%;--l:-10%;--t:-10%;`
 | `src`    | -        | string | image url, custom image source, will overwrite the image of pid <br> could be https://ooxx.png |
 
-more details:
-https://github.com/Rplus/pokemongo-shiny/discussions/2
 
 ※ If you use custom `src`, and try to create a custom `pid`, just follow basic format rules:
 

@@ -38,9 +38,9 @@
 				<div class="number">
 					{st.count}
 				</div>
-				<span class="label">
-					{st.label}
-				</span>
+				<div class="label">
+					{i18n.t(`status.${st.label}`)}
+				</div>
 				<input
 					type="checkbox"
 					id="status_vis_{index}"
@@ -155,10 +155,6 @@
 		.dashboard {
 			gap: min(1.25vw, .75em);
 		}
-		.pm {
-			width: 70px;
-			height: 70px;
-		}
 	}
 	.pm:not(:has(input:checked)) {
 		background-color: #fff0;
@@ -183,6 +179,7 @@
 	}
 
 	.label {
+		display: block;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -190,7 +187,6 @@
 		padding: 0 2;
 		margin-top: .25em;
 		font-size: smaller;
-		text-transform: capitalize;
 		opacity: 0.5;
 	}
 </style>

@@ -8,6 +8,7 @@
 		--seen-percent:${pokemonStore.status_percent.seen}%;
 		--captured-percent:${pokemonStore.status_percent.captured}%;
 	`);
+	let released_count = $derived(pokemonStore.sorted_pms.length);
 
 </script>
 
@@ -51,6 +52,23 @@
 				>
 			</label>
 		{/each}
+
+		/
+
+		<div class="pm summary-card" title={i18n.t('status.released')}>
+			<input
+				type="checkbox"
+				class="status_vis_checkbox sr-only-u"
+				checked
+				disabled
+			>
+			<div class="number">
+				{released_count}
+			</div>
+			<div class="label">
+				{i18n.t('status.released')}
+			</div>
+		</div>
 	</div>
 </header>
 
@@ -192,5 +210,9 @@
 		font-size: smaller;
 		text-transform: capitalize;
 		opacity: 0.5;
+	}
+
+	.summary-card {
+		cursor: default;
 	}
 </style>

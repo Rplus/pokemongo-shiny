@@ -38,9 +38,9 @@
 				<div class="number">
 					{st.count}
 				</div>
-				<span class="label">
-					{st.label}
-				</span>
+				<div class="label">
+					{i18n.t(`status.${st.label}`)}
+				</div>
 				<input
 					type="checkbox"
 					id="status_vis_{index}"
@@ -187,7 +187,7 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		width: 100%;
-		padding: 0 2;
+		padding: 0 2px;
 		margin-top: .25em;
 		font-size: smaller;
 		text-transform: capitalize;

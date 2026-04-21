@@ -179,14 +179,14 @@
 	}
 
 	.label {
-		display: block;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		width: 100%;
-		padding: 0 2;
+		padding: 0 2px;
 		margin-top: .25em;
 		font-size: smaller;
+		text-transform: capitalize;
 		opacity: 0.5;
 	}
 </style>

@@ -155,6 +155,10 @@
 		.dashboard {
 			gap: min(1.25vw, .75em);
 		}
+		.pm {
+			width: 70px;
+			height: 70px;
+		}
 	}
 	.pm:not(:has(input:checked)) {
 		background-color: #fff0;

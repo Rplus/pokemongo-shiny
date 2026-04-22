@@ -27,3 +27,7 @@ download-imgs:
 
 print-date:
 	date +%FT%T%:::z > './src/assets/data/latest-fetch-time.txt';
+
+pull-csv:
+	curl -L "https://docs.google.com/spreadsheets/d/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/export?format=csv&gid=679582482" -o ./src/assets/data/pm.csv
+

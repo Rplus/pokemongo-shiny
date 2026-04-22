@@ -24,17 +24,6 @@
 			}, {})
 	);
 
-	// init
-	$effect(() => {
-		const _tags = Object.keys(pokemonStore.tags);
-		_tags.forEach(tag => {
-			if (filter_manager.filter_state[tag] === undefined) {
-				filter_manager.filter_state[tag] = 0;
-			}
-		});
-	});
-
-
 </script>
 
 

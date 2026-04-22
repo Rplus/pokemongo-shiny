@@ -23,6 +23,7 @@
 
 <button class="pm status-{pm.status}"
 	class:img_diff={config.img_diff}
+	class:show_name={config.show_name}
 	type="button"
 	data-pid={pm.pid}
 	aria-label="Pokemon {pm_name}, status {pm.status}"
@@ -131,7 +132,7 @@
 			transition: opacity 1s;
 			background-image: linear-gradient(currentcolor, #0000);
 		}
-		.pm:not(.img_diff):hover &::after {
+		.pm.show_name:not(.img_diff):hover &::after {
 			opacity: .8;
 		}
 	}

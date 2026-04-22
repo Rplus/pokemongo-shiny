@@ -197,7 +197,7 @@ function handle_pms(pms) {
 
 		pm.dex = dex;
 		pm.name = names[dex];
-		pm.time_order = debut_timing / 1000 + dex;
+		// pm.time_order = debut_timing / 1000 + dex;
 		pm.status = '0';
 
 		// if (pm.family_dex !== '1' && pm.family_dex !== '422') {

@@ -55,254 +55,255 @@ family_dex,debut,pid,group,_index,tag,order,suffix,style,src
 21,2021-02-20,pm22,Spearow,47,,,,,
 23,2019-07-25,pm23,Ekans,48,,,,,
 23,2019-07-25,pm24,Ekans,49,,,,,
-25,2016-12-25,pm25.cHOLIDAY_2016,Pikachu_01,60,costume,,"
+25,2016-12-25,pm25.cHOLIDAY_2016,Pikachu_20161225,60,costume,,"
 Holiday Hat",,
-25,2016-12-25,pm26.cHOLIDAY_2016,Pikachu_01,61,costume,,"
+25,2016-12-25,pm26.cHOLIDAY_2016,Pikachu_20161225,61,costume,,"
 Holiday Hat",,
-25,2016-12-25,pm172.cHOLIDAY_2016,Pikachu_01,328,baby=costume,-1,"
+25,2016-12-25,pm172.cHOLIDAY_2016,Pikachu_20161225,328,baby=costume,-1,"
 Holiday Hat",,
-25,2017-02-26,pm25.cANNIVERSARY,Pikachu_c17,52,costume,,"
+25,2017-02-26,pm25.cANNIVERSARY,Pikachu_20170226,52,costume,,"
 Party Hat",,
-25,2017-02-26,pm26.cANNIVERSARY,Pikachu_c17,53,costume,,"
+25,2017-02-26,pm26.cANNIVERSARY,Pikachu_20170226,53,costume,,"
 Party Hat",,
-25,2017-02-26,pm172.cANNIVERSARY,Pikachu_c17,323,baby=costume,-1,"
+25,2017-02-26,pm172.cANNIVERSARY,Pikachu_20170226,323,baby=costume,-1,"
 Party Hat",,
-25,2017-06-06,pm25.cONE_YEAR_ANNIVERSARY,Pikachu_03,54,costume,,"
+25,2017-06-06,pm25.cONE_YEAR_ANNIVERSARY,Pikachu_20170606,54,costume,,"
 Original
 Cap",,
-25,2017-06-06,pm172.cONE_YEAR_ANNIVERSARY,Pikachu_03,324,baby=costume,-1,"
+25,2017-06-06,pm172.cONE_YEAR_ANNIVERSARY,Pikachu_20170606,324,baby=costume,-1,"
 Original
 Cap",,
-25,2017-08-15,pm25,Pikachu,50,,,,,
-25,2017-08-15,pm26,Pikachu,51,,,,,
-25,2017-08-15,pm172,Pikachu,322,baby,-1,,,
-25,2017-10-20,pm25.cHALLOWEEN_2017,Pikachu_04,58,costume,,"
+25,2017-08-15,pm25,Pikachu_20170815,50,,,,,
+25,2017-08-15,pm26,Pikachu_20170815,51,,,,,
+25,2017-08-15,pm172,Pikachu_20170815,322,baby,-1,,,
+25,2017-10-20,pm25.cHALLOWEEN_2017,Pikachu_20171020,58,costume,,"
 Halloween
 Hat",,
-25,2017-10-20,pm26.cHALLOWEEN_2017,Pikachu_04,59,costume,,"
+25,2017-10-20,pm26.cHALLOWEEN_2017,Pikachu_20171020,59,costume,,"
 Halloween
 Hat",,
-25,2017-10-20,pm172.cHALLOWEEN_2017,Pikachu_04,325,baby=costume,-1,"
+25,2017-10-20,pm172.cHALLOWEEN_2017,Pikachu_20171020,325,baby=costume,-1,"
 Halloween
 Hat",,
-25,2018-07-05,pm25.cSUMMER_2018,Pikachu_05,62,costume,,"
+25,2018-07-05,pm25.cSUMMER_2018,Pikachu_20180705,62,costume,,"
 Summer
 Style",,
-25,2018-07-05,pm26.cSUMMER_2018,Pikachu_05,63,costume,,"
+25,2018-07-05,pm26.cSUMMER_2018,Pikachu_20180705,63,costume,,"
 Summer
 Style",,
-25,2018-07-05,pm172.cSUMMER_2018,Pikachu_05,326,baby=costume,-1,"
+25,2018-07-05,pm172.cSUMMER_2018,Pikachu_20180705,326,baby=costume,-1,"
 Summer
 Style",,
-25,2018-10-05,pm25.cFALL_2018,Pikachu_06,56,costume,,"
-Fragment Hat",,
-25,2018-10-05,pm26.cFALL_2018,Pikachu_06,57,costume,,"
-Fragment Hat",,
-25,2018-11-23,pm26.fALOLA,Pikachu_61,70,,,(A),--t: -10%,
-25,2019-02-26,pm25.cNOVEMBER_2018,Pikachu_07,64,costume,,"
+25,2018-10-05,pm25.cFALL_2018,Pikachu_20181005,56,costume,,"
+HF Custom Cap",,
+25,2018-10-05,pm26.cFALL_2018,Pikachu_20181005,57,costume,,"
+HF Custom Cap",,
+25,2018-11-23,pm26.fALOLA,Pikachu_20181123,70,,,(A),--t: -10%,
+25,2019-02-26,pm25.cNOVEMBER_2018,Pikachu_20190226,64,costume,,"
 Flower Crown",,
-25,2019-02-26,pm26.cNOVEMBER_2018,Pikachu_07,65,costume,,"
+25,2019-02-26,pm26.cNOVEMBER_2018,Pikachu_20190226,65,costume,,"
 Flower Crown",,
-25,2019-02-26,pm172.cNOVEMBER_2018,Pikachu_07,329,baby=costume,-1,"
+25,2019-02-26,pm172.cNOVEMBER_2018,Pikachu_20190226,329,baby=costume,-1,"
 Flower Crown",,
-25,2019-05-07,pm25.cFEB_2019,Pikachu_PI_1,1516,costume,,"♂
+25,2019-05-07,pm25.cFEB_2019,Pikachu_20190507,1516,costume,,"♂
 Detective",,
-25,2019-06-06,pm26.cONE_YEAR_ANNIVERSARY,Pikachu_03,55,costume,,"
+25,2019-06-06,pm26.cONE_YEAR_ANNIVERSARY,Pikachu_20170606,55,costume,,"
 Original
 Cap",,
-25,2019-07-22,pm25.cMAY_2019_NOEVOLVE,Pikachu_10,68,costume,,"
+25,2019-07-22,pm25.cMAY_2019_NOEVOLVE,Pikachu_20190722,68,costume,,"
 Straw Hat",,
-25,2019-10-17,pm25.fFALL_2019,Pikachu_c19,69,costume,,"
+25,2019-10-17,pm25.fFALL_2019,Pikachu_20191017,69,costume,,"
 Mimikyu
 Costume",,
-25,2019-12-24,pm25.cWINTER_2018,Pikachu_08,66,costume,,"
+25,2019-12-24,pm25.cWINTER_2018,Pikachu_20191224,66,costume,,"
 Beanie Hat",,
-25,2019-12-24,pm26.cWINTER_2018,Pikachu_08,67,costume,,"
+25,2019-12-24,pm26.cWINTER_2018,Pikachu_20191224,67,costume,,"
 Beanie Hat",,
-25,2019-12-24,pm172.cWINTER_2018,Pikachu_08,327,baby=costume,-1,"
+25,2019-12-24,pm172.cWINTER_2018,Pikachu_20191224,327,baby=costume,-1,"
 Beanie Hat",,
-25,2020-02-25,pm25.cJAN_2020_NOEVOLVE,Pikachu_11,71,costume,,"
+25,2020-02-25,pm25.cJAN_2020_NOEVOLVE,Pikachu_20200225,71,costume,,"
 Spotted
 Party Hat",,
-25,2020-03-27,pm25.cSAFARI_2020_NOEVOLVE,Pikachu_13,72,costume,,"
+25,2020-03-27,pm25.cSAFARI_2020_NOEVOLVE,Pikachu_20200327,72,costume,,"
 Safari Hat",,
-25,2020-04-09,pm25.cAPRIL_2020_NOEVOLVE,Pikachu_12,73,costume,,"
+25,2020-04-09,pm25.cAPRIL_2020_NOEVOLVE,Pikachu_20200409,73,costume,,"
 Flower Hat",,
-25,2020-05-01,pm25.cKANTO_2020_NOEVOLVE,Pikachu_22,74,costume,,"
+25,2020-05-01,pm25.cKANTO_2020_NOEVOLVE,Pikachu_20200501,74,costume,,"
 Charizard Hat",,
-25,2020-05-08,pm25.cJOHTO_2020_NOEVOLVE,Pikachu_23,75,costume,,"
+25,2020-05-08,pm25.cJOHTO_2020_NOEVOLVE,Pikachu_20200508,75,costume,,"
 Umbreon Hat",,
-25,2020-05-15,pm25.cHOENN_2020_NOEVOLVE,Pikachu_24,76,costume,,"
+25,2020-05-15,pm25.cHOENN_2020_NOEVOLVE,Pikachu_20200515,76,costume,,"
 Rayquaza Hat",,
-25,2020-05-22,pm25.cSINNOH_2020_NOEVOLVE,Pikachu_25,77,costume,,"
+25,2020-05-22,pm25.cSINNOH_2020_NOEVOLVE,Pikachu_20200522a,77,costume,,"
 Lucario Hat",,
-25,2020-05-22,pm25.fCOSTUME_2020,Pikachu_4thY,78,costume,,"
-Green
+25,2020-05-22,pm25.fCOSTUME_2020,Pikachu_20200522b,78,costume,,"
+4ᵗʰ Anniversary
 Balloons",,
-25,2020-10-06,pm25.cCOSTUME_1,Pikachu_27,79,costume,,"
+25,2020-10-06,pm25.cCOSTUME_1,Pikachu_20201006,79,costume,,"
 World Cap",,
-25,2020-10-06,pm26.cCOSTUME_1,Pikachu_27,80,costume,,"
+25,2020-10-06,pm26.cCOSTUME_1,Pikachu_20201006,80,costume,,"
 World Cap",,
-25,2020-12-14,pm25.fADVENTURE_HAT_2020,Pikachu_c20_1,81,costume,,"
+25,2020-12-14,pm25.fADVENTURE_HAT_2020,Pikachu_20201214,81,costume,,"
 Adventure Hat",,
-25,2020-12-22,pm25.fWINTER_2020,Pikachu_c20_2,82,costume,,"
+25,2020-12-22,pm25.fWINTER_2020,Pikachu_20201222,82,costume,,"
 Winter Carnival",,
-25,2020-12-29,pm25.fVS_2019,Pikachu_16,85,costume,,"
+25,2020-12-29,pm25.fVS_2019,Pikachu_20201229a,85,costume,,"
 Libre",,
-25,2020-12-29,pm25.cCOSTUME_2,Pikachu_28,83,costume,,"
+25,2020-12-29,pm25.cCOSTUME_2,Pikachu_20201229b,83,costume,,"
 New Year's Hat",,
-25,2020-12-29,pm26.cCOSTUME_2,Pikachu_28,84,costume,,"
+25,2020-12-29,pm26.cCOSTUME_2,Pikachu_20201229b,84,costume,,"
 New Year's Hat",,
-25,2020-12-29,pm172.cCOSTUME_2,Pikachu_28,330,baby=costume,-1,"
+25,2020-12-29,pm172.cCOSTUME_2,Pikachu_20201229b,330,baby=costume,-1,"
 New Year's Hat",,
-25,2021-07-06,pm25.fFLYING_5TH_ANNIV,Pikachu_5thY,86,costume,,"
-5Th Anniversary
+25,2021-07-06,pm25.fFLYING_5TH_ANNIV,Pikachu_20210706,86,costume,,"
+5ᵗʰ Anniversary
 Balloon",,
-25,2021-07-17,pm25.cGOFEST_2021_NOEVOLVE,Pikachu_47,87,costume,,"
+25,2021-07-17,pm25.cGOFEST_2021_NOEVOLVE,Pikachu_20210717,87,costume,,"
 Meloetta Hat",,
-25,2021-10-15,pm25.cHALLOWEEN_2021_NOEVOLVE,Pikachu_c21,88,costume,,"
+25,2021-10-15,pm25.cHALLOWEEN_2021_NOEVOLVE,Pikachu_20211015,88,costume,,"
 Halloween
 Mischief",,
-25,2022-03-19,pm25.fKARIYUSHI,Pikachu_KARIYUSHI,89,costume,,"
+25,2022-03-19,pm25.fKARIYUSHI,Pikachu_20220319,89,costume,,"
 Kariyushi
 Shirt",,
-25,2022-05-03,pm25.fFLYING_OKINAWA,Pikachu_FLYING_OKINAWA,90,costume,,"
+25,2022-05-03,pm25.fFLYING_OKINAWA,Pikachu_20220503,90,costume,,"
 Okinawa
-Balloons",,
-25,2022-06-04,pm25.cGOFEST_2022_NOEVOLVE,Pikachu_GOFEST_2022,91,costume,,"
-Gracidea Flower",,
-25,2022-06-16,pm25.cTCG_2022_NOEVOLVE,Pikachu_TCG,92,costume,,"
-Tcg Hat",,
-25,2022-07-06,pm25.cANNIVERSARY_2022_NOEVOLVE,Pikachu_22an,93,costume,,"
-Cake Costume",,
-25,2022-08-27,pm25.fGOFEST_2022,Pikachu_22FEST,94,costume,,"
-Shaymin Scarf",,
-25,2022-08-27,pm25.fWCS_2022,Pikachu_c22_WCS,95,costume,,"
-Wc 2022",,
-25,2022-10-20,pm25.fFLYING_01,Pikachu_f01,96,costume,,"
-4Th Anniversary
-Balloon",,
-25,2022-10-20,pm25.fTSHIRT_01,Pikachu_TS01,97,costume,,"
-Green T-Shirt
-(Berry)",,
-25,2022-11-24,pm25.fFLYING_02,Pikachu_f02,99,costume,,"
-Purple
-Balloons",,
-25,2022-11-24,pm25.fTSHIRT_02,Pikachu_TS02,98,costume,,"
-Purple T-Shirt
-(Flower)",,
-25,2022-12-31,pm25.cJAN_2023_NOEVOLVE,Pikachu_c23_1,100,costume,,"
-Party Top Hat",,
-25,2022-12-31,pm25.cGOTOUR_2023_HAT,Pikachu_GT23,101,costume,,"
-Brendan's Hat",,
-25,2022-12-31,pm25.cGOTOUR_2023_BANDANA,Pikachu_GT23,102,costume,,"
-May's Bow",,
-25,2023-04-04,pm25.cSPRING_2023,Pikachu_c23_2,103,costume,,"
-Cherry Blossom",,
-25,2023-04-04,pm26.cSPRING_2023,Pikachu_c23_2,110,costume,,"
-Cherry Blossom",,
-25,2023-04-04,pm172.cSPRING_2023,Pikachu_c23_2,331,baby=costume,-1,"
-Cherry Blossom",,
-25,2023-07-28,pm25.fJEJU,Pikachu_23j,104,costume,,"
-Blue T-Shirt
-(Citrus)",,
-25,2023-07-28,pm25.fFLYING_03,Pikachu_f03,1221,costume,,"
 Orange
 Balloons",,
-25,2023-08-04,pm25.fSUMMER_2023_E,Pikachu_c23_3,105,costume,,"
+25,2022-06-04,pm25.cGOFEST_2022_NOEVOLVE,Pikachu_20220604,91,costume,,"
+Gracidea Flower",,
+25,2022-06-16,pm25.cTCG_2022_NOEVOLVE,Pikachu_20220616,92,costume,,"
+TCG Hat",,
+25,2022-07-06,pm25.cANNIVERSARY_2022_NOEVOLVE,Pikachu_20220706,93,costume,,"
+Cake Costume",,
+25,2022-08-27,pm25.fGOFEST_2022,Pikachu_20220827a,94,costume,,"
+Shaymin Scarf",,
+25,2022-08-27,pm25.fWCS_2022,Pikachu_20220827b,95,costume,,"
+WC 2022",,
+25,2022-10-20,pm25.fFLYING_01,Pikachu_20221020b,96,costume,,"
+Green
+Balloons",,
+25,2022-10-20,pm25.fTSHIRT_01,Pikachu_20221020a,97,costume,,"
+Green T-Shirt
+(Berry)",,
+25,2022-11-24,pm25.fFLYING_02,Pikachu_20221124b,99,costume,,"
+Purple
+Balloons",,
+25,2022-11-24,pm25.fTSHIRT_02,Pikachu_20221124a,98,costume,,"
+Purple T-Shirt
+(Flower)",,
+25,2022-12-31,pm25.cJAN_2023_NOEVOLVE,Pikachu_20221231a,100,costume,,"
+Party Top Hat",,
+25,2022-12-31,pm25.cGOTOUR_2023_HAT,Pikachu_20221231b,101,costume,,"
+Brendan's Hat",,
+25,2022-12-31,pm25.cGOTOUR_2023_BANDANA,Pikachu_20221231b,102,costume,,"
+May's Bow",,
+25,2023-04-04,pm25.cSPRING_2023,Pikachu_20230404,103,costume,,"
+Cherry Blossom",,
+25,2023-04-04,pm26.cSPRING_2023,Pikachu_20230404,110,costume,,"
+Cherry Blossom",,
+25,2023-04-04,pm172.cSPRING_2023,Pikachu_20230404,331,baby=costume,-1,"
+Cherry Blossom",,
+25,2023-07-28,pm25.fJEJU,Pikachu_20230728a,104,costume,,"
+Blue T-Shirt
+(Citrus)",,
+25,2023-07-28,pm25.fFLYING_03,Pikachu_20230728b,1221,costume,,"
+Orange
+Balloons",,
+25,2023-08-04,pm25.fSUMMER_2023_E,Pikachu_20230804,105,costume,,"
 Amethyst
 Crown",,
-25,2023-08-04,pm25.fSUMMER_2023_A,Pikachu_c23_3,106,costume,,"
+25,2023-08-04,pm25.fSUMMER_2023_A,Pikachu_20230804,106,costume,,"
 Malachite
 Crown",,
-25,2023-08-04,pm25.fSUMMER_2023_B,Pikachu_c23_3,107,costume,,"
+25,2023-08-04,pm25.fSUMMER_2023_B,Pikachu_20230804,107,costume,,"
 Aquamarine
 Crown",,
-25,2023-08-04,pm25.fSUMMER_2023_C,Pikachu_c23_3,108,costume,,"
+25,2023-08-04,pm25.fSUMMER_2023_C,Pikachu_20230804,108,costume,,"
 Quartz
 Crown",,
-25,2023-08-04,pm25.fSUMMER_2023_D,Pikachu_c23_3,109,costume,,"
+25,2023-08-04,pm25.fSUMMER_2023_D,Pikachu_20230804,109,costume,,"
 Pyrite
 Crown",,
-25,2023-08-23,pm25.fWCS_2023,Pikachu_c23_WCS,1214,costume,,"
-Wc 2023",,
-25,2023-10-05,pm25.cPI,Pikachu_PI_2,1226,costume,,"
+25,2023-08-23,pm25.fWCS_2023,Pikachu_20230823,1214,costume,,"
+WC 2023",,
+25,2023-10-05,pm25.cPI,Pikachu_20231005,1226,costume,,"
 Detective",,
-25,2023-10-05,pm26.cPI,Pikachu_PI_2,1227,costume,,"
+25,2023-10-05,pm26.cPI,Pikachu_20231005,1227,costume,,"
 Detective",,
-25,2023-10-26,pm25.cFALL_2023_NOEVOLVE,Pikachu_c23_4,1223,costume,,"
+25,2023-10-26,pm25.cFALL_2023_NOEVOLVE,Pikachu_20231026,1223,costume,,"
 Tricks & Treats",,
-25,2023-12-18,pm25.cHOLIDAY_2023,Pikachu_c23_5,1224,costume,,"
+25,2023-12-18,pm25.cHOLIDAY_2023,Pikachu_20231218,1224,costume,,"
 Holiday Outfit",,
-25,2023-12-18,pm26.cHOLIDAY_2023,Pikachu_c23_5,1225,costume,,"
+25,2023-12-18,pm26.cHOLIDAY_2023,Pikachu_20231218,1225,costume,,"
 Holiday Outfit",,
-25,2024-02-17,pm25.fGOTOUR_2024_A,Pikachu_GT24,1217,costume,,"
+25,2024-02-17,pm25.fGOTOUR_2024_A,Pikachu_20240217,1217,costume,,"
 Lucas' Cap",,
-25,2024-02-17,pm25.fGOTOUR_2024_A_02,Pikachu_GT24,1218,costume,,"
+25,2024-02-17,pm25.fGOTOUR_2024_A_02,Pikachu_20240217,1218,costume,,"
 Hilda's Hat",,
-25,2024-02-17,pm25.fGOTOUR_2024_B,Pikachu_GT24,1219,costume,,"
+25,2024-02-17,pm25.fGOTOUR_2024_B,Pikachu_20240217,1219,costume,,"
 Rei's Cap",,
-25,2024-02-17,pm25.fGOTOUR_2024_B_02,Pikachu_GT24,1220,costume,,"
+25,2024-02-17,pm25.fGOTOUR_2024_B_02,Pikachu_20240217,1220,costume,,"
 Akari's Kerchief",,
-25,2024-03-02,pm25.fFLYING_04,Pikachu_f04,1222,costume,,"
-Red
+25,2024-03-02,pm25.fFLYING_04,Pikachu_20240302b,1222,costume,,"
+Black
 Balloons",,
-25,2024-03-02,pm25.fTSHIRT_03,Pikachu_TS03,1216,costume,,"
+25,2024-03-02,pm25.fTSHIRT_03,Pikachu_20240302a,1216,costume,,"
 Batik Shirt",,
-25,2024-03-05,pm25.fHORIZONS,Pikachu_c24_Horizons,1228,costume,,"
+25,2024-03-05,pm25.fHORIZONS,Pikachu_20240305,1228,costume,,"
 Captains Hat",,
-25,2024-05-30,pm25.fGOFEST_2024_MTIARA,Pikachu_GF24,1229,costume,,"
+25,2024-05-30,pm25.fGOFEST_2024_MTIARA,Pikachu_20240530,1229,costume,,"
 Moon Crown",,
-25,2024-05-30,pm25.fGOFEST_2024_STIARA,Pikachu_GF24,1230,costume,,"
+25,2024-05-30,pm25.fGOFEST_2024_STIARA,Pikachu_20240530,1230,costume,,"
 Sun Crown",,
-25,2024-08-16,pm25.fWCS_2024,Pikachu_c24_WCS,1215,costume,,"
-Wc 2024",,
-25,2024-11-01,pm25.fDIWALI_2024,Pikachu_c24_Diwali,1359,costume,,"
+25,2024-08-16,pm25.fWCS_2024,Pikachu_20240816,1215,costume,,"
+WC 2024",,
+25,2024-11-01,pm25.fDIWALI_2024,Pikachu_20241101,1359,costume,,"
 Saree",,
-25,2024-11-16,pm25.fPOP_STAR,Pikachu_24PSRS,1357,costume,,"
+25,2024-11-16,pm25.fPOP_STAR,Pikachu_20241116,1357,costume,,"
 Pop Star",,
-25,2024-11-16,pm25.fROCK_STAR,Pikachu_24PSRS,1358,costume,,"
+25,2024-11-16,pm25.fROCK_STAR,Pikachu_20241116,1358,costume,,"
 Rock Star",,
-25,2025-02-21,pm25.fGOTOUR_2025_A,Pikachu_GT25,1353,costume,,"
+25,2025-02-21,pm25.fGOTOUR_2025_A,Pikachu_20250221,1353,costume,,"
 Hilbert's Hat",,
-25,2025-02-21,pm25.fGOTOUR_2025_A_02,Pikachu_GT25,1354,costume,,"
+25,2025-02-21,pm25.fGOTOUR_2025_A_02,Pikachu_20250221,1354,costume,,"
 Hilda's Hat",,
-25,2025-02-21,pm25.fGOTOUR_2025_B,Pikachu_GT25,1355,costume,,"
+25,2025-02-21,pm25.fGOTOUR_2025_B,Pikachu_20250221,1355,costume,,"
 Nate's Visor",,
-25,2025-02-21,pm25.fGOTOUR_2025_B_02,Pikachu_GT25,1356,costume,,"
+25,2025-02-21,pm25.fGOTOUR_2025_B_02,Pikachu_20250221,1356,costume,,"
 Rosa's Visor",,
-25,2025-03-13,pm25.fKURTA,Pikachu_c25_Kurta,1360,costume,,"
+25,2025-03-13,pm25.fKURTA,Pikachu_20250313,1360,costume,,"
 Kurta",,
-25,2025-05-29,pm25.fGOFEST_2025_MONOCLE_RED,Pikachu_GF25,1361,costume,,"
+25,2025-05-29,pm25.fGOFEST_2025_MONOCLE_RED,Pikachu_20250529,1361,costume,,"
 Red Formal",,
-25,2025-05-29,pm25.fGOFEST_2025_MONOCLE_YELLOW,Pikachu_GF25,1362,costume,,"
+25,2025-05-29,pm25.fGOFEST_2025_MONOCLE_YELLOW,Pikachu_20250529,1362,costume,,"
 Yellow Formal",,
-25,2025-05-29,pm25.fGOFEST_2025_MONOCLE_BLUE,Pikachu_GF25,1363,costume,,"
+25,2025-05-29,pm25.fGOFEST_2025_MONOCLE_BLUE,Pikachu_20250529,1363,costume,,"
 Blue Formal",,
-25,2025-06-28,pm25.fGOFEST_2025_GOGGLES_RED,Pikachu_GF25,1364,costume,,"
+25,2025-06-28,pm25.fGOFEST_2025_GOGGLES_RED,Pikachu_20250529,1364,costume,,"
 Red Dapper",,
-25,2025-06-28,pm25.fGOFEST_2025_GOGGLES_YELLOW,Pikachu_GF25,1365,costume,,"
+25,2025-06-28,pm25.fGOFEST_2025_GOGGLES_YELLOW,Pikachu_20250529,1365,costume,,"
 Yellow Dapper",,
-25,2025-06-28,pm25.fGOFEST_2025_GOGGLES_BLUE,Pikachu_GF25,1366,costume,,"
+25,2025-06-28,pm25.fGOFEST_2025_GOGGLES_BLUE,Pikachu_20250529,1366,costume,,"
 Blue Dapper",,
-25,2025-08-04,pm25.cINDONESIA_2025_NOEVOLVE,Pikachu_c25_Jersey,1367,costume,,"
+25,2025-08-04,pm25.cINDONESIA_2025_NOEVOLVE,Pikachu_20250804,1367,costume,,"
 Indonesia Jersey",,
-25,2025-08-15,pm25.fWCS_2025,Pikachu_c25_WCS,1368,costume,,"
+25,2025-08-15,pm25.fWCS_2025,Pikachu_20250815,1368,costume,,"
 Varsity Jacket",,
-25,2026-02-23,pm25.fGOTOUR_2026_A_02,Pikachu_c25,1522,costume,,"
+25,2026-02-23,pm25.fGOTOUR_2026_A_02,Pikachu_20260223,1522,costume,,"
 Leaf's Hat",,
-25,2026-02-23,pm25.fGOTOUR_2026_A,Pikachu_c25,1523,costume,,"
+25,2026-02-23,pm25.fGOTOUR_2026_A,Pikachu_20260223,1523,costume,,"
 Red's Hat",,
-25,2026-02-24,pm25.fGOTOUR_2026_B,Pikachu_c25,1524,costume,,"
+25,2026-02-24,pm25.fGOTOUR_2026_B,Pikachu_20260223,1524,costume,,"
 Ethan's Hat",,
-25,2026-02-24,pm25.fGOTOUR_2026_B_02,Pikachu_c25,1525,costume,,"
+25,2026-02-24,pm25.fGOTOUR_2026_B_02,Pikachu_20260223,1525,costume,,"
 Lyra's Hat",,
-25,2026-02-28,pm25.fGOTOUR_2026_C,Pikachu_c25,1526,costume,,"
+25,2026-02-28,pm25.fGOTOUR_2026_C,Pikachu_20260223,1526,costume,,"
 Calem's Hat",,
-25,2026-02-28,pm25.fGOTOUR_2026_C_02,Pikachu_c25,1527,costume,,"
+25,2026-02-28,pm25.fGOTOUR_2026_C_02,Pikachu_20260223,1527,costume,,"
 Serena's Hat",,
-25,2026-03-28,pm25.fGIGANTAMAX,Pikachu,1528,,,(GM),,
-25,2026-04-03,pm25.fBB_2026,Pikachu_s26,1543,costume,,"
+25,2026-03-28,pm25.fGIGANTAMAX,Pikachu_20170815,1528,,,(GM),,
+25,2026-04-03,pm25.fBB_2026,Pikachu_20260403,1543,costume,,"
 Baseball Jersey",,
 27,2018-12-06,pm27,Sandshrew,111,,,,,
 27,2018-12-06,pm28,Sandshrew,112,,,,,
@@ -494,7 +495,7 @@ Baseball Jersey",,
 123,2022-08-10,pm212.fMEGA,Scyther,414,,,(M),,
 124,2019-02-13,pm124,Jynx,251,,,,,
 124,2019-02-13,pm238,Jynx,446,baby,-1,,,
-124,2020-10-02,pm238.cFALL_2020_NOEVOLVE,Jynx,447,baby=costume,1,,,
+124,2020-10-02,pm238.cFALL_2020_NOEVOLVE,Smoochum,447,baby=costume,1,,,
 125,2018-11-15,pm125,Electabuzz,252,,,,,
 125,2018-11-15,pm239,Electabuzz,448,baby,-1,,,
 125,2018-11-15,pm466,Electabuzz,747,,,,,
@@ -525,49 +526,85 @@ Baseball Jersey",,
 133,2018-08-11,pm197,Eevee,362,,,,,
 133,2018-08-11,pm470,Eevee,753,,,,,
 133,2018-08-11,pm471,Eevee,757,,,,,
-133,2019-02-26,pm133.cNOVEMBER_2018,Eevee_c18,266,costume,,,,
-133,2019-02-26,pm134.cNOVEMBER_2018,Eevee_c18,271,costume,,,,
-133,2019-02-26,pm135.cNOVEMBER_2018,Eevee_c18,275,costume,,,,
-133,2019-02-26,pm136.cNOVEMBER_2018,Eevee_c18,279,costume,,,,
-133,2019-02-26,pm196.cNOVEMBER_2018,Eevee_c18,359,costume,,,,
-133,2019-02-26,pm197.cNOVEMBER_2018,Eevee_c18,363,costume,,,,
-133,2019-05-17,pm470.cNOVEMBER_2018,Eevee_c18,754,costume,,,,
-133,2019-05-17,pm471.cNOVEMBER_2018,Eevee_c18,758,costume,,,,
-133,2020-02-25,pm133.cJAN_2020_NOEVOLVE,Eevee_cROGUE,268,costume,2,,,
+133,2019-02-26,pm133.cNOVEMBER_2018,Eevee_2019_FC,266,costume,,"
+Flower Crown",,
+133,2019-02-26,pm134.cNOVEMBER_2018,Eevee_2019_FC,271,costume,,"
+Flower Crown",,
+133,2019-02-26,pm135.cNOVEMBER_2018,Eevee_2019_FC,275,costume,,"
+Flower Crown",,
+133,2019-02-26,pm136.cNOVEMBER_2018,Eevee_2019_FC,279,costume,,"
+Flower Crown",,
+133,2019-02-26,pm196.cNOVEMBER_2018,Eevee_2019_FC,359,costume,,"
+Flower Crown",,
+133,2019-02-26,pm197.cNOVEMBER_2018,Eevee_2019_FC,363,costume,,"
+Flower Crown",,
+133,2019-05-17,pm470.cNOVEMBER_2018,Eevee_2019_FC,754,costume,,"
+Flower Crown",,
+133,2019-05-17,pm471.cNOVEMBER_2018,Eevee_2019_FC,758,costume,,"
+Flower Crown",,
+133,2019-05-17,pm700.cNOVEMBER_2018,Eevee_2019_FC,1019,costume,,"
+Flower Crown",,
+133,2020-02-25,pm133.cJAN_2020_NOEVOLVE,Eevee_20200225,268,costume,,,,
 133,2021-05-25,pm700,Eevee,1018,,,,,
-133,2021-05-25,pm700.cNOVEMBER_2018,Eevee_c18,1019,costume,,,,
-133,2021-12-16,pm471.cHOLIDAY_2021_NOEVOLVE,Eevee_cROGUE,759,costume,2,,,
-133,2022-12-31,pm133.cHOLIDAY_2022,Eevee_c22,267,costume,,,,
-133,2022-12-31,pm134.cHOLIDAY_2022,Eevee_c22,272,costume,,,,
-133,2022-12-31,pm135.cHOLIDAY_2022,Eevee_c22,276,costume,,,,
-133,2022-12-31,pm136.cHOLIDAY_2022,Eevee_c22,280,costume,,,,
-133,2022-12-31,pm196.cHOLIDAY_2022,Eevee_c22,360,costume,,,,
-133,2022-12-31,pm197.cHOLIDAY_2022,Eevee_c22,364,costume,,,,
-133,2022-12-31,pm470.cHOLIDAY_2022,Eevee_c22,755,costume,,,,
-133,2022-12-31,pm471.cHOLIDAY_2022,Eevee_c22,760,costume,,,,
-133,2022-12-31,pm700.cHOLIDAY_2022,Eevee_c22,1020,costume,,,,
-133,2023-04-04,pm133.cSPRING_2023,Eevee_c23_1,269,costume,,,,
-133,2023-04-04,pm134.cSPRING_2023,Eevee_c23_1,273,costume,,,,
-133,2023-04-04,pm135.cSPRING_2023,Eevee_c23_1,277,costume,,,,
-133,2023-04-04,pm136.cSPRING_2023,Eevee_c23_1,281,costume,,,,
-133,2023-04-04,pm196.cSPRING_2023,Eevee_c23_1,361,costume,,,,
-133,2023-04-04,pm197.cSPRING_2023,Eevee_c23_1,365,costume,,,,
-133,2023-04-04,pm470.cSPRING_2023,Eevee_c23_1,756,costume,,,,
-133,2023-04-04,pm471.cSPRING_2023,Eevee_c23_1,761,costume,,,,
-133,2023-04-04,pm700.cSPRING_2023,Eevee_c23_1,1021,costume,,,,
-133,2023-10-07,pm133.cMAY_2023,Eevee_c23_2,1245,costume,,,,
-133,2023-10-07,pm134.cMAY_2023,Eevee_c23_2,1248,costume,,,,
-133,2023-10-07,pm135.cMAY_2023,Eevee_c23_2,1249,costume,,,,
-133,2023-10-07,pm136.cMAY_2023,Eevee_c23_2,1250,costume,,,,
-133,2023-10-07,pm196.cMAY_2023,Eevee_c23_2,1260,costume,,,,
-133,2023-10-07,pm197.cMAY_2023,Eevee_c23_2,1261,costume,,,,
-133,2023-10-07,pm470.cMAY_2023,Eevee_c23_2,1270,costume,,,,
-133,2023-10-07,pm471.cMAY_2023,Eevee_c23_2,1271,costume,,,,
-133,2023-10-07,pm700.cMAY_2023,Eevee_c23_2,1298,costume,,,,
-133,2024-05-30,pm133.fGOFEST_2024_MTIARA,Eevee_GF24,1246,costume,,,,
-133,2024-05-30,pm133.fGOFEST_2024_STIARA,Eevee_GF24,1247,costume,,,,
-133,2024-06-14,pm196.fGOFEST_2024_SSCARF,Eevee_GF24,1299,costume,,,,
-133,2024-06-14,pm197.fGOFEST_2024_MSCARF,Eevee_GF24,1300,costume,,,,
+133,2021-12-16,pm471.cHOLIDAY_2021_NOEVOLVE,Eevee_20211216,759,costume,,,,
+133,2022-12-31,pm133.cHOLIDAY_2022,Eevee_20221231,267,costume,,"
+Holiday Hat",,
+133,2022-12-31,pm134.cHOLIDAY_2022,Eevee_20221231,272,costume,,"
+Holiday Hat",,
+133,2022-12-31,pm135.cHOLIDAY_2022,Eevee_20221231,276,costume,,"
+Holiday Hat",,
+133,2022-12-31,pm136.cHOLIDAY_2022,Eevee_20221231,280,costume,,"
+Holiday Hat",,
+133,2022-12-31,pm196.cHOLIDAY_2022,Eevee_20221231,360,costume,,"
+Holiday Hat",,
+133,2022-12-31,pm197.cHOLIDAY_2022,Eevee_20221231,364,costume,,"
+Holiday Hat",,
+133,2022-12-31,pm470.cHOLIDAY_2022,Eevee_20221231,755,costume,,"
+Holiday Hat",,
+133,2022-12-31,pm471.cHOLIDAY_2022,Eevee_20221231,760,costume,,"
+Holiday Hat",,
+133,2022-12-31,pm700.cHOLIDAY_2022,Eevee_20221231,1020,costume,,"
+Holiday Hat",,
+133,2023-04-04,pm133.cSPRING_2023,Eevee_20230404,269,costume,,"
+Cherry Blossoms",,
+133,2023-04-04,pm134.cSPRING_2023,Eevee_20230404,273,costume,,"
+Cherry Blossoms",,
+133,2023-04-04,pm135.cSPRING_2023,Eevee_20230404,277,costume,,"
+Cherry Blossoms",,
+133,2023-04-04,pm136.cSPRING_2023,Eevee_20230404,281,costume,,"
+Cherry Blossoms",,
+133,2023-04-04,pm196.cSPRING_2023,Eevee_20230404,361,costume,,"
+Cherry Blossoms",,
+133,2023-04-04,pm197.cSPRING_2023,Eevee_20230404,365,costume,,"
+Cherry Blossoms",,
+133,2023-04-04,pm470.cSPRING_2023,Eevee_20230404,756,costume,,"
+Cherry Blossoms",,
+133,2023-04-04,pm471.cSPRING_2023,Eevee_20230404,761,costume,,"
+Cherry Blossoms",,
+133,2023-04-04,pm700.cSPRING_2023,Eevee_20230404,1021,costume,,"
+Cherry Blossoms",,
+133,2023-10-07,pm133.cMAY_2023,Eevee_20231007,1245,costume,,"
+Safari Hat",,
+133,2023-10-07,pm134.cMAY_2023,Eevee_20231007,1248,costume,,"
+Safari Hat",,
+133,2023-10-07,pm135.cMAY_2023,Eevee_20231007,1249,costume,,"
+Safari Hat",,
+133,2023-10-07,pm136.cMAY_2023,Eevee_20231007,1250,costume,,"
+Safari Hat",,
+133,2023-10-07,pm196.cMAY_2023,Eevee_20231007,1260,costume,,"
+Safari Hat",,
+133,2023-10-07,pm197.cMAY_2023,Eevee_20231007,1261,costume,,"
+Safari Hat",,
+133,2023-10-07,pm470.cMAY_2023,Eevee_20231007,1270,costume,,"
+Safari Hat",,
+133,2023-10-07,pm471.cMAY_2023,Eevee_20231007,1271,costume,,"
+Safari Hat",,
+133,2023-10-07,pm700.cMAY_2023,Eevee_20231007,1298,costume,,"
+Safari Hat",,
+133,2024-05-30,pm133.fGOFEST_2024_MTIARA,Eevee_20240530,1246,costume,,,,
+133,2024-05-30,pm133.fGOFEST_2024_STIARA,Eevee_20240530,1247,costume,,,,
+133,2024-06-14,pm196.fGOFEST_2024_SSCARF,Eevee_20240614,1299,costume,,,,
+133,2024-06-14,pm197.fGOFEST_2024_MSCARF,Eevee_20240614,1300,costume,,,,
 137,2020-09-19,pm137,Porygon,282,,,,--t: -15%,
 137,2020-09-19,pm233,Porygon,440,,,,--t: -15%,
 137,2020-09-19,pm474,Porygon,764,,,,--t: -15%,
@@ -636,7 +673,7 @@ Baseball Jersey",,
 183,2018-12-18,pm298,Marill,519,,-1,,,
 185,2019-08-05,pm185,Sudowoodo,347,,,,,
 185,2019-08-05,pm438,Sudowoodo,713,,-1,,,
-185,2025-12-18,pm185.cHOLIDAY_2025,Sudowoodo_c25,1513,costume,,,,
+185,2025-12-18,pm185.fWINTER_2025,Sudowoodo_c25,1513,costume,,,,
 187,2022-02-12,pm187,Hoppip,349,,,,,
 187,2022-02-12,pm188,Hoppip,350,,,,,
 187,2022-02-12,pm189,Hoppip,351,,,,,
@@ -686,8 +723,8 @@ Baseball Jersey",,
 201,,pm201.fUNOWN_Q,Unown,387,,,(Q),--t: -15%,
 202,2018-03-22,pm202,Wobbuffet,399,,,(♂),,
 202,2018-03-22,pm202.g2,Wobbuffet,400,,,(♀),,
-202,2018-03-22,pm202.cJAN_2020_NOEVOLVE,Wobbuffet,401,costume,,(♂),,
-202,2018-03-22,pm202.cJAN_2020_NOEVOLVE.g2,Wobbuffet,402,costume,,(♀),,
+202,2018-03-22,pm202.cJAN_2020_NOEVOLVE,Wobbuffet_c,401,costume,,(♂),,
+202,2018-03-22,pm202.cJAN_2020_NOEVOLVE.g2,Wobbuffet_c,402,costume,,(♀),,
 202,2018-03-22,pm360,Wobbuffet,604,baby,-1,,,
 203,2022-02-26,pm203,Girafarig,403,,,,,
 204,2018-08-20,pm204,Pineco,404,,,,,
@@ -1039,9 +1076,9 @@ Baseball Jersey",,
 481,2021-09-14,pm481,Mesprit,772,,,,,
 482,2021-09-14,pm482,Azelf,773,,,,,
 483,2021-07-23,pm483,Dialga,774,,,,--w: 100%; --t: 5%; --l: 5%,
-483,2024-02-17,pm483.fORIGIN,Dialga,1272,,,,--w: 100%; --t: 0%; --l: 5%,
+483,2024-02-17,pm483.fORIGIN,Dialga,1272,,,(O),--w: 100%; --t: 0%; --l: 5%,
 484,2021-08-06,pm484,Palkia,775,,,,--w: 100%; --t: 5%; --l: 5%,
-484,2024-02-17,pm484.fORIGIN,Palkia,1273,,,,--w: 100%; --t: 0%; --l: 5%,
+484,2024-02-17,pm484.fORIGIN,Palkia,1273,,,(O),--w: 100%; --t: 0%; --l: 5%,
 485,2020-01-07,pm485,Heatran,776,,,,,
 486,2021-06-17,pm486,Regigigas,777,,,,,
 487,2019-09-23,pm487.fALTERED,Giratina,779,,,(A),,
@@ -1081,8 +1118,8 @@ Baseball Jersey",,
 517,2022-08-27,pm518,Munna,810,,,,--t: -20%,
 519,2020-07-02,pm519,Pidove,811,,,,,
 519,2020-07-02,pm520,Pidove,812,,,,--t: -20%,
-519,2020-07-02,pm521,Pidove,813,,,,,
-519,2020-07-02,pm521.g2,Pidove,814,,,,,
+519,2020-07-02,pm521,Pidove,813,,,(♂),,
+519,2020-07-02,pm521.g2,Pidove,814,,,(♀),,
 522,2021-09-21,pm522.cFASHION_2021_NOEVOLVE,Blitzle_c21,817,costume,,,,
 522,2021-09-28,pm522,Blitzle,815,,,,,
 522,2021-09-28,pm523,Blitzle,816,,,,,
@@ -1111,8 +1148,8 @@ Baseball Jersey",,
 543,2022-08-10,pm545,Venipede,839,,,,,
 546,2022-03-22,pm546,Cottonee,840,,,,,
 546,2022-03-22,pm547,Cottonee,841,,,,,
-546,2022-03-22,pm547.cSPRING_2024,Cottonee_F,1278,costume,,,,
-546,2024-03-21,pm546.cSPRING_2024,Cottonee_F,1277,costume,,,,
+546,2024-03-21,pm546.cSPRING_2024,Cottonee_F,1278,costume,,,,
+546,2024-03-21,pm547.cSPRING_2024,Cottonee_F,1277,costume,,,,
 548,2023-08-04,pm548,Petilil,842,,,,,
 548,2023-08-04,pm549,Petilil,843,,,,,
 548,2025-07-12,pm549.fHISUIAN,Petilil_H,1384,,,(H),,
@@ -1362,7 +1399,7 @@ Baseball Jersey",,
 698,2023-07-27,pm699,Amaura,1017,,,,,
 701,2026-02-20,pm701,Hawlucha,1022,,,,,
 702,2023-01-10,pm702,Dedenne,1023,,,,,
-702,2024-12-17,pm702.cWINTER_2024,Dedenne,1427,costume,,,,
+702,2024-12-17,pm702.cWINTER_2024,Dedenne_c,1427,costume,,,,
 703,2025-05-29,pm703,Carbink,1428,,,,,
 704,2023-08-27,pm704,Goomy,1025,,,,,
 704,2023-08-27,pm705,Goomy,1026,,,,,
@@ -1419,8 +1456,8 @@ Baseball Jersey",,
 736,2023-09-23,pm736,Grubbin,1319,,,,,
 736,2023-09-23,pm737,Grubbin,1320,,,,,
 736,2023-09-23,pm738,Grubbin,1321,,,,--t: 0%,
-737,2025-12-18,pm737.cHOLIDAY_2025,Charjabug_c25,1514,costume,,,,
-737,2025-12-18,pm738.cHOLIDAY_2025,Charjabug_c25,1515,costume,,,--t: 0%,
+737,2025-12-18,pm737.fWINTER_2025,Charjabug_c25,1514,costume,,,,
+737,2025-12-18,pm738.fWINTER_2025,Charjabug_c25,1515,costume,,,--t: 0%,
 739,2024-06-14,pm739,Crabrawler,1322,,,,,
 739,2024-06-14,pm740,Crabrawler,1323,,,,,
 741,2024-02-13,pm741.fBAILE,Oricorio,1324,,,,,
@@ -1429,8 +1466,8 @@ Baseball Jersey",,
 741,2024-02-13,pm741.fSENSU,Oricorio,1327,,,,,
 742,2024-01-13,pm742,Cutiefly,1328,,,,--t: 0%,
 742,2024-01-13,pm743,Cutiefly,1329,,,,--t: 0%,
-744,2021-03-01,pm745.fMIDNIGHT,Rockruff,1053,,,(🌙),,
 744,2022-03-01,pm744,Rockruff,1051,,,,,
+744,2022-03-01,pm745.fMIDNIGHT,Rockruff,1053,,,(🌙),,
 744,2022-03-01,pm745.fMIDDAY,Rockruff,1052,,,(☀️),,
 744,2023-01-06,pm745.fDUSK,Rockruff,1330,,,🌓,,
 747,2024-05-23,pm747,Mareanie,1331,,,,,
@@ -1580,10 +1617,10 @@ Baseball Jersey",,
 885,,pm885,Dreepy,1193,,,,,
 886,,pm886,Drakloak,1194,,,,,
 887,,pm887,Dragapult,1195,,,,,
-888,2024-09-26,pm888.fHERO,Zacian_&_Zamazenta_hero,1337,,,(🏅),--w: 100%; --t: 5%; --l: 5%,
-888,2025-05-29,pm888.fCROWNED_SWORD,Zacian_&_Zamazenta_s,1452,,,(👑⚔️),--w: 100%; --t: 5%; --l: 5%,
-889,2024-09-26,pm889.fHERO,Zacian_&_Zamazenta_hero,1338,,,(🏅),--w: 100%; --t: 5%; --l: 5%,
-889,2025-05-29,pm889.fCROWNED_SHIELD,Zacian_&_Zamazenta_s,1453,,,(👑🛡️),--w: 100%; --t: 5%; --l: 5%,
+888,2024-09-26,pm888.fHERO,Zacian,1337,,,(🏅),--w: 100%; --t: 5%; --l: 5%,
+888,2025-05-29,pm888.fCROWNED_SWORD,Zacian,1452,,,(👑⚔️),--w: 100%; --t: 5%; --l: 5%,
+889,2024-09-26,pm889.fHERO,Zamazenta,1338,,,(🏅),--w: 100%; --t: 5%; --l: 5%,
+889,2025-05-29,pm889.fCROWNED_SHIELD,Zamazenta,1453,,,(👑🛡️),--w: 100%; --t: 5%; --l: 5%,
 890,,pm890,Eternatus,1198,,,,,
 891,,pm891,Kubfu,1199,,,,,
 892,,pm892,Urshifu,1200,,,,,
@@ -1635,6 +1672,9 @@ Baseball Jersey",,
 960,2025-07-29,pm960,Wiglett,1480,,,,,
 960,2025-07-29,pm961,Wiglett,1481,,,,,
 962,2023-09-10,pm962,Bombirdier,1342,,,,--t: -10%,
+965,2026-04-30,pm965,Varoom,1545,,,,,
+965,2026-04-30,pm966,Varoom,1546,,,,,
+968,2026-04-28,pm968,Orthworm,1544,,,,,https://db.pokemongohub.net/images/pokemon-home-renders/Shiny/poke_capture_0968_000_mf_n_00000000_f_r.png
 974,2024-12-22,pm974,Cetoddle,1482,,,,,
 974,2024-12-22,pm975,Cetoddle,1483,,,,,
 977,2025-08-25,pm977,Dondozo,1495,,,,--w: 100%; --t: 5%,

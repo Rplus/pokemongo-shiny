@@ -43,7 +43,7 @@
 		🏷️ {i18n.t('tag')}
 	</summary>
 
-	<form class="filter-box">
+	<form class="filter-box" hidden={!Object.keys(tags).length}>
 		<div class="tag-cloud">
 			{#each filter_manager.filter_cates as cate}
 				<section class="tag-cate flex gap2">

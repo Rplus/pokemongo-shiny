@@ -259,7 +259,36 @@
 		--border-color: var(--pm-grid-color1, #dada0b);
   	background-color: hsla(33, 100%, 97%, 1);
 	}
-/* 
+
+	/* funny pm style */
+	.pm.pm[data-pid="pm94.fMEGA"] {
+		img {
+			filter: drop-shadow(6px 0px 6px);
+		}
+		&:hover {
+			.img-box {
+				background: linear-gradient(165deg, transparent, #000 30%);
+				z-index: 2;
+			}
+			.caption {
+				filter: blur(1px);
+				z-index: 1;
+			}
+		}
+	}
+	.pm.pm[data-pid="pm103.fALOLA"] {
+		img {
+			transition: top .3s;
+		}
+		&:hover {
+			img {
+				--t: -0%;
+			}
+		}
+	}
+
+
+/*
 	.pm-list {
 		gap: calc(var(--pm-grid-size) * .25);
 

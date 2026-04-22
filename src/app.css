@@ -204,6 +204,7 @@
 		width: var(--grid-size, 96px);
 		height: var(--grid-size, 96px);
 		--pm-marker-size: 20%;
+		cursor: pointer;
 
 		@media (max-width: 768px) {
 			width: calc(var(--grid-size, 96px) * .75);

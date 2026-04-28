@@ -3,52 +3,88 @@ family_dex,debut,pid,group,tag,order,suffix,style,src
 1,2018-03-25,pm2,Bulbasaur,,,,,
 1,2018-03-25,pm3,Bulbasaur,,,,,
 1,2018-03-25,pm3.fMEGA,Bulbasaur,,,(M),,
-1,2019-10-17,pm1.fFALL_2019,Bulbasaur_c19,costume,,,,
-1,2020-02-25,pm1.cJAN_2020_NOEVOLVE,Bulbasaur_c20_1,costume,,,,
-1,2020-07-25,pm1.cSPRING_2020_NOEVOLVE,Bulbasaur_c20_2,costume,,,,
+1,2019-10-17,pm1.fFALL_2019,Bulbasaur_c19,costume,,"
+Shedinja
+costume",,
+1,2020-02-25,pm1.cJAN_2020_NOEVOLVE,Bulbasaur_c20_1,costume,,"
+Party
+Hat",,
+1,2020-07-25,pm1.cSPRING_2020_NOEVOLVE,Bulbasaur_c20_2,costume,,"
+Pikachu
+Visor",,
 1,2024-10-26,pm3.fGIGANTAMAX,Bulbasaur,,,(GM),--w: 115%; --t: -5%,
-1,2025-07-01,pm2.cJAN_2020_NOEVOLVE,Bulbasaur_c20_1,costume,,,,
-1,2025-07-01,pm3.cJAN_2020_NOEVOLVE,Bulbasaur_c20_1,costume,,,,
+1,2025-07-01,pm2.cJAN_2020_NOEVOLVE,Bulbasaur_c20_1,costume,,"
+Party
+Hat",,
+1,2025-07-01,pm3.cJAN_2020_NOEVOLVE,Bulbasaur_c20_1,costume,,"
+Party
+Hat",,
 4,2018-05-19,pm4,Charmander,,,,,
 4,2018-05-19,pm5,Charmander,,,,,
 4,2018-05-19,pm6,Charmander,,,,--t: -5%,
 4,2018-05-19,pm6.fMEGA_X,Charmander,,,(M-X),--t: -0%,
 4,2018-05-19,pm6.fMEGA_Y,Charmander,,,(M-Y),--t: -0%,
-4,2019-10-17,pm4.fFALL_2019,Charmander_c19,costume,,,,
-4,2020-02-25,pm4.cJAN_2020_NOEVOLVE,Charmander_c20_1,costume,,,,
-4,2020-07-25,pm4.cSPRING_2020_NOEVOLVE,Charmander_c20_2,costume,,,,
-4,2022-07-06,pm5.cJAN_2020_NOEVOLVE,Charmander_c20_1,costume,,,,
-4,2022-07-06,pm6.cJAN_2020_NOEVOLVE,Charmander_c20_1,costume,,,--t: -5%,
+4,2019-10-17,pm4.fFALL_2019,Charmander_c19,costume,,"
+Cubone
+costume",,
+4,2020-02-25,pm4.cJAN_2020_NOEVOLVE,Charmander_c20_1,costume,,"
+Party
+Hat",,
+4,2020-07-25,pm4.cSPRING_2020_NOEVOLVE,Charmander_c20_2,costume,,"
+Pikachu
+Visor",,
+4,2022-07-06,pm5.cJAN_2020_NOEVOLVE,Charmander_c20_1,costume,,"
+Party
+Hat",,
+4,2022-07-06,pm6.cJAN_2020_NOEVOLVE,Charmander_c20_1,costume,,"
+Party
+Hat",--t: -5%,
 4,2024-10-26,pm6.fGIGANTAMAX,Charmander,,,(GM),--w: 115%; --t: -5%,
 7,2018-07-08,pm7,Squirtle,,,,,
 7,2018-07-08,pm8,Squirtle,,,,,
 7,2018-07-08,pm9,Squirtle,,,,,
 7,2018-07-08,pm9.fMEGA,Squirtle,,,(M),,
-7,2018-07-08,pm7.cSUMMER_2018,Squirtle_c18,costume,,,,
-7,2018-07-08,pm8.cSUMMER_2018,Squirtle_c18,costume,,,,
-7,2018-07-08,pm9.cSUMMER_2018,Squirtle_c18,costume,,,,
-7,2019-10-17,pm7.fFALL_2019,Squirtle_c19,costume,,,,
-7,2020-02-25,pm7.cJAN_2020_NOEVOLVE,Squirtle_c20_1,costume,,,,
-7,2020-07-25,pm7.cSPRING_2020_NOEVOLVE,Squirtle_c20_2,costume,,,,
-7,2023-07-03,pm8.cJAN_2020_NOEVOLVE,Squirtle_c20_1,costume,,,,
-7,2023-07-03,pm9.cJAN_2020_NOEVOLVE,Squirtle_c20_1,costume,,,,
+7,2018-07-08,pm7.cSUMMER_2018,Squirtle_c18,costume,,"
+Sunglasses",,
+7,2018-07-08,pm8.cSUMMER_2018,Squirtle_c18,costume,,"
+Sunglasses",,
+7,2018-07-08,pm9.cSUMMER_2018,Squirtle_c18,costume,,"
+Sunglasses",,
+7,2019-10-17,pm7.fFALL_2019,Squirtle_c19,costume,,"
+Yamask
+costume",,
+7,2020-02-25,pm7.cJAN_2020_NOEVOLVE,Squirtle_c20_1,costume,,"
+Party
+Hat",,
+7,2020-07-25,pm7.cSPRING_2020_NOEVOLVE,Squirtle_c20_2,costume,,"
+Pikachu
+Visor",,
+7,2023-07-03,pm8.cJAN_2020_NOEVOLVE,Squirtle_c20_1,costume,,"
+Party
+Hat",,
+7,2023-07-03,pm9.cJAN_2020_NOEVOLVE,Squirtle_c20_1,costume,,"
+Party
+Hat",,
 7,2024-10-26,pm9.fGIGANTAMAX,Squirtle,,,(GM),--w: 115%; --t: -5%,
 10,2018-11-01,pm10,Caterpie,,,,,
 10,2018-11-01,pm11,Caterpie,,,,,
 10,2018-11-01,pm12,Caterpie,,,,--l: -15%; --t: -5%,
-10,2021-09-21,pm12.cFASHION_2021_NOEVOLVE,Caterpie_c21,costume,,,--l: -15%; --t: -5%,
-12,2025-08-03,pm12.fGIGANTAMAX,Caterpie,,,(GM),--w: 115%; --t: -5%,
+10,2021-09-21,pm12.cFASHION_2021_NOEVOLVE,Caterpie_c21,costume,,"
+Fashionable",--l: -15%; --t: -5%,
+10,2025-08-03,pm12.fGIGANTAMAX,Caterpie,,,(GM),--w: 115%; --t: -5%,
 13,2020-06-19,pm13,Weedle,,,,,
 13,2020-06-19,pm14,Weedle,,,,,
-13,2020-06-19,pm15,Weedle,,,,,
-13,2020-06-19,pm15.fMEGA,Weedle,,,(M),,
+13,2020-06-19,pm15,Weedle,,,,--l: -15%; --t: -5%,
+13,2020-06-19,pm15.fMEGA,Weedle,,,(M),--l: -15%; --t: -10%,
 16,2019-02-26,pm16,Pidgey,,,,,
 16,2019-02-26,pm17,Pidgey,,,,--t: -5%,
 16,2019-02-26,pm18,Pidgey,,,,--t: -5%,
 16,2019-02-26,pm18.fMEGA,Pidgey,,,(M),--t: -5%,
 19,2019-02-26,pm19,Rattata,,,,,
 19,2019-02-26,pm20,Rattata,,,,,
-19,2019-02-26,pm20.cJAN_2020_NOEVOLVE,Rattata_c20,costume,,,,
+19,2019-02-26,pm20.cJAN_2020_NOEVOLVE,Rattata_c20,costume,,"
+Party
+Hat",,
 19,2019-06-28,pm19.fALOLA,Rattata_A,,,(A),,
 19,2019-06-28,pm20.fALOLA,Rattata_A,,,(A),,
 21,2021-02-20,pm21,Spearow,,,,,
@@ -56,11 +92,14 @@ family_dex,debut,pid,group,tag,order,suffix,style,src
 23,2019-07-25,pm23,Ekans,,,,,
 23,2019-07-25,pm24,Ekans,,,,,
 25,2016-12-25,pm25.cHOLIDAY_2016,Pikachu_20161225,costume,,"
-Holiday Hat",,
+Holiday
+Hat",,
 25,2016-12-25,pm26.cHOLIDAY_2016,Pikachu_20161225,costume,,"
-Holiday Hat",,
+Holiday
+Hat",,
 25,2016-12-25,pm172.cHOLIDAY_2016,Pikachu_20161225,baby=costume,-1,"
-Holiday Hat",,
+Holiday
+Hat",,
 25,2017-02-26,pm25.cANNIVERSARY,Pikachu_20170226,costume,,"
 Party Hat",,
 25,2017-02-26,pm26.cANNIVERSARY,Pikachu_20170226,costume,,"
@@ -100,11 +139,14 @@ HF Custom Cap",,
 HF Custom Cap",,
 25,2018-11-23,pm26.fALOLA,Pikachu_20181123,,,(A),--t: -10%,
 25,2019-02-26,pm25.cNOVEMBER_2018,Pikachu_20190226,costume,,"
-Flower Crown",,
+Flower
+Crown",,
 25,2019-02-26,pm26.cNOVEMBER_2018,Pikachu_20190226,costume,,"
-Flower Crown",,
+Flower
+Crown",,
 25,2019-02-26,pm172.cNOVEMBER_2018,Pikachu_20190226,baby=costume,-1,"
-Flower Crown",,
+Flower
+Crown",,
 25,2019-05-07,pm25.cFEB_2019,Pikachu_20190507,costume,,"♂
 Detective",,
 25,2019-06-06,pm26.cONE_YEAR_ANNIVERSARY,Pikachu_20170606,costume,,"
@@ -146,7 +188,8 @@ World Cap",,
 25,2020-12-14,pm25.fADVENTURE_HAT_2020,Pikachu_20201214,costume,,"
 Adventure Hat",,
 25,2020-12-22,pm25.fWINTER_2020,Pikachu_20201222,costume,,"
-Winter Carnival",,
+Holiday
+Costume",,
 25,2020-12-29,pm25.fVS_2019,Pikachu_20201229a,costume,,"
 Libre",,
 25,2020-12-29,pm25.cCOSTUME_2,Pikachu_20201229b,costume,,"
@@ -167,7 +210,7 @@ Mischief",,
 Kariyushi
 Shirt",,
 25,2022-05-03,pm25.fFLYING_OKINAWA,Pikachu_20220503,costume,,"
-Okinawa
+Red &
 Orange
 Balloons",,
 25,2022-06-04,pm25.cGOFEST_2022_NOEVOLVE,Pikachu_20220604,costume,,"
@@ -240,7 +283,7 @@ Holiday Outfit",,
 25,2024-02-17,pm25.fGOTOUR_2024_A,Pikachu_20240217,costume,,"
 Lucas' Cap",,
 25,2024-02-17,pm25.fGOTOUR_2024_A_02,Pikachu_20240217,costume,,"
-Hilda's Hat",,
+Dawn's Hat",,
 25,2024-02-17,pm25.fGOTOUR_2024_B,Pikachu_20240217,costume,,"
 Rei's Cap",,
 25,2024-02-17,pm25.fGOTOUR_2024_B_02,Pikachu_20240217,costume,,"
@@ -305,19 +348,24 @@ Serena's Hat",,
 25,2026-03-28,pm25.fGIGANTAMAX,Pikachu_20170815,,,(GM),,
 25,2026-04-03,pm25.fBB_2026,Pikachu_20260403,costume,,"
 Baseball Jersey",,
+25,2026-05-12,pm25.fVISOR_2026,Pikachu_20260512,costume,,"
+Marathon Visor",,
 27,2018-12-06,pm27,Sandshrew,,,,,
 27,2018-12-06,pm28,Sandshrew,,,,,
 27,2019-06-28,pm27.fALOLA,Sandshrew_A,,,(A),,
 27,2019-06-28,pm28.fALOLA,Sandshrew_A,,,(A),,
 29,2018-10-11,pm29,Nidoran_Female,,,,,
 29,2018-10-11,pm30,Nidoran_Female,,,,,
-29,2018-10-11,pm31,Nidoran_Female,,,,--w: 115%; --t: -5%,
+29,2018-10-11,pm31,Nidoran_Female,,,,--w: 115%; --t: -10%,
 29,2019-07-04,pm32,Nidoran_Male,,,,,
 29,2019-07-04,pm33,Nidoran_Male,,,,,
-29,2019-07-04,pm34,Nidoran_Male,,,,--w: 115%; --t: -5%,
-29,2020-03-01,pm33.cJAN_2020_NOEVOLVE,Nidoran_Male_c20,costume,,,,
-31,2025-05-10,pm31.cROYAL_NOEVOLVE,Nido_royal,costume,,,--w: 115%; --t: -5%,
-31,2025-05-10,pm34.cROYAL_NOEVOLVE,Nido_royal,costume,,,--w: 115%; --t: -5%,
+29,2019-07-04,pm34,Nidoran_Male,,,,--w: 115%; --t: -10%,
+29,2020-03-01,pm33.cJAN_2020_NOEVOLVE,Nidoran_Male_c20,costume,,"
+Party Hat",,
+31,2025-05-10,pm31.cROYAL_NOEVOLVE,Nido_royal,costume,,"
+Crown",--w: 115%; --t: -10%,
+31,2025-05-10,pm34.cROYAL_NOEVOLVE,Nido_royal,costume,,"
+Crown",--w: 115%; --t: -10%,
 35,2019-02-13,pm35,Clefairy,,,,,
 35,2019-02-13,pm36,Clefairy,,,,,
 35,2019-02-13,pm173,Clefairy,baby,-1,,,
@@ -325,13 +373,19 @@ Baseball Jersey",,
 37,2019-06-28,pm38.fALOLA,Vulpix_A,,,(A),,
 37,2020-10-09,pm37,Vulpix,,,,,
 37,2020-10-09,pm38,Vulpix,,,,,
-37,2022-10-27,pm37.cFALL_2022,Vulpix_c22,costume,,,,
-37,2022-10-27,pm38.cFALL_2022,Vulpix_c22,costume,,,,
+37,2022-10-27,pm37.cFALL_2022,Vulpix_c22,costume,,"
+Spooky
+Festival",,
+37,2022-10-27,pm38.cFALL_2022,Vulpix_c22,costume,,"
+Spooky
+Festival",,
 39,2019-04-16,pm39,Jigglypuff,,,,,
 39,2019-04-16,pm40,Jigglypuff,,,,,
 39,2019-04-16,pm174,Jigglypuff,baby,-1,,,
-39,2024-01-01,pm39.cJAN_2024,Jigglypuff_c24,costume,,,,
-39,2024-01-01,pm40.cJAN_2024,Jigglypuff_c24,costume,,,,
+39,2024-01-01,pm39.cJAN_2024,Jigglypuff_c24,costume,,"
+Ribbon",,
+39,2024-01-01,pm40.cJAN_2024,Jigglypuff_c24,costume,,"
+Ribbon",,
 41,2019-07-25,pm41,Zubat,,,,--t: -10%,
 41,2019-07-25,pm42,Zubat,,,,--t: -10%,
 41,2019-07-25,pm169,Zubat,,,,--t: -10%,
@@ -345,10 +399,12 @@ Baseball Jersey",,
 48,2020-05-01,pm49,Venonat,,,,--t: -10%,
 50,2019-04-29,pm50,Diglett,,,,,
 50,2019-04-29,pm51,Diglett,,,,,
-50,2019-06-28,pm50.fALOLA,Diglett_A,costume,,(A),,
+50,2019-06-28,pm50.fALOLA,Diglett_A,,,(A),,
 50,2019-06-28,pm51.fALOLA,Diglett_A,,,(A),,
-50,2022-09-27,pm50.cFALL_2022,Diglett_c22,costume,,,,
-50,2022-09-27,pm51.cFALL_2022,Diglett_c22,costume,,,,
+50,2022-09-27,pm50.cFALL_2022,Diglett_c22,costume,,"
+Fashionable",,
+50,2022-09-27,pm51.cFALL_2022,Diglett_c22,costume,,"
+Fashionable",,
 52,2019-06-28,pm52.fALOLA,Meowth_A,,,(A),,
 52,2019-06-28,pm53.fALOLA,Meowth_A,,,(A),,
 52,2019-11-07,pm52,Meowth,,,,,
@@ -358,9 +414,14 @@ Baseball Jersey",,
 52,2026-02-15,pm52.fGIGANTAMAX,Meowth,,,(GM),--w: 100%; --l: 20%; --t: 0%,
 54,2019-01-25,pm54,Psyduck,,,,,
 54,2019-01-25,pm55,Psyduck,,,,,
-54,2023-12-18,pm54.cHOLIDAY_2023,Psyduck_2,costume,,,,
-54,2023-12-18,pm55.cHOLIDAY_2023,Psyduck_2,costume,,,,
-54,2025-09-09,pm54.fSWIM_2025,Psyduck_swim,,,,,
+54,2023-12-18,pm54.cHOLIDAY_2023,Psyduck_2,costume,,"
+Holiday
+Attire",,
+54,2023-12-18,pm55.cHOLIDAY_2023,Psyduck_2,costume,,"
+Holiday
+Attire",,
+54,2025-09-09,pm54.fSWIM_2025,Psyduck_swim,costume,,"
+Swim Ring",,
 56,2019-03-05,pm56,Mankey,,,,,
 56,2019-03-05,pm57,Mankey,,,,,
 56,2024-01-19,pm979,Mankey,,,,,
@@ -396,20 +457,30 @@ Baseball Jersey",,
 77,2018-11-05,pm78,Ponyta,,,,,
 77,2021-05-11,pm77.fGALARIAN,Ponyta_G,,,(G),,
 77,2021-05-11,pm78.fGALARIAN,Ponyta_G,,,(G),,
-77,2021-07-17,pm77.fGALARIAN.cGOFEST_2021_NOEVOLVE,Ponyta_G_c21,costume,,(G),,
-77,2023-05-11,pm77.cSPRING_2023_VALOR,Ponyta_c23,costume,,,,
-77,2023-05-11,pm78.cSPRING_2023_VALOR,Ponyta_c23,costume,,,,
+77,2021-07-17,pm77.fGALARIAN.cGOFEST_2021_NOEVOLVE,Ponyta_G_c21,costume,,"(G)
+Meloetta
+Hat",,
+77,2023-05-11,pm77.cSPRING_2023_VALOR,Ponyta_c23,costume,,"
+Candela
+accessory",,
+77,2023-05-11,pm78.cSPRING_2023_VALOR,Ponyta_c23,costume,,"
+Candela
+accessory",,
 79,2020-11-16,pm79,Slowpoke,,,,,
 79,2020-11-16,pm80,Slowpoke,,,,,
 79,2020-11-16,pm199,Slowpoke,,,,,
-79,2020-11-30,pm79.f2020,Slowpoke_glasses,costume,,,,
-79,2020-11-30,pm80.f2021,Slowpoke_glasses,costume,,,,
+79,2020-11-30,pm79.f2020,Slowpoke_glasses,costume,,"
+New Year",,
+79,2020-11-30,pm80.f2021,Slowpoke_glasses,costume,,"
+New Year",,
 79,2021-06-08,pm80.fMEGA,Slowpoke,,,(M),,
-79,2022-01-01,pm199.f2022,Slowpoke_glasses,costume,,,,
+79,2022-01-01,pm199.f2022,Slowpoke_glasses,costume,,"
+New Year",,
 79,2023-03-18,pm79.fGALARIAN,Slowpoke_G,,,(G),,
 79,2023-03-18,pm80.fGALARIAN,Slowpoke_G,,,(G),,
 79,2023-03-18,pm199.fGALARIAN,Slowpoke_G,,,(G),,
-79,2023-10-05,pm79.cPI_NOEVOLVE,Slowpoke_c23,costume,,,,
+79,2023-10-05,pm79.cPI_NOEVOLVE,Slowpoke_c23,costume,,"
+w Hat",,
 81,2018-11-16,pm81,Magnemite,,,,--t: -10%,
 81,2018-11-16,pm82,Magnemite,,,,--t: -15%,
 81,2018-11-16,pm462,Magnemite,,,,--t: -5%,
@@ -424,22 +495,30 @@ Baseball Jersey",,
 88,2018-09-13,pm89,Grimer,,,,,
 88,2019-06-28,pm88.fALOLA,Grimer_61,,,(A),,
 88,2019-06-28,pm89.fALOLA,Grimer_61,,,(A),,
-88,2024-06-24,pm88.cANNIVERSARY_2024,Grimer_24,costume,,,,
-88,2024-06-24,pm89.cANNIVERSARY_2024,Grimer_24,costume,,,,
+88,2024-06-24,pm88.cANNIVERSARY_2024,Grimer_24,costume,,"
+Party Hat",,
+88,2024-06-24,pm89.cANNIVERSARY_2024,Grimer_24,costume,,"
+Party Hat",,
 90,2018-06-07,pm90,Shellder,,,,,
 90,2018-06-07,pm91,Shellder,,,,--t: 0%,
 92,2018-11-03,pm92,Gastly,,,,--t: -10%,
 92,2018-11-03,pm93,Gastly,,,,--t: 5%,
 92,2018-11-03,pm94,Gastly,,,,,
 92,2018-11-03,pm94.fMEGA,Gastly,,,(M),,
-92,2020-03-01,pm94.cJAN_2020_NOEVOLVE,Gastly_c20_1,costume,,,,
-92,2020-10-23,pm94.fCOSTUME_2020,Gastly_c20_2,costume,,,,
-92,2022-10-27,pm94.cFALL_2022_NOEVOLVE,Gastly_c22,costume,,,,
-92,2023-10-26,pm94.cFALL_2023_NOEVOLVE,Gastly_c23,costume,,,,
+92,2020-03-01,pm94.cJAN_2020_NOEVOLVE,Gastly_c20_1,costume,,"
+Party Hat",,
+92,2020-10-23,pm94.fCOSTUME_2020,Gastly_c20_2,costume,,"
+Halloween",,
+92,2022-10-27,pm94.cFALL_2022_NOEVOLVE,Gastly_c22,costume,,"
+Spooky
+Festival",,
+92,2023-10-26,pm94.cFALL_2023_NOEVOLVE,Gastly_c23,costume,,"
+Tricks &
+Treats",,
 92,2024-10-31,pm94.fGIGANTAMAX,Gastly,,,(GM),--w: 115%; --t: -5%,
-95,2019-06-04,pm95,Onix,,,,,
-95,2019-06-04,pm208,Onix,,,,,
-95,2021-12-01,pm208.fMEGA,Onix,,,(M),,
+95,2019-06-04,pm95,Onix,,,,--w: 110%; --t: 0%,
+95,2019-06-04,pm208,Onix,,,,--w: 110%; --t: 0%,
+95,2021-12-01,pm208.fMEGA,Onix,,,(M),--t: -25%,
 96,2018-10-05,pm96,Drowzee,,,,,
 96,2018-10-05,pm97,Drowzee,,,,,
 98,2018-10-01,pm98,Krabby,,,,,
@@ -455,8 +534,12 @@ Baseball Jersey",,
 104,2018-11-05,pm104,Cubone,,,,,
 104,2018-11-05,pm105,Cubone,,,,,
 104,2018-11-05,pm105.fALOLA,Cubone,,,(A),,
-104,2023-11-01,pm104.cFALL_2023,Cubone_c23,costume,,,,
-104,2023-11-01,pm105.cFALL_2023,Cubone_c23,costume,,,,
+104,2023-11-01,pm104.cFALL_2023,Cubone_c23,costume,,"
+Cempasúchil
+Crown",,
+104,2023-11-01,pm105.cFALL_2023,Cubone_c23,costume,,"
+Cempasúchil
+Crown",,
 106,2021-02-20,pm106,Tyrogue,,,,,
 106,2021-02-20,pm107,Tyrogue,,,,,
 106,2022-02-26,pm236,Tyrogue,baby,-1,,,
@@ -472,9 +555,15 @@ Baseball Jersey",,
 113,2020-02-13,pm113,Chansey,,,,,
 113,2020-02-13,pm242,Chansey,,,,,
 113,2020-02-13,pm440,Chansey,baby,-1,,,
-113,2021-04-04,pm113.cNOVEMBER_2018,Chansey_c18,costume,,,,
-113,2021-04-04,pm242.cNOVEMBER_2018,Chansey_c18,costume,,,,
-113,2021-04-04,pm440.cNOVEMBER_2018,Chansey_c18,baby=costume,-1,,,
+113,2021-04-04,pm113.cNOVEMBER_2018,Chansey_c18,costume,,"
+Flower
+Crown",,
+113,2021-04-04,pm242.cNOVEMBER_2018,Chansey_c18,costume,,"
+Flower
+Crown",,
+113,2021-04-04,pm440.cNOVEMBER_2018,Chansey_c18,baby=costume,-1,"
+Flower
+Crown",,
 114,2020-07-24,pm114,Tangela,,,,,
 114,2020-07-24,pm465,Tangela,,,,,
 115,2019-09-09,pm115,Kangaskhan,,,,,
@@ -495,13 +584,20 @@ Baseball Jersey",,
 123,2022-08-10,pm212.fMEGA,Scyther,,,(M),,
 124,2019-02-13,pm124,Jynx,,,,,
 124,2019-02-13,pm238,Jynx,baby,-1,,,
-124,2020-10-02,pm238.cFALL_2020_NOEVOLVE,Smoochum,baby=costume,1,,,
+124,2020-10-02,pm238.cFALL_2020_NOEVOLVE,Smoochum,baby=costume,,"
+w Bow",,
 125,2018-11-15,pm125,Electabuzz,,,,,
 125,2018-11-15,pm239,Electabuzz,baby,-1,,,
 125,2018-11-15,pm466,Electabuzz,,,,,
-125,2023-05-02,pm125.cSPRING_2023_INSTINCT,Electabuzz_c23,costume,,,,
-125,2023-05-02,pm239.cSPRING_2023_INSTINCT,Electabuzz_c23,baby=costume,-1,,,
-125,2023-05-02,pm466.cSPRING_2023_INSTINCT,Electabuzz_c23,costume,,,,
+125,2023-05-02,pm125.cSPRING_2023_INSTINCT,Electabuzz_c23,costume,,"
+Spark
+accessory",,
+125,2023-05-02,pm239.cSPRING_2023_INSTINCT,Electabuzz_c23,baby=costume,-1,"
+Spark
+accessory",,
+125,2023-05-02,pm466.cSPRING_2023_INSTINCT,Electabuzz_c23,costume,,"
+Spark
+accessory",,
 126,2018-03-22,pm126,Magmar,,,,,
 126,2018-03-22,pm240,Magmar,baby,-1,,,
 126,2018-03-22,pm467,Magmar,,,,,
@@ -512,12 +608,17 @@ Baseball Jersey",,
 129,2017-03-22,pm130,Magikarp,,,,--w: 120%; --t: 5%,
 129,2017-03-22,pm130.fMEGA,Magikarp,,,(M),--t: -10%,
 131,2019-04-18,pm131,Lapras,,,,--w: 120%; --l: 0%; --t: -10%,
-131,2022-05-12,pm131.fCOSTUME_2020,Lapras,costume,,,--w: 120%; --l: 0%; --t: -10%,
-131,2023-04-13,pm131.cSPRING_2023_MYSTIC,Lapras,costume,,,--w: 120%; --l: 0%; --t: -10%,
+131,2022-05-12,pm131.fCOSTUME_2020,Lapras,costume,,"
+w scarf",--w: 120%; --l: 0%; --t: -10%,
+131,2023-04-13,pm131.cSPRING_2023_MYSTIC,Lapras,costume,,"
+Blanche
+accessory",--w: 120%; --l: 0%; --t: -10%,
 131,2024-12-08,pm131.fGIGANTAMAX,Lapras,,,(GM),,
 132,2021-02-20,pm132,Ditto,,,,,
-132,2026-03-10,pm132.fSPRING_2026_A,Ditto_costume,costume,,(🧢),,
-132,2026-03-11,pm132.fSPRING_2026_B,Ditto_costume,costume,,(👒),,
+132,2026-03-10,pm132.fSPRING_2026_A,Ditto_costume,costume,,"
+w Cap",,
+132,2026-03-11,pm132.fSPRING_2026_B,Ditto_costume,costume,,"
+w Hat",,
 133,2018-08-11,pm133,Eevee,,,,,
 133,2018-08-11,pm134,Eevee,,,,,
 133,2018-08-11,pm135,Eevee,,,,,
@@ -527,26 +628,38 @@ Baseball Jersey",,
 133,2018-08-11,pm470,Eevee,,,,,
 133,2018-08-11,pm471,Eevee,,,,,
 133,2019-02-26,pm133.cNOVEMBER_2018,Eevee_2019_FC,costume,,"
-Flower Crown",,
+Flower
+Crown",,
 133,2019-02-26,pm134.cNOVEMBER_2018,Eevee_2019_FC,costume,,"
-Flower Crown",,
+Flower
+Crown",,
 133,2019-02-26,pm135.cNOVEMBER_2018,Eevee_2019_FC,costume,,"
-Flower Crown",,
+Flower
+Crown",,
 133,2019-02-26,pm136.cNOVEMBER_2018,Eevee_2019_FC,costume,,"
-Flower Crown",,
+Flower
+Crown",,
 133,2019-02-26,pm196.cNOVEMBER_2018,Eevee_2019_FC,costume,,"
-Flower Crown",,
+Flower
+Crown",,
 133,2019-02-26,pm197.cNOVEMBER_2018,Eevee_2019_FC,costume,,"
-Flower Crown",,
+Flower
+Crown",,
 133,2019-05-17,pm470.cNOVEMBER_2018,Eevee_2019_FC,costume,,"
-Flower Crown",,
+Flower
+Crown",,
 133,2019-05-17,pm471.cNOVEMBER_2018,Eevee_2019_FC,costume,,"
-Flower Crown",,
+Flower
+Crown",,
 133,2019-05-17,pm700.cNOVEMBER_2018,Eevee_2019_FC,costume,,"
-Flower Crown",,
-133,2020-02-25,pm133.cJAN_2020_NOEVOLVE,Eevee_20200225,costume,,,,
+Flower
+Crown",,
+133,2020-02-25,pm133.cJAN_2020_NOEVOLVE,Eevee_20200225,costume,,"
+Spotted
+Party Hat",,
 133,2021-05-25,pm700,Eevee,,,,,
-133,2021-12-16,pm471.cHOLIDAY_2021_NOEVOLVE,Eevee_20211216,costume,,,,
+133,2021-12-16,pm471.cHOLIDAY_2021_NOEVOLVE,Eevee_20211216,costume,,"
+Holiday",,
 133,2022-12-31,pm133.cHOLIDAY_2022,Eevee_20221231,costume,,"
 Holiday Hat",,
 133,2022-12-31,pm134.cHOLIDAY_2022,Eevee_20221231,costume,,"
@@ -566,23 +679,32 @@ Holiday Hat",,
 133,2022-12-31,pm700.cHOLIDAY_2022,Eevee_20221231,costume,,"
 Holiday Hat",,
 133,2023-04-04,pm133.cSPRING_2023,Eevee_20230404,costume,,"
-Cherry Blossoms",,
+Cherry
+Blossoms",,
 133,2023-04-04,pm134.cSPRING_2023,Eevee_20230404,costume,,"
-Cherry Blossoms",,
+Cherry
+Blossoms",,
 133,2023-04-04,pm135.cSPRING_2023,Eevee_20230404,costume,,"
-Cherry Blossoms",,
+Cherry
+Blossoms",,
 133,2023-04-04,pm136.cSPRING_2023,Eevee_20230404,costume,,"
-Cherry Blossoms",,
+Cherry
+Blossoms",,
 133,2023-04-04,pm196.cSPRING_2023,Eevee_20230404,costume,,"
-Cherry Blossoms",,
+Cherry
+Blossoms",,
 133,2023-04-04,pm197.cSPRING_2023,Eevee_20230404,costume,,"
-Cherry Blossoms",,
+Cherry
+Blossoms",,
 133,2023-04-04,pm470.cSPRING_2023,Eevee_20230404,costume,,"
-Cherry Blossoms",,
+Cherry
+Blossoms",,
 133,2023-04-04,pm471.cSPRING_2023,Eevee_20230404,costume,,"
-Cherry Blossoms",,
+Cherry
+Blossoms",,
 133,2023-04-04,pm700.cSPRING_2023,Eevee_20230404,costume,,"
-Cherry Blossoms",,
+Cherry
+Blossoms",,
 133,2023-10-07,pm133.cMAY_2023,Eevee_20231007,costume,,"
 Safari Hat",,
 133,2023-10-07,pm134.cMAY_2023,Eevee_20231007,costume,,"
@@ -601,10 +723,14 @@ Safari Hat",,
 Safari Hat",,
 133,2023-10-07,pm700.cMAY_2023,Eevee_20231007,costume,,"
 Safari Hat",,
-133,2024-05-30,pm133.fGOFEST_2024_MTIARA,Eevee_20240530,costume,,,,
-133,2024-05-30,pm133.fGOFEST_2024_STIARA,Eevee_20240530,costume,,,,
-133,2024-06-14,pm196.fGOFEST_2024_SSCARF,Eevee_20240614,costume,,,,
-133,2024-06-14,pm197.fGOFEST_2024_MSCARF,Eevee_20240614,costume,,,,
+133,2024-05-30,pm133.fGOFEST_2024_STIARA,Eevee_20240530,costume,,"
+Sun Tiara",,
+133,2024-05-30,pm133.fGOFEST_2024_MTIARA,Eevee_20240530,costume,,"
+Moon Tiara",,
+133,2024-06-14,pm196.fGOFEST_2024_SSCARF,Eevee_20240614,costume,,"
+Sun Scarf",,
+133,2024-06-14,pm197.fGOFEST_2024_MSCARF,Eevee_20240614,costume,,"
+Moon Scarf",,
 137,2020-09-19,pm137,Porygon,,,,--t: -15%,
 137,2020-09-19,pm233,Porygon,,,,--t: -15%,
 137,2020-09-19,pm474,Porygon,,,,--t: -15%,
@@ -614,12 +740,18 @@ Safari Hat",,
 140,2018-05-24,pm141,Kabuto,,,,,
 142,2018-05-02,pm142,Aerodactyl,,,,--t: 0%,
 142,2023-01-25,pm142.fMEGA,Aerodactyl,,,(M),--t: 0%,
-142,2023-08-04,pm142.fSUMMER_2023,Aerodactyl_c23,costume,,,--t: 0%,
+142,2023-08-04,pm142.fSUMMER_2023,Aerodactyl_c23,costume,,"
+w Satchel",--t: 0%,
 143,2021-02-20,pm143,Snorlax,,,,--w: 120%; --l: 0%; --t: -10%,
-143,2022-07-16,pm143.cGOFEST_2022_NOEVOLVE,Snorlax_c22,costume,,,--w: 120%; --l: 0%; --t: -10%,
+143,2022-07-16,pm143.cGOFEST_2022_NOEVOLVE,Snorlax_c22,costume,,"
+Cowboy
+Hat",--w: 120%; --l: 0%; --t: -10%,
 143,2022-11-09,pm446,Snorlax,baby,-1,,,
-143,2023-07-15,pm143.cNIGHTCAP,Snorlax_c23,costume,,,--w: 120%; --l: 0%; --t: -10%,
-143,2024-11-16,pm143.fWILDAREA_2024,Snorlax_c24,costume,,,--t: -15%; --w: 125%,
+143,2023-07-15,pm143.cNIGHTCAP,Snorlax_c23,costume,,"
+Nightcap",--w: 120%; --l: 0%; --t: -10%,
+143,2024-11-16,pm143.fWILDAREA_2024,Snorlax_c24,costume,,"
+Studded
+Jacket",--t: -15%; --w: 125%,
 143,2025-04-19,pm143.fGIGANTAMAX,Snorlax,,,(GM),,
 144,2018-07-07,pm144,Articuno,,,,--w: 120%; --t: 15%,
 144,2024-10-04,pm144.fGALARIAN,Articuno_G,,,(G),--w: 120%; --t: 0%,
@@ -631,7 +763,8 @@ Safari Hat",,
 147,2018-02-24,pm148,Dratini,,,,,
 147,2018-02-24,pm149,Dratini,,,,--w: 120%; --l: 5%; --t: 5%,
 147,2026-02-28,pm149.fMEGA,Dratini,,,(M),--w: 120%; --l: 5%; --t: 5%,
-149,2023-11-15,pm149.cFALL_2023,Dragonite_c23,costume,,,--w: 120%; --l: 5%; --t: 5%,
+149,2023-11-15,pm149.cFALL_2023,Dragonite_c23,costume,,"
+Fashionable",--w: 120%; --l: 5%; --t: 5%,
 150,2019-09-16,pm150,Mewtwo,,,,,
 151,2021-02-20,pm151,Mew,,,,,
 152,2018-09-22,pm152,Chikorita,,,,,
@@ -648,8 +781,12 @@ Safari Hat",,
 161,2019-09-02,pm162,Sentret,,,,,
 163,2022-01-01,pm163,Hoothoot,,,,,
 163,2022-01-01,pm164,Hoothoot,,,,--t: -15%,
-163,2022-01-01,pm163.cJAN_2022_NOEVOLVE,Hoothoot_2022,costume,,,,
-163,2022-12-31,pm164.cJAN_2022_NOEVOLVE,Hoothoot_2022,costume,,,--t: -15%,
+163,2022-01-01,pm163.cJAN_2022_NOEVOLVE,Hoothoot_2022,costume,,"
+New Year's
+Hat",,
+163,2022-12-31,pm164.cJAN_2022_NOEVOLVE,Hoothoot_2022,costume,,"
+New Year's
+Hat",--t: -15%,
 165,2020-09-10,pm165,Ledyba,,,,--t: -5%,
 165,2020-09-10,pm166,Ledyba,,,,--t: -5%,
 167,2021-10-15,pm167,Spinarak,,,,,
@@ -659,9 +796,15 @@ Safari Hat",,
 175,2018-03-22,pm175,Togepi,baby,-1,,,
 175,2018-03-22,pm176,Togepi,,,,,
 175,2018-03-22,pm468,Togepi,,,,,
-175,2018-03-22,pm175.cAPRIL_2020_NOEVOLVE,Togepi_c20,baby=costume,-1,,,
-175,2022-04-12,pm176.cAPRIL_2020_NOEVOLVE,Togepi_c20,costume,,,,
-175,2022-04-12,pm468.cAPRIL_2020_NOEVOLVE,Togepi_c20,costume,,,,
+175,2018-03-22,pm175.cAPRIL_2020_NOEVOLVE,Togepi_c20,baby=costume,-1,"
+Flower
+Crown",,
+175,2022-04-12,pm176.cAPRIL_2020_NOEVOLVE,Togepi_c20,costume,,"
+Flower
+Crown",,
+175,2022-04-12,pm468.cAPRIL_2020_NOEVOLVE,Togepi_c20,costume,,"
+Flower
+Crown",,
 177,2018-08-20,pm177,Natu,,,,,
 177,2018-08-20,pm178,Natu,,,,,
 179,2018-04-15,pm179,Mareep,,,,,
@@ -670,10 +813,11 @@ Safari Hat",,
 179,2018-04-15,pm181.fMEGA,Mareep,,,(M),,
 183,2018-12-18,pm183,Marill,,,,,
 183,2018-12-18,pm184,Marill,,,,,
-183,2018-12-18,pm298,Marill,,-1,,,
+183,2018-12-18,pm298,Marill,baby,-1,,,
 185,2019-08-05,pm185,Sudowoodo,,,,,
-185,2019-08-05,pm438,Sudowoodo,,-1,,,
-185,2025-12-18,pm185.fWINTER_2025,Sudowoodo_c25,costume,,,,
+185,2019-08-05,pm438,Sudowoodo,baby,-1,,,
+185,2025-12-18,pm185.fWINTER_2025,Sudowoodo_c25,costume,,"
+Holiday Attire",,
 187,2022-02-12,pm187,Hoppip,,,,,
 187,2022-02-12,pm188,Hoppip,,,,,
 187,2022-02-12,pm189,Hoppip,,,,,
@@ -687,44 +831,50 @@ Safari Hat",,
 194,2020-12-11,pm195,Wooper,,,,,
 194,2023-11-05,pm194.fPALDEA,Wooper_P,,,,,
 194,2023-11-05,pm980,Wooper_P,,,,,
-194,2023-11-15,pm194.cFALL_2023,Wooper_1,costume,,,,
-194,2023-11-15,pm195.cFALL_2023,Wooper_1,costume,,,,
+194,2023-11-15,pm194.cFALL_2023,Wooper_1,costume,,"
+Fashionable",,
+194,2023-11-15,pm195.cFALL_2023,Wooper_1,costume,,"
+Fashionable",,
 198,2018-03-31,pm198,Murkrow,,,,,
 198,2018-11-14,pm430,Murkrow,,,,--t: -5%,
 200,2018-12-01,pm200,Misdreavus,,,,--t: -5%,
 200,2018-12-01,pm429,Misdreavus,,,,--t: -5%,
-201,2020-07-25,pm201.fUNOWN_G,Unown,,,(G),--t: -15%,
-201,2020-07-25,pm201.fUNOWN_O,Unown,,,(O),--t: -15%,
-201,2020-08-07,pm201.fUNOWN_A,Unown,,,(A),--t: -15%,
-201,2020-08-07,pm201.fUNOWN_L,Unown,,,(L),--t: -15%,
-201,2020-08-07,pm201.fUNOWN_R,Unown,,,(R),--t: -15%,
-201,2020-08-07,pm201.fUNOWN_T,Unown,,,(T),--t: -15%,
-201,2020-08-07,pm201.fUNOWN_U,Unown,,,(U),--t: -15%,
-201,2020-11-22,pm201.fUNOWN_C,Unown,,,(C),--t: -15%,
-201,2021-07-17,pm201.fUNOWN_F,Unown,,,(F),--t: -15%,
-201,2022-02-26,pm201.fUNOWN_J,Unown,,,(J),--t: -15%,
-201,2022-05-13,pm201.fUNOWN_E,Unown,,,(E),--t: -15%,
-201,2022-05-13,pm201.fUNOWN_I,Unown,,,(I),--t: -15%,
-201,2022-05-13,pm201.fUNOWN_S,Unown,,,(S),--t: -15%,
-201,2022-05-13,pm201.fUNOWN_V,Unown,,,(V),--t: -15%,
-201,2022-06-04,pm201.fUNOWN_B,Unown,,,(B),--t: -15%,
-201,2022-08-17,pm201.fUNOWN_D,Unown,,,(D),--t: -15%,
-201,2022-08-27,pm201.fUNOWN_N,Unown,,,(N),--t: -15%,
-201,2022-08-27,pm201.fUNOWN_P,Unown,,,(P),--t: -15%,
-201,2022-08-27,pm201.fUNOWN_X,Unown,,,(X),--t: -15%,
-201,2022-09-24,pm201.fUNOWN_Y,Unown,,,(Y),--t: -15%,
-201,2023-02-18,pm201.fUNOWN_H,Unown,,,(H),--t: -15%,
-201,2023-08-04,pm201.fUNOWN_M,Unown,,,(M),--t: -15%,
-201,2023-08-04,pm201.fUNOWN_EXCLAMATION_POINT,Unown,,,(!),--t: -15%,
-201,2024-05-30,pm201.fUNOWN_QUESTION_MARK,Unown,,,(?),--t: -15%,
-201,2025-11-07,pm201.fUNOWN_K,Unown,,,(K),--t: -15%,
-201,2025-11-07,pm201.fUNOWN_W,Unown,,,(W),--t: -15%,
-201,2026-02-21,pm201.fUNOWN_Z,Unown,,,(Z),--t: -15%,
-201,,pm201.fUNOWN_Q,Unown,,,(Q),--t: -15%,
+201,2020-07-25,pm201.fUNOWN_G,Unown,,7,(G),--t: -15%,
+201,2020-07-25,pm201.fUNOWN_O,Unown,,15,(O),--t: -15%,
+201,2020-08-07,pm201.fUNOWN_A,Unown,,1,(A),--t: -15%,
+201,2020-08-07,pm201.fUNOWN_L,Unown,,12,(L),--t: -15%,
+201,2020-08-07,pm201.fUNOWN_R,Unown,,18,(R),--t: -15%,
+201,2020-08-07,pm201.fUNOWN_T,Unown,,20,(T),--t: -15%,
+201,2020-08-07,pm201.fUNOWN_U,Unown,,21,(U),--t: -15%,
+201,2020-11-22,pm201.fUNOWN_C,Unown,,3,(C),--t: -15%,
+201,2021-07-17,pm201.fUNOWN_F,Unown,,6,(F),--t: -15%,
+201,2022-02-26,pm201.fUNOWN_J,Unown,,10,(J),--t: -15%,
+201,2022-05-13,pm201.fUNOWN_E,Unown,,5,(E),--t: -15%,
+201,2022-05-13,pm201.fUNOWN_I,Unown,,9,(I),--t: -15%,
+201,2022-05-13,pm201.fUNOWN_S,Unown,,19,(S),--t: -15%,
+201,2022-05-13,pm201.fUNOWN_V,Unown,,22,(V),--t: -15%,
+201,2022-06-04,pm201.fUNOWN_B,Unown,,2,(B),--t: -15%,
+201,2022-08-17,pm201.fUNOWN_D,Unown,,4,(D),--t: -15%,
+201,2022-08-27,pm201.fUNOWN_N,Unown,,14,(N),--t: -15%,
+201,2022-08-27,pm201.fUNOWN_P,Unown,,16,(P),--t: -15%,
+201,2022-08-27,pm201.fUNOWN_X,Unown,,24,(X),--t: -15%,
+201,2022-09-24,pm201.fUNOWN_Y,Unown,,25,(Y),--t: -15%,
+201,2023-02-18,pm201.fUNOWN_H,Unown,,8,(H),--t: -15%,
+201,2023-08-04,pm201.fUNOWN_M,Unown,,13,(M),--t: -15%,
+201,2023-08-04,pm201.fUNOWN_EXCLAMATION_POINT,Unown,,27,(!),--t: -15%,
+201,2024-05-30,pm201.fUNOWN_QUESTION_MARK,Unown,,28,(?),--t: -15%,
+201,2025-11-07,pm201.fUNOWN_K,Unown,,11,(K),--t: -15%,
+201,2025-11-07,pm201.fUNOWN_W,Unown,,23,(W),--t: -15%,
+201,2026-02-21,pm201.fUNOWN_Z,Unown,,26,(Z),--t: -15%,
+201,,pm201.fUNOWN_Q,Unown,,17,(Q),--t: -15%,
 202,2018-03-22,pm202,Wobbuffet,,,(♂),,
 202,2018-03-22,pm202.g2,Wobbuffet,,,(♀),,
-202,2018-03-22,pm202.cJAN_2020_NOEVOLVE,Wobbuffet_c,costume,,(♂),,
-202,2018-03-22,pm202.cJAN_2020_NOEVOLVE.g2,Wobbuffet_c,costume,,(♀),,
+202,2018-03-22,pm202.cJAN_2020_NOEVOLVE,Wobbuffet_c,costume,,"(♂)
+Party
+Hat",,
+202,2018-03-22,pm202.cJAN_2020_NOEVOLVE.g2,Wobbuffet_c,costume,,"(♀)
+Party
+Hat",,
 202,2018-03-22,pm360,Wobbuffet,baby,-1,,,
 203,2022-02-26,pm203,Girafarig,,,,,
 204,2018-08-20,pm204,Pineco,,,,,
@@ -737,23 +887,27 @@ Safari Hat",,
 209,2018-08-01,pm209,Snubbull,,,,,
 209,2018-08-01,pm210,Snubbull,,,,,
 211,2020-07-25,pm211,Qwilfish,,,,--t: -5%,
-211,2024-02-17,pm904,Qwilfish_H,,,,--t: -10%,
-211,2024-02-17,pm211.fHISUIAN,Qwilfish_H,,-1,(H),--t: -20%,
+211,2024-02-17,pm211.fHISUIAN,Qwilfish_H,,,(H),--t: -10%,
+211,2024-02-17,pm904,Qwilfish_H,,,,--t: -20%,
 213,2019-04-18,pm213,Shuckle,,,,,
 214,2021-08-06,pm214,Heracross,,,(♂),,
 214,2021-08-06,pm214.g2,Heracross,,,(♀),,
 214,2024-04-13,pm214.fMEGA,Heracross,,,(M),,
 215,2019-07-25,pm215,Sneasel,,,,,
 215,2019-07-25,pm461,Sneasel,,,,,
-215,2021-09-21,pm215.cFASHION_2021_NOEVOLVE,Sneasel_c21,costume,,,,
+215,2021-09-21,pm215.cFASHION_2021_NOEVOLVE,Sneasel_c21,costume,,"
+Fashionable",,
+215,2023-12-05,pm215.fHISUIAN,Sneasel_H,,,(H),,
 215,2023-12-05,pm903,Sneasel_H,,,,,
-215,2023-12-05,pm215.fHISUIAN,Sneasel_H,,-1,(H),,
 216,2020-03-26,pm216,Teddiursa,,,,,
 216,2020-03-26,pm217,Teddiursa,,,,,
 216,2022-11-12,pm901,Teddiursa,,,,,
-216,2025-10-27,pm216.cHALLOWEEN_2025,Teddiursa_c25,costume,,,,
-216,2025-10-27,pm217.cHALLOWEEN_2025,Teddiursa_c25,costume,,,,
-216,2025-10-27,pm901.cHALLOWEEN_2025,Teddiursa_c25,costume,,,,
+216,2025-10-27,pm216.cHALLOWEEN_2025,Teddiursa_c25,costume,,"
+Witch Hat",,
+216,2025-10-27,pm217.cHALLOWEEN_2025,Teddiursa_c25,costume,,"
+Witch Hat",,
+216,2025-10-27,pm901.cHALLOWEEN_2025,Teddiursa_c25,costume,,"
+Witch Hat",,
 218,2021-01-07,pm218,Slugma,,,,,
 218,2021-01-07,pm219,Slugma,,,,,
 220,2019-02-16,pm220,Swinub,,,,,
@@ -761,12 +915,15 @@ Safari Hat",,
 220,2019-02-16,pm473,Swinub,,,,,
 222,2022-02-26,pm222,Corsola,,,,,
 222,2024-11-27,pm222.fGALARIAN,Corsola_G,,,(G),,
-222,2026-04-14,pm222.fSPRING_2026,Corsola_G,costume,,(G),,
+222,2026-04-14,pm222.fSPRING_2026,Corsola_G_sunglasses,costume,,"(G)
+Pink
+Sunglasses",,
 222,2024-11-27,pm864,Corsola_G,,,,,
 223,2022-02-26,pm223,Remoraid,,,,,
 223,2022-02-26,pm224,Remoraid,,,,,
 225,2018-12-18,pm225,Delibird,,,,,
-225,2020-12-22,pm225.fWINTER_2020,Delibird,costume,,,,
+225,2020-12-22,pm225.fWINTER_2020,Delibird,costume,,"
+Holiday",,
 226,2022-02-26,pm226,Mantine,,,,,
 226,2023-05-02,pm458,Mantine,baby,-1,,--t: -20%,
 227,2019-11-01,pm227,Skarmory,,,,,
@@ -776,7 +933,9 @@ Safari Hat",,
 231,2022-02-26,pm231,Phanpy,,,,,
 231,2022-02-26,pm232,Phanpy,,,,,
 234,2019-12-24,pm234,Stantler,,,,,
-234,2019-12-24,pm234.cWINTER_2018,Stantler,costume,,,,
+234,2019-12-24,pm234.cWINTER_2018,Stantler,costume,,"
+Christmas
+Bells",,
 235,2021-04-29,pm235,Smeargle,,,,,
 241,2021-01-26,pm241,Miltank,,,,,
 243,2019-06-29,pm243,Raikou,,,,,
@@ -808,13 +967,16 @@ Safari Hat",,
 263,2020-05-25,pm263.fGALARIAN,Zigzagoon_G,,,(G),,
 263,2020-05-25,pm264.fGALARIAN,Zigzagoon_G,,,(G),,
 263,2020-05-25,pm862,Zigzagoon_G,,,,,
-263,2021-07-17,pm263.fGALARIAN.cGOFEST_2021_NOEVOLVE,Zigzagoon_G_21,costume,,(G),,
+263,2021-07-17,pm263.fGALARIAN.cGOFEST_2021_NOEVOLVE,Zigzagoon_G_21,costume,,"(G)
+Meloetta
+Hat",,
 265,2020-01-02,pm265,Wurmple,,,,,
 265,2020-01-02,pm266,Wurmple,,,,,
 265,2020-01-02,pm267,Wurmple,,,,--t: -10%,
 265,2020-01-02,pm268,Wurmple,,,,,
 265,2020-01-02,pm269,Wurmple,,,,--t: -10%,
-265,2020-01-02,pm265.cJAN_2020_NOEVOLVE,Wurmple_c20,costume,,,,
+265,2020-01-02,pm265.cJAN_2020_NOEVOLVE,Wurmple_c20,costume,,"
+Party Hat",,
 270,2019-03-29,pm270,Lotad,,,,,
 270,2019-03-29,pm271,Lotad,,,,,
 270,2019-03-29,pm272,Lotad,,,,,
@@ -829,7 +991,8 @@ Safari Hat",,
 280,2019-08-03,pm281,Ralts,,,,,
 280,2019-08-03,pm282,Ralts,,,,,
 280,2019-08-03,pm475,Ralts,,,,,
-280,2019-08-03,pm281.cFALL_2020_NOEVOLVE,Ralts_c20,costume,,,,
+280,2019-08-03,pm281.cFALL_2020_NOEVOLVE,Ralts_c20,costume,,"
+Top Hat",,
 280,2023-02-08,pm282.fMEGA,Ralts,,,(M),,
 280,2025-01-11,pm475.fMEGA,Ralts,,,(M),,
 283,2023-02-18,pm283,Surskit,,,,,
@@ -839,9 +1002,12 @@ Safari Hat",,
 287,2019-06-08,pm287,Slakoth,,,,,
 287,2019-06-08,pm288,Slakoth,,,,,
 287,2019-06-08,pm289,Slakoth,,,,,
-287,2024-06-07,pm287.cSUMMER_2024,Slakoth_1,costume,,,,
-287,2024-06-07,pm288.cSUMMER_2024,Slakoth_1,costume,,,,
-287,2024-06-07,pm289.cSUMMER_2024,Slakoth_1,costume,,,,
+287,2024-06-07,pm287.cSUMMER_2024,Slakoth_1,costume,,"
+Visor",,
+287,2024-06-07,pm288.cSUMMER_2024,Slakoth_1,costume,,"
+Visor",,
+287,2024-06-07,pm289.cSUMMER_2024,Slakoth_1,costume,,"
+Visor",,
 290,2020-03-19,pm290,Nincada,,,,,
 290,2020-03-19,pm291,Nincada,,,,--t: -5%,
 290,2022-10-01,pm292,Nincada,,,,--t: -5%,
@@ -855,7 +1021,8 @@ Safari Hat",,
 300,2020-05-15,pm300,Skitty,,,,,
 300,2020-05-15,pm301,Skitty,,,,,
 302,2017-10-20,pm302,Sableye,,,,,
-302,2020-10-23,pm302.fCOSTUME_2020,Sableye,costume,,,,
+302,2020-10-23,pm302.fCOSTUME_2020,Sableye,costume,,"
+Litwick Hat",,
 302,2023-06-29,pm302.fMEGA,Sableye,,,(M),--t: -10%,
 303,2017-12-08,pm303,Mawile,,,,,
 303,2024-10-12,pm303.fMEGA,Mawile,,,(M),,
@@ -889,15 +1056,15 @@ Safari Hat",,
 324,2023-02-18,pm324,Torkoal,,,,,
 325,2019-02-04,pm325,Spoink,,,,,
 325,2019-02-04,pm326,Spoink,,,,,
-327,2019-07-01,pm327.f07,Spinda,,,(#8),,
-327,2019-09-01,pm327.f02,Spinda,,,(#3),,
-327,2019-11-01,pm327.f00,Spinda,,,(#1),,
-327,2020-01-01,pm327.f06,Spinda,,,(#7),,
-327,2020-03-01,pm327.f05,Spinda,,,(#6),,
-327,2020-06-01,pm327.f04,Spinda,,,(#5),,
-327,2020-09-01,pm327.f01,Spinda,,,(#2),,
-327,2020-11-01,pm327.f03,Spinda,,,(#4),,
-327,2021-02-14,pm327.f08,Spinda,,,(#9),,
+327,2019-07-01,pm327.f07,Spinda,,8,(#8),,
+327,2019-09-01,pm327.f02,Spinda,,3,(#3),,
+327,2019-11-01,pm327.f00,Spinda,,1,(#1),,
+327,2020-01-01,pm327.f06,Spinda,,7,(#7),,
+327,2020-03-01,pm327.f05,Spinda,,6,(#6),,
+327,2020-06-01,pm327.f04,Spinda,,5,(#5),,
+327,2020-09-01,pm327.f01,Spinda,,2,(#2),,
+327,2020-11-01,pm327.f03,Spinda,,4,(#4),,
+327,2021-02-14,pm327.f08,Spinda,,9,(#9),,
 328,2019-10-11,pm328,Trapinch,,,,,
 328,2019-10-11,pm329,Trapinch,,,,,
 328,2019-10-11,pm330,Trapinch,,,,,
@@ -933,15 +1100,22 @@ Safari Hat",,
 355,2017-10-26,pm355,Duskull,,,,,
 355,2017-10-26,pm356,Duskull,,,,,
 355,2017-10-26,pm477,Duskull,,,,--w: 120%; --t: 0%,
-355,2022-11-01,pm355.cFALL_2022_NOEVOLVE,Duskull_c22,costume,,,,
-355,2022-11-01,pm356.cFALL_2022_NOEVOLVE,Duskull_c22,costume,,,,
-355,2022-11-01,pm477.cFALL_2022_NOEVOLVE,Duskull_c22,costume,,,--w: 120%; --t: 0%,
+355,2022-11-01,pm355.cFALL_2022_NOEVOLVE,Duskull_c22,costume,,"
+Cempasúchil
+Crown",,
+355,2022-11-01,pm356.cFALL_2022_NOEVOLVE,Duskull_c22,costume,,"
+Cempasúchil
+Crown",,
+355,2022-11-01,pm477.cFALL_2022_NOEVOLVE,Duskull_c22,costume,,"
+Cempasúchil
+Crown",--w: 120%; --t: 0%,
 357,2023-02-18,pm357,Tropius,,,,--t: -10%,
 358,2021-07-17,pm358,Chimecho,,,,,
 358,2024-02-17,pm433,Chimecho,baby,-1,,--t: -10%,
 359,2017-12-08,pm359,Absol,,,,,
 359,2021-10-21,pm359.fMEGA,Absol,,,(M),,
-359,2022-09-27,pm359.cFALL_2022_NOEVOLVE,Absol_22,costume,,,,
+359,2022-09-27,pm359.cFALL_2022_NOEVOLVE,Absol_22,costume,,"
+Sunglasses",,
 361,2017-12-21,pm361,Snorunt,,,,,
 361,2017-12-21,pm362,Snorunt,,,,--t: -10%,
 361,2019-01-31,pm478,Snorunt,,,,--t: -10%,
@@ -949,7 +1123,8 @@ Safari Hat",,
 363,2021-12-16,pm363,Spheal,,,,,
 363,2021-12-16,pm364,Spheal,,,,,
 363,2021-12-16,pm365,Spheal,,,,,
-363,2021-12-16,pm363.cHOLIDAY_2021_NOEVOLVE,Spheal_c21,costume,,,,
+363,2021-12-16,pm363.cHOLIDAY_2021_NOEVOLVE,Spheal_c21,costume,,"
+Holiday",,
 366,2019-02-23,pm366,Clamperl,,,,,
 366,2019-02-23,pm367,Clamperl,,,,--t: -10%,
 366,2019-02-23,pm368,Clamperl,,,,--t: -10%,
@@ -984,19 +1159,27 @@ Safari Hat",,
 387,2019-09-14,pm387,Turtwig,,,,,
 387,2019-09-14,pm388,Turtwig,,,,,
 387,2019-09-14,pm389,Turtwig,,,,,
-387,2021-11-16,pm387.cGEMS_1_2021_NOEVOLVE,Turtwig_21gems,costume,,,,
-387,2021-11-16,pm387.cGEMS_2_2021_NOEVOLVE,Turtwig_21gems,costume,,,,
+387,2021-11-16,pm387.cGEMS_1_2021_NOEVOLVE,Turtwig_21gems,costume,,"
+Luca's Hat",,
+387,2021-11-16,pm387.cGEMS_2_2021_NOEVOLVE,Turtwig_21gems,costume,,"
+Dawn's Hat",,
 390,2019-11-15,pm390,Chimchar,,,,,
 390,2019-11-15,pm391,Chimchar,,,,,
 390,2019-11-15,pm392,Chimchar,,,,,
-390,2021-11-16,pm390.cGEMS_1_2021_NOEVOLVE,Chimchar_21gems,costume,,,,
-390,2021-11-16,pm390.cGEMS_2_2021_NOEVOLVE,Chimchar_21gems,costume,,,,
+390,2021-11-16,pm390.cGEMS_1_2021_NOEVOLVE,Chimchar_21gems,costume,,"
+Luca's Hat",,
+390,2021-11-16,pm390.cGEMS_2_2021_NOEVOLVE,Chimchar_21gems,costume,,"
+Dawn's Hat",,
 393,2020-01-18,pm393,Piplup,,,,,
 393,2020-01-18,pm394,Piplup,,,,,
 393,2020-01-18,pm395,Piplup,,,,,
-393,2021-10-15,pm393.cHALLOWEEN_2021_NOEVOLVE,Piplup_21Ha,costume,,,,
-393,2021-11-16,pm393.cGEMS_1_2021_NOEVOLVE,Piplup_21gems,costume,,,,
-393,2021-11-16,pm393.cGEMS_2_2021_NOEVOLVE,Piplup_21gems,costume,,,,
+393,2021-10-15,pm393.cHALLOWEEN_2021_NOEVOLVE,Piplup_21Ha,costume,,"
+Halloween
+Mischief",,
+393,2021-11-16,pm393.cGEMS_1_2021_NOEVOLVE,Piplup_21gems,costume,,"
+Luca's Hat",,
+393,2021-11-16,pm393.cGEMS_2_2021_NOEVOLVE,Piplup_21gems,costume,,"
+Dawn's Hat",,
 396,2022-07-17,pm396,Starly,,,,,
 396,2022-07-17,pm397,Starly,,,,--t: -5%,
 396,2022-07-17,pm398,Starly,,,,--t: -5%,
@@ -1007,7 +1190,8 @@ Safari Hat",,
 403,2018-10-16,pm403,Shinx,,,,,
 403,2018-10-16,pm404,Shinx,,,,,
 403,2018-10-16,pm405,Shinx,,,,,
-403,2018-10-16,pm403.cFALL_2020_NOEVOLVE,Shinx_c20,costume,,,,
+403,2018-10-16,pm403.cFALL_2020_NOEVOLVE,Shinx_c20,costume,,"
+Top Hat",,
 408,2021-07-23,pm408,Cranidos,,,,,
 408,2021-07-23,pm409,Cranidos,,,,,
 410,2021-07-23,pm410,Shieldon,,,,,
@@ -1034,12 +1218,18 @@ Safari Hat",,
 422,2023-08-27,pm423.fWEST_SEA,Shellos_West,,,(W 🌊),,
 425,2018-10-23,pm425,Drifloon,,,,--t: -20%,
 425,2018-10-23,pm426,Drifloon,,,,--t: -20%,
-425,2021-10-15,pm426.cHALLOWEEN_2021_NOEVOLVE,Drifloon_c21,costume,,,--t: -20%,
+425,2021-10-15,pm426.cHALLOWEEN_2021_NOEVOLVE,Drifloon_c21,costume,,"
+Halloween
+Mischief",--t: -20%,
 427,2019-04-16,pm427,Buneary,,,,,
 427,2019-04-16,pm428,Buneary,,,,,
-427,2019-04-16,pm427.cAPRIL_2020_NOEVOLVE,Buneary_c20,costume,-1,,,
 427,2021-04-04,pm428.fMEGA,Buneary,,,(M),,
-427,2022-04-12,pm428.cAPRIL_2020_NOEVOLVE,Buneary_c20,costume,,,,
+427,2020-04-09,pm427.cAPRIL_2020_NOEVOLVE,Buneary_c20,costume,,"
+Flower
+Crown",,
+427,2022-04-12,pm428.cAPRIL_2020_NOEVOLVE,Buneary_c20,costume,,"
+Flower
+Crown",,
 431,2020-05-22,pm431,Glameow,,,,,
 431,2020-05-22,pm432,Glameow,,,,,
 434,2024-02-24,pm434,Stunky,,,,,
@@ -1063,8 +1253,12 @@ Safari Hat",,
 451,2020-03-05,pm452,Skorupi,,,,,
 453,2020-03-31,pm453,Croagunk,,,,,
 453,2020-03-31,pm454,Croagunk,,,,,
-453,2020-03-31,pm453.cFALL_2020_NOEVOLVE,Croagunk_c20,costume,,,,
-453,2022-09-27,pm454.cFALL_2020_NOEVOLVE,Croagunk_c20,costume,,,,
+453,2020-03-31,pm453.cFALL_2020_NOEVOLVE,Croagunk_c20,costume,,"
+Backwards
+Cap",,
+453,2022-09-27,pm454.cFALL_2020_NOEVOLVE,Croagunk_c20,costume,,"
+Backwards
+Cap",,
 455,2024-02-19,pm455,Carnivine,,,,--t: 0%,
 456,2022-01-21,pm456,Finneon,,,,--t: -15%,
 456,2022-01-21,pm457,Finneon,,,,--t: -15%,
@@ -1120,7 +1314,8 @@ Safari Hat",,
 519,2020-07-02,pm520,Pidove,,,,--t: -20%,
 519,2020-07-02,pm521,Pidove,,,(♂),,
 519,2020-07-02,pm521.g2,Pidove,,,(♀),,
-522,2021-09-21,pm522.cFASHION_2021_NOEVOLVE,Blitzle_c21,costume,,,,
+522,2021-09-21,pm522.cFASHION_2021_NOEVOLVE,Blitzle_c21,costume,,"
+Fashionable",,
 522,2021-09-28,pm522,Blitzle,,,,,
 522,2021-09-28,pm523,Blitzle,,,,,
 524,2020-08-14,pm524,Roggenrola,,,,,
@@ -1134,7 +1329,7 @@ Safari Hat",,
 531,2025-04-05,pm531.fMEGA,Audino,,,(M),,
 532,2020-03-13,pm532,Timburr,,,,,
 532,2020-03-13,pm533,Timburr,,,,,
-532,2020-03-13,pm534,Timburr,,,,,
+532,2020-03-13,pm534,Timburr,,,,--t: -20%,
 535,2021-07-17,pm535,Tympole,,,,,
 535,2021-07-17,pm536,Tympole,,,,,
 535,2021-07-17,pm537,Tympole,,,,,
@@ -1148,8 +1343,10 @@ Safari Hat",,
 543,2022-08-10,pm545,Venipede,,,,,
 546,2022-03-22,pm546,Cottonee,,,,,
 546,2022-03-22,pm547,Cottonee,,,,,
-546,2024-03-21,pm546.cSPRING_2024,Cottonee_F,costume,,,,
-546,2024-03-21,pm547.cSPRING_2024,Cottonee_F,costume,,,,
+546,2024-03-21,pm546.cSPRING_2024,Cottonee_F,costume,,"
+Flower Crown",,
+546,2024-03-21,pm547.cSPRING_2024,Cottonee_F,costume,,"
+Flower Crown",,
 548,2023-08-04,pm548,Petilil,,,,,
 548,2023-08-04,pm549,Petilil,,,,,
 548,2025-07-12,pm549.fHISUIAN,Petilil_H,,,(H),,
@@ -1184,8 +1381,10 @@ Safari Hat",,
 570,2023-10-26,pm571,Zorua,,,,,
 572,2020-02-02,pm572,Minccino,,,,,
 572,2020-02-02,pm573,Minccino,,,,,
-572,2025-01-10,pm572.cFASHION_2025,Minccino_c25,costume,,,,
-572,2025-01-10,pm573.cFASHION_2025,Minccino_c25,costume,,,,
+572,2025-01-10,pm572.cFASHION_2025,Minccino_c25,costume,,"
+Fashionable",,
+572,2025-01-10,pm573.cFASHION_2025,Minccino_c25,costume,,"
+Fashionable",,
 574,2023-11-15,pm574,Gothita,,,,,
 574,2023-11-15,pm575,Gothita,,,,,
 574,2023-11-15,pm576,Gothita,,,,,
@@ -1193,7 +1392,7 @@ Safari Hat",,
 577,2023-09-20,pm578,Solosis,,,,,
 577,2023-09-20,pm579,Solosis,,,,,
 580,2024-07-05,pm580,Ducklett,,,,,
-580,2024-07-05,pm581,Ducklett,,,,,
+580,2024-07-05,pm581,Ducklett,,,,--t: -10%,
 582,2023-12-25,pm582,Vanillite,,,,,
 582,2023-12-25,pm583,Vanillite,,,,,
 582,2023-12-25,pm584,Vanillite,,,,,
@@ -1207,7 +1406,7 @@ Safari Hat",,
 585,2025-02-21,pm586.fWINTER,Deerling,,,(❄️),,
 587,2024-05-30,pm587,Emolga,,,,,
 588,2022-06-04,pm588,Karrablast,,,,,
-588,2022-06-04,pm589,Karrablast,,,,,
+588,2022-06-04,pm589,Karrablast,,,,--t: -10%,
 590,2022-07-01,pm590,Foongus,,,,,
 590,2022-07-01,pm591,Foongus,,,,,
 592,2023-02-08,pm592,Frillish,,,(♂),--t: -10%,
@@ -1235,8 +1434,10 @@ Safari Hat",,
 610,2022-06-04,pm612,Axew,,,,,
 613,2020-12-18,pm613,Cubchoo,,,,,
 613,2020-12-18,pm614,Cubchoo,,,,--w: 100%; --t: 5%; --l: 5%,
-613,2020-12-18,pm613.fWINTER_2020,Cubchoo_c20,costume,,,,
-613,2022-12-23,pm614.fWINTER_2020,Cubchoo_c20,costume,,,--w: 100%; --t: 5%; --l: 5%,
+613,2020-12-18,pm613.fWINTER_2020,Cubchoo_c20,costume,,"
+Holiday",,
+613,2022-12-23,pm614.fWINTER_2020,Cubchoo_c20,costume,,"
+Holiday",--w: 100%; --t: 5%; --l: 5%,
 615,2023-12-09,pm615,Cryogonal,,,,--t: -20%,
 616,2022-06-04,pm616,Shelmet,,,,,
 616,2022-06-04,pm617,Shelmet,,,,,
@@ -1294,9 +1495,12 @@ Safari Hat",,
 656,2023-08-13,pm656,Froakie,,,,,
 656,2023-08-13,pm657,Froakie,,,,,
 656,2023-08-13,pm658,Froakie,,,,,
-656,2024-10-22,pm656.cFALL_2024,Froakie_c24,costume,,,,
-656,2024-10-22,pm657.cFALL_2024,Froakie_c24,costume,,,,
-656,2024-10-22,pm658.cFALL_2024,Froakie_c24,costume,,,,
+656,2024-10-22,pm656.cFALL_2024,Froakie_c24,costume,,"
+Halloween",,
+656,2024-10-22,pm657.cFALL_2024,Froakie_c24,costume,,"
+Halloween",,
+656,2024-10-22,pm658.cFALL_2024,Froakie_c24,costume,,"
+Halloween",,
 659,2021-04-04,pm659,Bunnelby,,,,,
 659,2021-04-04,pm660,Bunnelby,,,,,
 661,2021-03-06,pm661,Fletchling,,,,,
@@ -1362,16 +1566,26 @@ Safari Hat",,
 672,2023-10-07,pm673,Skiddo,,,,,
 674,2023-06-16,pm674,Pancham,,,,,
 674,2023-06-16,pm675,Pancham,,,,,
-676,2022-09-27,pm676.fNATURAL,Furfrou,,,(Natural),,
-676,2022-09-27,pm676.fDEBUTANTE,Furfrou,,,(Debutante),,
-676,2022-09-27,pm676.fSTAR,Furfrou,,,(Star),,
-676,2022-09-27,pm676.fDANDY,Furfrou,,,(Dandy),,
-676,2022-09-27,pm676.fKABUKI,Furfrou,,,(Kabuki),,
-676,2022-09-27,pm676.fMATRON,Furfrou,,,(Matron),,
-676,2022-09-27,pm676.fDIAMOND,Furfrou,,,(Diamond),,
-676,2022-09-27,pm676.fPHARAOH,Furfrou,,,(Pharaoh),,
-676,2022-09-27,pm676.fLA_REINE,Furfrou,,,(La Reine),,
-676,2023-02-08,pm676.fHEART,Furfrou,,,(Heart),,
+676,2022-09-27,pm676.fNATURAL,Furfrou,,,"
+Natural",,
+676,2022-09-27,pm676.fDEBUTANTE,Furfrou,,,"
+Debutante",,
+676,2022-09-27,pm676.fSTAR,Furfrou,,,"
+Star",,
+676,2022-09-27,pm676.fDANDY,Furfrou,,,"
+Dandy",,
+676,2022-09-27,pm676.fKABUKI,Furfrou,,,"
+Kabuki",,
+676,2022-09-27,pm676.fMATRON,Furfrou,,,"
+Matron",,
+676,2022-09-27,pm676.fDIAMOND,Furfrou,,,"
+Diamond",,
+676,2022-09-27,pm676.fPHARAOH,Furfrou,,,"
+Pharaoh",,
+676,2022-09-27,pm676.fLA_REINE,Furfrou,,,"
+La Reine",,
+676,2023-02-08,pm676.fHEART,Furfrou,,,"
+Heart",,
 677,2022-02-01,pm677,Espurr,,,,,
 677,2022-02-01,pm678,Espurr,,,(♂),,
 677,2022-02-01,pm678.fFEMALE,Espurr,,,(♀),,
@@ -1399,7 +1613,8 @@ Safari Hat",,
 698,2023-07-27,pm699,Amaura,,,,,
 701,2026-02-20,pm701,Hawlucha,,,,,
 702,2023-01-10,pm702,Dedenne,,,,,
-702,2024-12-17,pm702.cWINTER_2024,Dedenne_c,costume,,,,
+702,2024-12-17,pm702.cWINTER_2024,Dedenne_c,costume,,"
+Holiday Attire",,
 703,2025-05-29,pm703,Carbink,,,,,
 704,2023-08-27,pm704,Goomy,,,,,
 704,2023-08-27,pm705,Goomy,,,,,
@@ -1407,14 +1622,22 @@ Safari Hat",,
 707,2026-02-20,pm707,Klefki,,,,,
 708,2023-10-19,pm708,Phantump,,,,,
 708,2023-10-19,pm709,Phantump,,,,,
-710,2022-10-27,pm710.fSMALL.cFALL_2022,Pumpkaboo_c22,costume,,,--t: 0%,
-710,2022-10-27,pm710.fAVERAGE.cFALL_2022,Pumpkaboo_c22,costume,,,--t: -5%,
-710,2022-10-27,pm710.fLARGE.cFALL_2022,Pumpkaboo_c22,costume,,,--t: -10%,
-710,2022-10-27,pm710.fSUPER.cFALL_2022,Pumpkaboo_c22,costume,,,--t: -15%,
-710,2022-10-27,pm711.fSMALL.cFALL_2022,Pumpkaboo_c22,costume,,,,
-710,2022-10-27,pm711.fAVERAGE.cFALL_2022,Pumpkaboo_c22,costume,,,,
-710,2022-10-27,pm711.fLARGE.cFALL_2022,Pumpkaboo_c22,costume,,,,
-710,2022-10-27,pm711.fSUPER.cFALL_2022,Pumpkaboo_c22,costume,,,,
+710,2022-10-27,pm710.fSMALL.cFALL_2022,Pumpkaboo_c22,costume,,"
+Halloween",--t: 0%,
+710,2022-10-27,pm710.fAVERAGE.cFALL_2022,Pumpkaboo_c22,costume,,"
+Halloween",--t: -5%,
+710,2022-10-27,pm710.fLARGE.cFALL_2022,Pumpkaboo_c22,costume,,"
+Halloween",--t: -10%,
+710,2022-10-27,pm710.fSUPER.cFALL_2022,Pumpkaboo_c22,costume,,"
+Halloween",--t: -15%,
+710,2022-10-27,pm711.fSMALL.cFALL_2022,Pumpkaboo_c22,costume,,"
+Halloween",,
+710,2022-10-27,pm711.fAVERAGE.cFALL_2022,Pumpkaboo_c22,costume,,"
+Halloween",,
+710,2022-10-27,pm711.fLARGE.cFALL_2022,Pumpkaboo_c22,costume,,"
+Halloween",,
+710,2022-10-27,pm711.fSUPER.cFALL_2022,Pumpkaboo_c22,costume,,"
+Halloween",,
 710,2023-08-04,pm710.fSMALL,Pumpkaboo,,,,--t: 0%,
 710,2023-08-04,pm710.fAVERAGE,Pumpkaboo,,,,--t: -5%,
 710,2023-08-04,pm710.fLARGE,Pumpkaboo,,,,--t: -10%,
@@ -1428,8 +1651,10 @@ Safari Hat",,
 712,2022-12-23,pm713.fHISUIAN,Bergmite,,,(H),,
 714,2022-10-20,pm714,Noibat,,,,--t: 0%,
 714,2022-10-20,pm715,Noibat,,,,--t: 0%,
-714,2025-10-27,pm714.cHALLOWEEN_2025,Noibat_c25,costume,,,--t: 0%,
-714,2025-10-27,pm715.cHALLOWEEN_2025,Noibat_c25,costume,,,--t: 0%,
+714,2025-10-27,pm714.cHALLOWEEN_2025,Noibat_c25,costume,,"
+Headband",--t: 0%,
+714,2025-10-27,pm715.cHALLOWEEN_2025,Noibat_c25,costume,,"
+Headband",--t: 0%,
 716,2022-10-08,pm716,Xerneas,,,,,
 717,2022-09-27,pm717,Yveltal,,,,,
 718,,pm718,Zygarde,,,,,
@@ -1439,9 +1664,12 @@ Safari Hat",,
 722,2024-01-06,pm723,Rowlet,,,,,
 722,2024-01-06,pm724,Rowlet,,,,,
 722,2024-02-11,pm724.fHISUIAN,Rowlet_H,,,(H),,
-722,2024-10-22,pm722.cFALL_2024,Rowlet_c24,costume,,,,
-722,2024-10-22,pm723.cFALL_2024,Rowlet_c24,costume,,,,
-722,2024-10-22,pm724.cFALL_2024,Rowlet_c24,costume,,,,
+722,2024-10-22,pm722.cFALL_2024,Rowlet_c24,costume,,"
+Halloween",,
+722,2024-10-22,pm723.cFALL_2024,Rowlet_c24,costume,,"
+Halloween",,
+722,2024-10-22,pm724.cFALL_2024,Rowlet_c24,costume,,"
+Halloween",,
 725,2024-03-16,pm725,Litten,,,,,
 725,2024-03-16,pm726,Litten,,,,,
 725,2024-03-16,pm727,Litten,,,,,
@@ -1456,20 +1684,26 @@ Safari Hat",,
 736,2023-09-23,pm736,Grubbin,,,,,
 736,2023-09-23,pm737,Grubbin,,,,,
 736,2023-09-23,pm738,Grubbin,,,,--t: 0%,
-737,2025-12-18,pm737.fWINTER_2025,Charjabug_c25,costume,,,,
-737,2025-12-18,pm738.fWINTER_2025,Charjabug_c25,costume,,,--t: 0%,
+737,2025-12-18,pm737.fWINTER_2025,Charjabug_c25,costume,,"
+Holiday Attire",,
+737,2025-12-18,pm738.fWINTER_2025,Charjabug_c25,costume,,"
+Holiday Attire",--t: 0%,
 739,2024-06-14,pm739,Crabrawler,,,,,
 739,2024-06-14,pm740,Crabrawler,,,,,
-741,2024-02-13,pm741.fBAILE,Oricorio,,,,,
-741,2024-02-13,pm741.fPAU,Oricorio,,,,,
-741,2024-02-13,pm741.fPOMPOM,Oricorio,,,,,
-741,2024-02-13,pm741.fSENSU,Oricorio,,,,,
+741,2024-02-13,pm741.fBAILE,Oricorio,,,"
+Baile",,
+741,2024-02-13,pm741.fPAU,Oricorio,,,"
+Pau",,
+741,2024-02-13,pm741.fPOMPOM,Oricorio,,,"
+Pompom",,
+741,2024-02-13,pm741.fSENSU,Oricorio,,,"
+Sensu",,
 742,2024-01-13,pm742,Cutiefly,,,,--t: 0%,
 742,2024-01-13,pm743,Cutiefly,,,,--t: 0%,
 744,2022-03-01,pm744,Rockruff,,,,,
 744,2022-03-01,pm745.fMIDNIGHT,Rockruff,,,(🌙),,
 744,2022-03-01,pm745.fMIDDAY,Rockruff,,,(☀️),,
-744,2023-01-06,pm745.fDUSK,Rockruff,,,🌓,,
+744,2023-01-06,pm745.fDUSK,Rockruff,,,(🌓),,
 747,2024-05-23,pm747,Mareanie,,,,,
 747,2024-05-23,pm748,Mareanie,,,,,
 749,2025-03-29,pm749,Mudbray,,,,,
@@ -1484,7 +1718,9 @@ Safari Hat",,
 757,2025-08-11,pm758,Salandit,,,,,
 759,2022-04-23,pm759,Stufful,,,,,
 759,2022-04-23,pm760,Stufful,,,,--w: 110%; --t: 10%; --l: 5%,
-760,2025-11-07,pm760.fWILDAREA_2025,Bewear_cape,costume,,,--w: 100%; --t: 15%; --l: 5%,
+760,2025-11-07,pm760.fWILDAREA_2025,Bewear_cape,costume,,"
+Wilderness
+Cape",--w: 100%; --t: 15%; --l: 5%,
 761,2025-05-19,pm761,Bounsweet,,,,,
 761,2025-05-19,pm762,Bounsweet,,,,,
 761,2025-05-19,pm763,Bounsweet,,,,,
@@ -1525,8 +1761,8 @@ Safari Hat",,
 798,2024-04-04,pm798,Kartana,,,,,
 799,2023-10-06,pm799,Guzzlord,,,,,
 800,2024-05-30,pm800,Necrozma,,,,,
-800,2024-05-30,pm800.fDAWN_WINGS,Necrozma,,,(🌅🪽),,
-800,2024-05-30,pm800.fDUSK_MANE,Necrozma,,,(🌇🦁),,
+800,2024-05-30,pm800.fDAWN_WINGS,Necrozma,,,(DW),,
+800,2024-05-30,pm800.fDUSK_MANE,Necrozma,,,(DM),,
 801,,pm801,Magearna,,,,,
 802,,pm802,Marshadow,,,,,
 803,,pm803,Poipole,,,,,
@@ -1559,8 +1795,12 @@ Safari Hat",,
 830,,pm830,Eldegoss,,,,,
 831,2024-09-03,pm831,Wooloo,,,,,
 831,2024-09-03,pm832,Wooloo,,,,,
-831,2024-12-22,pm831.cWINTER_2024,Wooloo_c24,costume,,,,
-831,2024-12-22,pm832.cWINTER_2024,Wooloo_c24,costume,,,,
+831,2024-12-22,pm831.cWINTER_2024,Wooloo_c24,costume,,"
+Holiday
+Attire",,
+831,2024-12-22,pm832.cWINTER_2024,Wooloo_c24,costume,,"
+Holiday
+Attire",,
 833,,pm833,Chewtle,,,,,
 834,,pm834,Drednaw,,,,,
 835,,pm835,Yamper,,,,,
@@ -1584,21 +1824,27 @@ Safari Hat",,
 850,2026-03-17,pm851,Sizzlipede,,,,,
 852,,pm852,Clobbopus,,,,,
 853,,pm853,Grapploct,,,,,
-854,2025-10-21,pm854.fANTIQUE,Sinistea_A,,,(A),,
-854,2025-10-21,pm855.fANTIQUE,Sinistea_A,,,(A),,
-854,2025-10-21,pm854.fPHONY,Sinistea_P,,,(P),,
-854,2025-10-21,pm855.fPHONY,Sinistea_P,,,(P),,
+854,2025-10-21,pm854.fANTIQUE,Sinistea_A,,,"
+Antique",,
+854,2025-10-21,pm855.fANTIQUE,Sinistea_A,,,"
+Antique",,
+854,2025-10-21,pm854.fPHONY,Sinistea_P,,,"
+Phony",,
+854,2025-10-21,pm855.fPHONY,Sinistea_P,,,"
+Phony",,
 856,2025-11-07,pm856,Hatenna,,,,,
 856,2025-11-07,pm857,Hatenna,,,,,
 856,2025-11-07,pm858,Hatenna,,,,,
 859,2025-11-07,pm859,Impidimp,,,,,
 859,2025-11-07,pm860,Impidimp,,,,,
 859,2025-11-07,pm861,Impidimp,,,,,
-861,2025-11-07,pm861.fGIGANTAMAX,Impidimp,,,(GM),--w: 100%; --t: 15%; --l: 5%,
+859,2025-11-07,pm861.fGIGANTAMAX,Impidimp,,,(GM),--w: 100%; --t: 15%; --l: 5%,
 868,,pm868,Milcery,,,,,
 869,,pm869,Alcremie,,,,,
 870,2024-09-08,pm870,Falinks,,,,,
-870,2025-05-29,pm870.fGOFEST_2025_TRAIN_CONDUCTOR,Falinks,costume,,,,
+870,2025-05-29,pm870.fGOFEST_2025_TRAIN_CONDUCTOR,Falinks_Train,costume,,"
+Train",,
+870,2026-05-23,pm870.fMEGA,Falinks,,,(M),,pokeminer image?
 871,,pm871,Pincurchin,,,,,
 872,,pm872,Snom,,,,,
 873,,pm873,Frosmoth,,,,,
@@ -1617,10 +1863,16 @@ Safari Hat",,
 885,,pm885,Dreepy,,,,,
 886,,pm886,Drakloak,,,,,
 887,,pm887,Dragapult,,,,,
-888,2024-09-26,pm888.fHERO,Zacian,,,(🏅),--w: 100%; --t: 5%; --l: 5%,
-888,2025-05-29,pm888.fCROWNED_SWORD,Zacian,,,(👑⚔️),--w: 100%; --t: 5%; --l: 5%,
-889,2024-09-26,pm889.fHERO,Zamazenta,,,(🏅),--w: 100%; --t: 5%; --l: 5%,
-889,2025-05-29,pm889.fCROWNED_SHIELD,Zamazenta,,,(👑🛡️),--w: 100%; --t: 5%; --l: 5%,
+888,2024-09-26,pm888.fHERO,Zacian,,,"
+Hero",--w: 100%; --t: 5%; --l: 5%,
+888,2025-05-29,pm888.fCROWNED_SWORD,Zacian,,,"
+Crowned
+Sword",--w: 100%; --t: 5%; --l: 5%,
+889,2024-09-26,pm889.fHERO,Zamazenta,,,"
+Hero",--w: 100%; --t: 5%; --l: 5%,
+889,2025-05-29,pm889.fCROWNED_SHIELD,Zamazenta,,,"
+Crowned
+Shield",--w: 100%; --t: 5%; --l: 5%,
 890,,pm890,Eternatus,,,,,
 891,,pm891,Kubfu,,,,,
 892,,pm892,Urshifu,,,,,
@@ -1636,7 +1888,8 @@ Safari Hat",,
 906,2025-01-05,pm906,Sprigatito,,,,,
 906,2025-01-05,pm907,Sprigatito,,,,,
 906,2025-01-05,pm908,Sprigatito,,,,,
-906,2025-04-16,pm907.cHORIZONS_2025_NOEVOLVE,Sprigatito_c25,costume,,,,
+906,2025-04-16,pm907.cHORIZONS_2025_NOEVOLVE,Sprigatito_c25,costume,,"
+Liko's Hat",,
 909,2025-03-08,pm909,Fuecoco,,,,,
 909,2025-03-08,pm910,Fuecoco,,,,,
 909,2025-03-08,pm911,Fuecoco,,,,,
@@ -1674,13 +1927,13 @@ Safari Hat",,
 962,2023-09-10,pm962,Bombirdier,,,,--t: -10%,
 965,2026-04-30,pm965,Varoom,,,,,
 965,2026-04-30,pm966,Varoom,,,,,
-968,2026-04-28,pm968,Orthworm,,,,,https://db.pokemongohub.net/images/pokemon-home-renders/Shiny/poke_capture_0968_000_mf_n_00000000_f_r.png
+968,2026-04-28,pm968,Orthworm,,,,,
 974,2024-12-22,pm974,Cetoddle,,,,,
 974,2024-12-22,pm975,Cetoddle,,,,,
 977,2025-08-25,pm977,Dondozo,,,,--w: 100%; --t: 5%,
 996,2025-05-29,pm996,Frigibax,,,,,
 996,2025-05-29,pm997,Frigibax,,,,,
 996,2025-05-29,pm998,Frigibax,,,,,
+999,2025-07-01,pm999,Gimmighoul,,,,,
 999,2025-07-01,pm999.fCOIN_A1,Gimmighoul,costume,,(9),,
-999,2025-07-01,pm999,Gimmighoul,,-1,,,
-999,2025-07-01,pm1000,Gimmighoul,,,,,https://github.com/user-attachments/assets/d8a8524c-0eab-429f-a797-c3cdad85d545
+999,2025-07-01,pm1000,Gimmighoul,,,,,

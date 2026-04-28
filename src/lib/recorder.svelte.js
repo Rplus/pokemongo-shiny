@@ -1,4 +1,4 @@
-import { rev_sort_by, set_all_records, get_all_records } from '@lib/u.js';
+import { rev_sort_by, set_all_records, get_all_records } from '@lib/u.svelte.js';
 import { pokemonStore, } from '@lib/pm.svelte.js';
 import { session } from '@lib/config.svelte.js';
 

@@ -1,8 +1,8 @@
 // import pm_local_csv_url from '@data/pm.csv?url';
 import raw_names from '@data/name.csv';
-import { csv2json, fetch_data, get_item, confirm_to_reset, } from '@lib/u.js';
+import { csv2json, fetch_data, get_item, confirm_to_reset, } from '@lib/u.svelte.js';
 import { recorder, } from '@lib/recorder.svelte.js';
-import { session, DEFAULT_PM_DATA_SOURCE, LOCAL_PM_DATA_SOURCE } from '@lib/config.svelte.js';
+import { session, fetch_hash, DEFAULT_PM_DATA_SOURCE, LOCAL_PM_DATA_SOURCE } from '@lib/config.svelte.js';
 
 class PokemonManager {
 	groups = $state([]);
@@ -18,6 +18,7 @@ class PokemonManager {
 		try {
 			// Step 1: Basic setup
 			const { groups, tags, pid_with_tags } = await fetch_pms_data();
+			await fetch_hash();
 
 			this.groups = groups;
 			this.tags = tags;

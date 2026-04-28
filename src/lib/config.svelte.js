@@ -1,5 +1,5 @@
 import pm_local_csv_url from '@data/pm.csv?url';
-import { set_item, get_item, } from '@lib/u.js';
+import { set_item, get_item, } from '@lib/u.svelte.js';
 
 // export let status = $state('');
 // export let name = $state('?');

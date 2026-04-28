@@ -2,7 +2,7 @@
 	import { pokemonStore, get_name, } from '@lib/pm.svelte.js';
 	import { i18n } from '@lib/i18n.svelte.js';
 	import { config } from '@lib/config.svelte.js';
-	import { get_pm_img_src, } from '@lib/u.js';
+	import { get_pm_img_src, } from '@lib/u.svelte.js';
 
 	let { pm, } = $props();
 

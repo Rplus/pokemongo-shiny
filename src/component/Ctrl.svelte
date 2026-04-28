@@ -6,7 +6,7 @@
 	import CustomStyle from '@comp/CustomStyle.svelte';
 
 	import { i18n } from '@lib/i18n.svelte.js';
-	import { get_item, set_item, } from '@lib/u.js';
+	import { get_item, set_item, } from '@lib/u.svelte.js';
 
 	const default_io = {
 		record: true,

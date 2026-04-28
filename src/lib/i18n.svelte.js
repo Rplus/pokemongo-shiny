@@ -1,4 +1,4 @@
-import { set_item, get_item, } from '@lib/u.js';
+import { set_item, get_item, } from '@lib/u.svelte.js';
 
 const dictionaries = {
 	'nickname': {

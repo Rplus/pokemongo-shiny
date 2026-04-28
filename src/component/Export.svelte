@@ -1,6 +1,6 @@
 <script>
 	import { i18n } from '@lib/i18n.svelte.js';
-	import { pick, get_time_string, } from '@lib/u.js';
+	import { pick, get_time_string, } from '@lib/u.svelte.js';
 
 	import { pokemonStore, } from '@lib/pm.svelte.js';
 	import { session, } from '@lib/config.svelte.js';

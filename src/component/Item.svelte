@@ -169,6 +169,8 @@
 
 	.name {
 		font-size: 10px;
+		padding-left: 1px;
+		text-align: left;
 		opacity: 0.4;
 		transition: opacity 0.3s;
 

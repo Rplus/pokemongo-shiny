@@ -49,22 +49,5 @@
 	<p style="color: red;">{pokemonStore.error}</p>
 	<button onclick={() => reset_ls()}>try to reset localStorage</button>
 {:else}
-
+= =?
 {/if}
-
-<!--
-{#await init()}
-	Loading...
-
-{:then}
-	<Ctrl />
-	<List />
-
-	<Float_Btns />
-
-{:catch error}
-	GG!
-	<button onclick={() => reset_ls()}>try to reset localStorage</button>
-
-{/await}
--->

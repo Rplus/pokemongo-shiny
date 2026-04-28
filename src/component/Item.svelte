@@ -51,8 +51,8 @@
 		/>
 	</div>
 
-	<div class="caption" hidden={!config.show_name}>
-		<div class="name">
+	<div class="caption">
+		<div class="name" hidden={!config.show_name}>
 			{pm_name}
 
 			{#if config.show_suffix}

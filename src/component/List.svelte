@@ -38,7 +38,7 @@
 
 	<main class="pm-list">
 		{#if isLoading || !pokemonStore.groups.length}
-			<div class="loader pokeball" out:fade={{ duration: 3000 }}></div>
+			<div class="loader pokeball" out:fade={{ duration: 300 }}></div>
 		{:else}
 			{#each pokemonStore.groups as [group_name, pms] (group_name)}
 				<div class="pm-group">

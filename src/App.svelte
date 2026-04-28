@@ -48,6 +48,4 @@
 {:else if pokemonStore.error}
 	<p style="color: red;">{pokemonStore.error}</p>
 	<button onclick={() => reset_ls()}>try to reset localStorage</button>
-{:else}
-= =?
 {/if}

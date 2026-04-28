@@ -56,7 +56,7 @@
 			{pm_name}
 
 			{#if config.show_suffix}
-				<span>{pm.suffix}</span>
+				<div class="suffix">{pm.suffix}</div>
 			{/if}
 		</div>
 
@@ -178,7 +178,7 @@
 			font-size: 12px;
 		}
 
-		span {
+		.suffix {
 			white-space: pre-wrap;
 		}
 	}

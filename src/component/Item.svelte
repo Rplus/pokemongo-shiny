@@ -10,8 +10,8 @@
 	let title = $derived(`#${pm.dex} ${pm_name} \n@${pm.debut}`);
 
 	let tags_class = pm.tag.map(tag => ` tag-${tag}`).join('');
-	let src = get_pm_img_src(pm.pid, true, pm.src);
-	let src0 = get_pm_img_src(pm.pid, false, pm.src /* TODO */ );
+	let src = get_pm_img_src(pm.pid, pokemonStore.hash, true, pm.src);
+	let src0 = get_pm_img_src(pm.pid, pokemonStore.hash, false, pm.src /* TODO */ );
 
 	function handle_click_pm() {
 		pm.status = (pm.status + 1) % 4;

@@ -2,7 +2,7 @@
 import raw_names from '@data/name.csv';
 import { csv2json, fetch_data, get_item, confirm_to_reset, } from '@lib/u.svelte.js';
 import { recorder, } from '@lib/recorder.svelte.js';
-import { session, fetch_hash, DEFAULT_PM_DATA_SOURCE, LOCAL_PM_DATA_SOURCE } from '@lib/config.svelte.js';
+import { session, DEFAULT_PM_DATA_SOURCE, LOCAL_PM_DATA_SOURCE } from '@lib/config.svelte.js';
 
 class PokemonManager {
 	groups = $state([]);
@@ -10,6 +10,7 @@ class PokemonManager {
 	is_loading = $state(true);
 	error = $state(null);
 	pid_with_tags = $state(new Map());
+	hash = $state('');
 
 	async init() {
 		this.is_loading = true;
@@ -17,8 +18,13 @@ class PokemonManager {
 
 		try {
 			// Step 1: Basic setup
-			const { groups, tags, pid_with_tags } = await fetch_pms_data();
-			await fetch_hash();
+			const [pm_result, hash_result] = await Promise.all([
+				fetch_pms_data(),
+				fetch_hash(),
+			]);
+
+			this.hash = hash_result;
+			const { groups, tags, pid_with_tags } = pm_result;
 
 			this.groups = groups;
 			this.tags = tags;
@@ -341,4 +347,10 @@ function get_default_tags(pid = '', dex = 1) {
 
 export function get_name(names, lang = 'en') {
 	return names?.[lang] || names?.en || '';
+}
+
+async function fetch_hash(argument) {
+	const res = await fetch('https://api.github.com/repos/PokeMiners/pogo_assets/branches/master');
+	const { commit } = await res.json();
+	return commit.sha;
 }

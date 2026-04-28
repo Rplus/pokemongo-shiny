@@ -5,7 +5,7 @@ dev:
 	bun run dev;
 
 host-image:
-	bunx http-server ./tasks/tmp -p 1111;
+	bunx http-server ./tasks/tmp -p 1111 -c 86400;
 
 build:
 	bun run build;

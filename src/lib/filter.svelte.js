@@ -1,4 +1,5 @@
 import { pokemonStore, } from '@lib/pm.svelte.js';
+import { get_item, set_item, } from '@lib/u.svelte.js';
 
 const custom_style_when_filtered = `
 .pm-list {
@@ -13,7 +14,7 @@ const custom_style_when_filtered = `
 
 class FilterManager {
 	filter_cates = ['🧬', '📍', '🐣', '🧩'];
-	filter_state = $state({});
+	filter_state = $state(get_item('filter_state') || {});
 
 	reset_filter() {
 		console.log(111, 'reset');
@@ -97,3 +98,9 @@ class FilterManager {
 }
 
 export const filter_manager = new FilterManager();
+
+$effect.root(() => {
+	$effect(() => {
+		set_item('filter_state', $state.snapshot(filter_manager.filter_state));
+	});
+});

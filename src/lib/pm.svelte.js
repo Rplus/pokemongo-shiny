@@ -66,7 +66,7 @@ class PokemonManager {
 		const counts = this.status_counts;
 		return [
 			{ label: 'none',  count: counts[0], },
-			{ label: 'met',   count: counts[1], },
+			{ label: 'met',   count: counts[1] + counts[2] + counts[3], },
 			{ label: 'own',   count: counts[2] + counts[3], },
 			{ label: 'extra', count: counts[3], },
 		];

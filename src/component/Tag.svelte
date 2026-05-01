@@ -88,7 +88,7 @@
 }
 
 .hr {
-	border-right: 2px dashed #9993;
+	border-right: 2px dashed color-mix(in srgb, var(--main-color), #0000 90%);
 }
 
 .tag {
@@ -164,12 +164,13 @@
 	top: -.25em;
 	z-index: 100;
 	margin: auto;
-	background-color: #9993;
-	background-color: #dddd;
+	background-color: color-mix(in srgb, var(--main-bgc), var(--panal-bgc, #6663) 50%);
 	padding: 0 3vw;
 
 	&[open] {
+		--panal-bgc: #9996;
 		padding-bottom: 1em;
+		backdrop-filter: blur(5px);
 	}
 
 	summary {

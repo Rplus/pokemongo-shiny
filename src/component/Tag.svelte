@@ -166,6 +166,7 @@
 	margin: auto;
 	background-color: color-mix(in srgb, var(--main-bgc), var(--panal-bgc, #6663) 50%);
 	padding: 0 3vw;
+	font-size: smaller;
 
 	&[open] {
 		--panal-bgc: #9996;

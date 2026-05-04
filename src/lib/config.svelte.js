@@ -1,5 +1,5 @@
 import pm_local_csv_url from '@data/pm.csv?url';
-import { set_item, get_item, } from '@lib/u.svelte.js';
+import { set_item, get_item, parse_status_visibility, } from '@lib/u.svelte.js';
 
 // export let status = $state('');
 // export let name = $state('?');
@@ -46,6 +46,25 @@ export const config = $state({
 	...get_item('config'),
 });
 
+{
+	const _qs = new URL(location).searchParams;
+	const _status = _qs.get('status') || '';
+	const _status_visibility = parse_status_visibility(_qs.get('visibility') || '');
+
+	if (_status) {
+		session.status = _status;
+		session.name = _qs.get('name') || '?';
+	}
+
+	if (_status_visibility) {
+		config.status_visibility = _status_visibility;
+	} else if (_status) {
+		config.status_visibility = parse_status_visibility('1111');
+	}
+
+	history.replaceState({}, null, location.pathname); // reset qs
+}
+
 let _save_timer;
 
 // 2. Auto-persist on any change
@@ -85,15 +104,6 @@ $effect.root(() => {
 		}, 500); // Wait for 500ms of inactivity
 	});
 });
-
-{
-	const _qs = new URL(location).searchParams;
-	if (_qs.get('status')) {
-		session.status = _qs.get('status') || '';
-		session.name = _qs.get('name') || '?';
-		history.pushState({}, null, location.pathname); // reset qs
-	}
-}
 
 export function reset_all_config() {
 	const fresh_default = JSON.parse(JSON.stringify(DEFAULT_CONFIG));

@@ -64,11 +64,29 @@ export function confirm_to_reset() {
 	}
 }
 
-export function gen_href(status, name) {
+export function parse_status_visibility(value = '') {
+	if (!/^[01]{4}$/.test(value)) {
+		return null;
+	}
+
+	return value.split('').map(v => v === '1');
+}
+
+export function stringify_status_visibility(status_visibility = []) {
+	return status_visibility
+		.slice(0, 4)
+		.map(v => v ? '1' : '0')
+		.join('');
+}
+
+export function gen_href(status, name, status_visibility) {
 	let a = new URL(location.href);
 	a.hash = '';
 	a.searchParams.set('name', name);
 	a.searchParams.set('status', status);
+	if (status_visibility) {
+		a.searchParams.set('visibility', stringify_status_visibility(status_visibility));
+	}
 
 	return a.toString();
 }

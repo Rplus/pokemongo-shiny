@@ -1,6 +1,6 @@
 <script>
 	import { recorder, } from '@lib/recorder.svelte.js';
-	import { session } from '@lib/config.svelte.js';
+	import { config, session } from '@lib/config.svelte.js';
 	import { get_time_string, gen_href, } from '@lib/u.svelte.js';
 	import { i18n } from '@lib/i18n.svelte.js';
 	import { pokemonStore, } from '@lib/pm.svelte.js';
@@ -34,7 +34,7 @@
 
 				<div class="label">
 					<a class="link {record.name === session.name && 'bolder'}"
-						href={gen_href(record.status, record.name)}
+						href={gen_href(record.status, record.name, config.status_visibility)}
 						onclick={(e) => click_record(e, index, record)}
 					>
 						<div>

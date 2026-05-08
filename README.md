@@ -24,7 +24,7 @@ There are many methods for data usage.
 
 ### A. (Default) use my google spreadsheet
 
-  just enter my spreadsheet public url into side-panel:  
+  The app uses my spreadsheet by default, so you do not need to enter a custom data URL for the live site. The default data source is:  
   <https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/'pm2026'>
 
   if you want to update my spreadsheet  
@@ -40,12 +40,12 @@ There are many methods for data usage.
 ### B. use your google spreadsheet
 
   you need to get the spreadsheet public url, the easiest method is:  
-  `https://opensheet.elk.sh/spreadsheet_id/tab_name`  
-  just change the `spreadsheet_id/tab_name` with your google spreadsheet page.  
+  `https://opensheet.elk.sh/spreadsheet_id/'tab_name'`  
+  just change the `spreadsheet_id/'tab_name'` with your google spreadsheet page.  
   And then, you could update spreadsheet by yourself.
 
   ※  
-  If your tab name contains number, you must to use `spreadsheet_id/'tab_name123'` instead of `spreadsheet_id/tab_name123`
+  OpenSheet requires quotes for tab names that contain numbers. For example, use `spreadsheet_id/'pm2026'` instead of `spreadsheet_id/pm2026`.
 
 ### C. custom csv data url:
 

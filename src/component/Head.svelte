@@ -8,7 +8,7 @@
 		--seen-percent:${pokemonStore.status_percent.seen}%;
 		--captured-percent:${pokemonStore.status_percent.captured}%;
 	`);
-	let released_count = $derived(pokemonStore.sorted_pms.length);
+	let released_count = $derived(pokemonStore.sorted_pms.filter(pm => !pm._hidden).length);
 
 </script>
 

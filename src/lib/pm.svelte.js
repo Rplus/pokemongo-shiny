@@ -56,6 +56,8 @@ class PokemonManager {
 	status_counts = $derived.by(() => {
 		const counts = { 0: 0, 1: 0, 2: 0, 3: 0 };
 		this.sorted_pms.forEach(pm => {
+			if (pm._hidden) return;
+
 			const s = Number(pm.status || 0);
 			if (counts[s] !== undefined) counts[s]++;
 		});
@@ -86,7 +88,7 @@ class PokemonManager {
 
 		this.sorted_pms.forEach(pm => {
 			if (!grouped_map.has(pm._gidx)) grouped_map.set(pm._gidx, []);
-			grouped_map.get(pm._gidx).push(pm.status ?? 0);
+			grouped_map.get(pm._gidx).push(pm._hidden ? 0 : (pm.status ?? 0));
 		});
 		return Array.from(grouped_map, ([key, values]) => `${key}.${values.join('')}`).join('-');
 	});
@@ -189,8 +191,14 @@ function handle_pms(pms) {
 	let _fcounter = 0;
 
 	pms.filter(Boolean).forEach(pm => {
-		const debut_timing = +(new Date(pm.debut));
-		if (!(debut_timing < today)) {
+		const debut = (pm.debut || '').trim();
+		if (!debut) {
+			return;
+		}
+
+		const debut_timing = +(new Date(debut));
+		const is_invalid_debut = Number.isNaN(debut_timing);
+		if (!is_invalid_debut && !(debut_timing < today)) {
 			return;
 		}
 		const dex = +(pm.pid.match(/pm(\d+)/)?.[1]);
@@ -199,6 +207,7 @@ function handle_pms(pms) {
 		pm.name = names[dex];
 		// pm.time_order = debut_timing / 1000 + dex;
 		pm.status = '0';
+		pm._hidden = is_invalid_debut;
 
 		// if (pm.family_dex !== '1' && pm.family_dex !== '422') {
 		// 	return
@@ -268,7 +277,12 @@ function get_gen(dex_num = 0) {
 }
 
 function sort_by_group_id (a, b) {
-	return a[0].localeCompare(b[0], undefined, {
+	const [a_family, a_group = ''] = a[0].split(/\.(.*)/s);
+	const [b_family, b_group = ''] = b[0].split(/\.(.*)/s);
+	const family_diff = Number(a_family) - Number(b_family);
+	if (family_diff) return family_diff;
+
+	return a_group.localeCompare(b_group, undefined, {
 		numeric: true,
 		sensitivity: 'base' // Case-insensitive: "p" and "P" are treated the same
 	});

@@ -43,7 +43,9 @@
 			{#each pokemonStore.groups as [group_name, pms] (group_name)}
 				<div class="pm-group">
 					{#each pms as pm (pm.pid)}
-						<Item {pm} />
+						{#if !pm._hidden}
+							<Item {pm} />
+						{/if}
 					{/each}
 				</div>
 			{/each}

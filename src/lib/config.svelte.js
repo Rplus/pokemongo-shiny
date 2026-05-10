@@ -88,6 +88,12 @@ $effect.root(() => {
 
 {
 	const _qs = new URL(location).searchParams;
+	const visible_statuses = _qs.get('visible');
+	if (visible_statuses) {
+		config.status_visibility = DEFAULT_CONFIG.status_visibility.map((_, index) => {
+			return visible_statuses.includes(String(index));
+		});
+	}
 	if (_qs.get('status')) {
 		session.status = _qs.get('status') || '';
 		session.name = _qs.get('name') || '?';

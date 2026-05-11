@@ -86,7 +86,7 @@ all csv columns/properties:
 | property | required? | type | description |
 | -------- | -------- | ----- | ----- |
 | `family_dex`  | required | number | usally the pokedex of the first pokemon of family,<br>please group together data rows with the same family_dex |
-| `debut`  | required | string | shiny form released date |
+| `debut`  | required | string | shiny form released date.<br>A nonblank value that is not a valid date invalidates the row: the row is not displayed, but its status URL position is preserved. |
 | `pid`    | required | string | uni key, image file name.<br>format: `pm25.cFALL_2018`... |
 | `group`  | required | string | A flexible string used for grouping; <br>this will be used to sort the groups, and you may append a numeric suffix when needed to adjust the group order." |
 | `tag`    | -        | string | tags for pokemon, combine tags with `=`.<br> e.q. `tag1=tag2=tag3` |
@@ -94,6 +94,10 @@ all csv columns/properties:
 | `suffix` | -        | string | suffix name, write mega or other types.<br>e.q. `(Y)`, `#7` |
 | `style`  | -        | string | custom image style,<br>e.q. `--w:140%;--l:-10%;--t:-10%;`
 | `src`    | -        | string | image url, custom image source, will overwrite the image of pid <br> could be https://ooxx.png |
+
+For `debut`, leave the cell blank for unreleased or unused future data. Use a
+nonblank non-date value only when an existing row should be hidden without
+shifting saved status URL indexes.
 
 
 ※ If you use custom `src`, and try to create a custom `pid`, just follow basic format rules:

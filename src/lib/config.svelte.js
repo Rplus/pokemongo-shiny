@@ -59,6 +59,7 @@ export const config = $state({
 	if (_status_visibility) {
 		config.status_visibility = _status_visibility;
 	} else if (_status) {
+		// Old shared status URLs did not include visibility, so keep their all-visible behavior.
 		config.status_visibility = parse_status_visibility('1111');
 	}
 

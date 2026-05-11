@@ -1,10 +1,10 @@
 <script>
 	import { i18n } from '@lib/i18n.svelte.js';
-	import { session } from '@lib/config.svelte.js';
+	import { config, session } from '@lib/config.svelte.js';
 	import { pokemonStore, } from '@lib/pm.svelte.js';
 	import { fetch_data, gen_href, } from '@lib/u.svelte.js';
 
-	let url = $derived(gen_href(pokemonStore.status_string, session.name));
+	let url = $derived(gen_href(pokemonStore.status_string, session.name, config.status_visibility));
 
 	let short_href = $state(null);
 

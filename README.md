@@ -95,9 +95,9 @@ all csv columns/properties:
 | `style`  | -        | string | custom image style,<br>e.q. `--w:140%;--l:-10%;--t:-10%;`
 | `src`    | -        | string | image url, custom image source, will overwrite the image of pid <br> could be https://ooxx.png |
 
-For `debut`, leave the cell blank for unreleased or unused future data. Use a
-nonblank non-date value only when an existing row should be hidden without
-shifting saved status URL indexes.
+A blank `debut` value is ignored and does not reserve a status URL position.
+Use a nonblank non-date value only when an existing row should be hidden
+without shifting saved status URL indexes.
 
 
 ※ If you use custom `src`, and try to create a custom `pid`, just follow basic format rules:

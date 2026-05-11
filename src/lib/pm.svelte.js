@@ -10,7 +10,7 @@ class PokemonManager {
 	is_loading = $state(true);
 	error = $state(null);
 	pid_with_tags = $state(new Map());
-	status_length_in_family = $state(new Map());
+	status_length_by_family = $state(new Map());
 
 	async init() {
 		this.is_loading = true;
@@ -18,12 +18,12 @@ class PokemonManager {
 
 		try {
 			// Step 1: Basic setup
-			const { groups, tags, pid_with_tags, status_length_in_family } = await fetch_pms_data();
+			const { groups, tags, pid_with_tags, status_length_by_family } = await fetch_pms_data();
 
 			this.groups = groups;
 			this.tags = tags;
 			this.pid_with_tags = pid_with_tags;
-			this.status_length_in_family = status_length_in_family;
+			this.status_length_by_family = status_length_by_family;
 
 			// Step 2: Data priority logic (The core sequence)
 			// Priority 1: URL session (already parsed in config.svelte.js)
@@ -88,7 +88,7 @@ class PokemonManager {
 
 		this.sorted_pms.forEach(pm => {
 			if (!grouped_map.has(pm._gidx)) {
-				const _array_len = this.status_length_in_family.get(pm._gidx) || (pm._pidx + 1);
+				const _array_len = this.status_length_by_family.get(pm._gidx);
 				grouped_map.set(pm._gidx, Array(_array_len).fill(0));
 			}
 			grouped_map.get(pm._gidx)[pm._pidx] = pm.status ?? 0;
@@ -189,7 +189,7 @@ function handle_pms(pms) {
 	const all_groups = new Map();
 	const tags = {};
 	const pid_with_tags = new Map();
-	const status_length_in_family = new Map();
+	const status_length_by_family = new Map();
 
 	let _fdex = 0;
 	let _fcounter = 0;
@@ -218,7 +218,8 @@ function handle_pms(pms) {
 			pm._pidx = Number(_fcounter - 1);
 			// pm.key = `${pm.family_dex}.${_fcounter}`;
 		}
-		status_length_in_family.set(pm._gidx, Math.max(status_length_in_family.get(pm._gidx) || 0, pm._pidx + 1));
+		// Reserve the original family status position before tombstone rows are skipped.
+		status_length_by_family.set(pm._gidx, Math.max(status_length_by_family.get(pm._gidx) || 0, pm._pidx + 1));
 
 		if (is_tombstone) {
 			return;
@@ -272,7 +273,7 @@ function handle_pms(pms) {
 		groups: Array.from(all_groups).sort(sort_by_group_id),
 		tags,
 		pid_with_tags,
-		status_length_in_family,
+		status_length_by_family,
 	};
 }
 

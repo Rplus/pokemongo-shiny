@@ -65,18 +65,18 @@ export function confirm_to_reset() {
 }
 
 export function parse_status_visibility(value = '') {
-	if (!/^[01]{4}$/.test(value)) {
+	if (value.length !== 4 || !/^[01]{4}$/.test(value)) {
 		return null;
 	}
-
-	return value.split('').map(v => v === '1');
+	return Array.from(value, v => v === '1');
 }
 
 export function stringify_status_visibility(status_visibility = []) {
-	return status_visibility
-		.slice(0, 4)
-		.map(v => v ? '1' : '0')
-		.join('');
+	let res = '';
+	for (let i = 0; i < 4; i++) {
+		res += status_visibility[i] ? '1' : '0';
+	}
+	return res;
 }
 
 export function gen_href(status, name, status_visibility) {

@@ -31,11 +31,26 @@
 
 <style>
 
+	:global(:root) {
+		--float-btn-size: clamp(40px, 9vw, 56px);
+		--float-btn-gap: clamp(8px, 2vw, 14px);
+		--float-btn-left: calc(min(3vw, 1em) + 4px);
+	}
+
+	.ctrl-btn {
+		bottom: 1rem;
+	}
+
 	.record-btn {
-		left: 3em;
+		bottom: calc(1rem + var(--float-btn-size) + var(--float-btn-gap));
+		left: calc(var(--float-btn-left) + var(--float-btn-size) + var(--float-btn-gap));
+		translate: 0 calc(2rem - var(--float-btn-size) - var(--float-btn-gap));
 	}
 
 	.locker-btn {
+		bottom: calc(1rem + (var(--float-btn-size) + var(--float-btn-gap)) * 2);
+		translate: 0 calc(4rem - (var(--float-btn-size) + var(--float-btn-gap)) * 2);
+
 		&::before {
 			content: var(--locker-icon, '🔓');
 		}
@@ -50,15 +65,15 @@
 		position: fixed;
 		z-index: 30;
 		/* bottom: .5rem; */
-		left: calc(min(3vw, 1em) + 4px);
+		left: var(--float-btn-left);
 		border: 1px outset #0006;
 		display: flex;
-		width: 2em;
-		height: 2em;
+		width: var(--float-btn-size);
+		height: var(--float-btn-size);
 		padding: 0;
 		place-items: center;
 		place-content: center;
-		font-size: .8rem;
+		font-size: clamp(1.1rem, 4vw, 1.5rem);
 		background-color: #f4f4f4;
 		cursor: pointer;
 		user-select: none;

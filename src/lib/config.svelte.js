@@ -32,9 +32,9 @@ export const DEFAULT_CONFIG = Object.freeze({
 	// style
 	maxwidth: 1200,
 	grid_size: 96,
-	main_bgc: '#ffffff',
+	main_bgc: '#d6d6d6',
 	main_color: '#213547',
-	grid_colors: ['#dddddd', '#dada0b', '#a1a112'],
+	grid_colors: ['#bababa', '#dada0b', '#a1a112'],
 	gradient_colors: ['#000000', '#63452c'],
 	data_source: {...DEFAULT_PM_DATA_SOURCE},
 	status_visibility: [true, true, true, true, ],

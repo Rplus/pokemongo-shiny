@@ -41,14 +41,7 @@
 		left: calc(min(3vw, 1em) + 4px);
 		display: flex;
 		flex-direction: column-reverse;
-		align-items: flex-start;
 		gap: .5rem;
-		/* only the buttons take clicks, not the empty corner of the box */
-		pointer-events: none;
-	}
-
-	.record-btn {
-		margin-left: calc(var(--btn-size) + .5rem);
 	}
 
 	.locker-btn {
@@ -63,7 +56,6 @@
 	}
 
 	.btn-icon {
-		pointer-events: auto;
 		border: 1px outset #0006;
 		display: flex;
 		width: var(--btn-size);

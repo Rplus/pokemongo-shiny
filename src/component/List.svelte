@@ -41,7 +41,7 @@
 			<div class="loader pokeball" out:fade={{ duration: 300 }}></div>
 		{:else}
 			{#each pokemonStore.groups as [group_name, pms] (group_name)}
-				<div class="pm-group">
+				<div class="pm-group" data-group={group_name}>
 					{#each pms as pm (pm.pid)}
 						<Item {pm} />
 					{/each}

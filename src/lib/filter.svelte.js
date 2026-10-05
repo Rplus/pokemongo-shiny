@@ -1,17 +1,6 @@
 import { pokemonStore, } from '@lib/pm.svelte.js';
 import { get_item, set_item, } from '@lib/u.svelte.js';
 
-const custom_style_when_filtered = `
-.pm-list {
-	gap: 1em;
-}
-.pm-group.pm-group {
-	display: contents;
-}
-.pm-group .pm {
-	order: var(--dex-order);
-}`;
-
 class FilterManager {
 	filter_cates = ['🧬', '📍', '🐣', '🧩'];
 	filter_state = $state(get_item('filter_state') || {});
@@ -89,11 +78,18 @@ class FilterManager {
 
 		if (_hide_list.length === 0) return '';
 
-		// 3. build efficient css selectors using attribute selectors
+		// 3. hide groups whose members are all hidden, so they leave no empty gap
+		const _hidden = new Set(_hide_list);
+		const _hide_groups = pokemonStore.groups
+			.filter(([, _pms]) => _pms.every(_pm => _hidden.has(_pm.pid)))
+			.map(([_key]) => `.pm-group[data-group="${_key}"]`);
+
+		// 4. build efficient css selectors using attribute selectors
 		// [data-pid="xxx"] handles pids with dots perfectly
-		return _hide_list
-			.map(_id => `.pm[data-pid="${_id}"]`)
-			.join(',\n') + '{display:none !important;}' + custom_style_when_filtered;
+		return [
+			..._hide_list.map(_id => `.pm[data-pid="${_id}"]`),
+			..._hide_groups,
+		].join(',\n') + '{display:none !important;}';
 	}
 }
 

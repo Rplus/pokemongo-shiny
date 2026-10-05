@@ -165,6 +165,10 @@ const dictionaries = {
 		'en': 'marker',
 		'zh': '標記',
 	},
+	'custom.grid_color.bgc': {
+		'en': 'BG',
+		'zh': '背景色',
+	},
 	'custom.maxwidth': {
 		'en': 'Max width',
 		'zh': '最大寬度',

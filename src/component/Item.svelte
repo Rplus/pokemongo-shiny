@@ -139,7 +139,7 @@
 
 	.pm {
 		break-inside: avoid;
-		background-color: var(--main-bgc);
+		background-color: var(--pm-grid-color3, var(--main-bgc));
 		width: var(--pm-grid-size, 96px);
 		height: var(--pm-grid-size, 96px);
 		order: var(--group-order);

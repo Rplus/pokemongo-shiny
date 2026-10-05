@@ -34,7 +34,6 @@
 <style>
 
 	.float-btns {
-		--btn-size: 44px;
 		position: fixed;
 		z-index: 30;
 		bottom: 1rem;
@@ -58,8 +57,8 @@
 	.btn-icon {
 		border: 1px outset #0006;
 		display: flex;
-		width: var(--btn-size);
-		height: var(--btn-size);
+		width: 2em;
+		height: 2em;
 		padding: 0;
 		place-items: center;
 		place-content: center;

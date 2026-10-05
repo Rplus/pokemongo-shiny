@@ -3,36 +3,44 @@
 	import { i18n } from '@lib/i18n.svelte.js';
 </script>
 
-<label class="btn-icon ctrl-btn hide-for-print" for="ctrl-checkbox" style="bottom:1rem">
-	⚙️
-	<span class="sr-only-u">
-		toggle control panel
-	</span>
-</label>
+<div class="float-btns hide-for-print">
+	<label class="btn-icon ctrl-btn" for="ctrl-checkbox">
+		⚙️
+		<span class="sr-only-u">
+			toggle control panel
+		</span>
+	</label>
 
 
-<button class="btn-icon record-btn hide-for-print" style="bottom:3rem"
-	onclick={recorder.add_current}
-	title={i18n.t('record.save')}
->
-	💾
-	<span class="sr-only-u">
-		Save current record
-	</span>
-</button>
+	<button class="btn-icon record-btn"
+		onclick={recorder.add_current}
+		title={i18n.t('record.save')}
+	>
+		💾
+		<span class="sr-only-u">
+			Save current record
+		</span>
+	</button>
 
-<label class="btn-icon locker-btn hide-for-print" for="list-locker" style="bottom: 5rem">
-	<span class="sr-only-u">
-		Lock
-	</span>
-</label>
+	<label class="btn-icon locker-btn" for="list-locker">
+		<span class="sr-only-u">
+			Lock
+		</span>
+	</label>
+</div>
 
 
 
 <style>
 
-	.record-btn {
-		left: 3em;
+	.float-btns {
+		position: fixed;
+		z-index: 30;
+		bottom: 1rem;
+		left: calc(min(3vw, 1em) + 4px);
+		display: flex;
+		flex-direction: column-reverse;
+		gap: .5rem;
 	}
 
 	.locker-btn {
@@ -47,10 +55,6 @@
 	}
 
 	.btn-icon {
-		position: fixed;
-		z-index: 30;
-		/* bottom: .5rem; */
-		left: calc(min(3vw, 1em) + 4px);
 		border: 1px outset #0006;
 		display: flex;
 		width: 2em;
@@ -58,7 +62,7 @@
 		padding: 0;
 		place-items: center;
 		place-content: center;
-		font-size: .8rem;
+		font-size: 1.3rem;
 		background-color: #f4f4f4;
 		cursor: pointer;
 		user-select: none;
